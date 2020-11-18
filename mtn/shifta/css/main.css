@@ -1,0 +1,464 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* General */
+*{
+	background-repeat:no-repeat;
+}
+
+#loader img {
+    position: absolute;
+    left: 50%;
+    margin-left: -45px;
+    right: auto;
+    top: 50%;
+    margin-top: -45px;
+    bottom: auto;
+}
+
+#loader{
+	width:654px;
+	height:1200px;
+	background-color: #4cd1ff;
+	position:absolute;
+	/* overflow: hidden; */
+	z-index: 1000;
+	display:block;
+}
+
+#slidersHolder {
+    float: left;
+    height: auto;
+    display: block;
+    position: relative;
+    width: 654px;
+	height:596px;
+	overflow:hidden;
+	
+}
+body{
+	background-color:#CCC;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.dd-option-selected{
+	display:none !important;
+}
+.container{
+	width:654px;
+	height:1200px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url(../img/bg.jpg);
+	position: relative;
+	/* overflow: hidden; */
+}
+
+img{
+	border:none;
+}
+.line{
+	width:585px;
+	display:block;
+	height: 22px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.share{
+	width:192px;
+	display:block;
+	height: 38px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.shareSection{
+	width: 654px;
+	height: 600px;
+	float:left;
+	display:block;
+	background-image:url(../img/sharesectionbg.jpg);
+}
+
+
+.shiftYourWay{
+	position:absolute;
+	width:404px;
+	height:308px;
+	display:block;
+	background-repeat: no-repeat;
+	/*background-image:url(../img/shiftyourway.png);*/
+	top: 3px;
+	left: 3px;
+}
+
+
+.customizeYourCupCake{
+	width:529px;
+	float:right;
+	display:block;
+	height:184px;
+	/*background-image:url(../img/customise.png);*/
+	margin-right: 12px;
+	margin-top: 3px;
+}
+
+
+.ribbon {
+  width: 654px;
+  height: 91px;
+  position: absolute;
+  display: none;
+  background-image: url(../img/ribbon.png);
+  top: 330px;
+  left: 0px;
+  z-index: 500;
+}
+
+
+.social{
+	width: 109px;
+	height:45px;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.facebook{
+	width: 44px;
+	height:44px;
+	display:block;
+	float:left;
+	background-image:url(../img/facebook.png)
+}
+
+.facebook:hover{
+	background-image:url(../img/facebook_hover.png)
+}
+
+
+.twitter{
+	width: 44px;
+	height:44px;
+	display:block;
+	float:left;
+	margin-left:20px;
+	background-image:url(../img/twitter.png);
+}
+
+
+.twitter:hover{
+	background-image:url(../img/twitter_hover.png);
+}
+
+
+#hooray{
+	width:300px;
+	height:200px;
+	display:block;
+	z-index: 10000;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	display:none;
+}
+/* General */
+
+/*Sliders */
+.cupCakes{
+	width:654px;
+	height:438px;
+	float:left;
+	display:block;
+	position: relative;
+}
+
+
+.sliderControls{
+	width:585px;
+	display:block;
+	height: 89px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 68px;
+	position: relative;
+}
+
+
+.sliderTop{
+	width:585px;
+	display:block;
+	height: 65px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.cupCakeOptions{
+	width: 2616px;
+	height:596px;
+	display:block;
+	/* float: left; */
+	position: absolute;
+	left: 0px;
+}
+
+
+.slidez{
+	width:654px;
+	height: 500px;
+	display:block;
+	float:left
+}
+
+
+.leftControl{
+	width: 90px;
+	height: 65px;
+	display:block;
+	float:left;
+	background-image:url(../img/leftarrow_normal.png);
+	background-repeat:no-repeat;
+	/* margin-top: 5px; */
+	
+}
+
+#leftBasics{
+	display:none;
+}
+
+#leftDisabled {
+  width: 90px;
+  height: 65px;
+  display: block;
+  float: left;
+  background-image: url(../img/disbled.png);
+  background-repeat: no-repeat;
+}
+
+
+.rightControl{
+	width: 90px;
+	height: 65px;
+	display:block;
+	float:left;
+	background-image:url(../img/rightarrow_normal.png);
+	background-repeat:no-repeat;
+	/* margin-top: 5px; */
+}
+
+
+.leftControl:hover{
+	background-image:url(../img/leftarrow_hover.png);
+
+}
+
+
+.rightControl:hover{
+	background-image:url(../img/rightarrow_hover.png);
+}
+
+.sliderTitle{
+	width:405px;
+	float:left;
+	height: 65px;
+	display: block;
+	text-align:center;
+}
+
+.sliderz{
+	width: 493px;
+	height:78px;
+	/* float:left; */
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+
+	position:relative;
+}
+
+.slidezTitle{
+	width:572px;
+	height:57px;
+	float:left;
+	display:block;
+	margin-top: 18px;
+}
+
+.tooltip{
+	background-image:url(../img/tooltip.png);
+	height:24px;
+	width:78px;
+	position:absolute;
+	z-index:100;
+	top: -35px;
+	text-align:center;
+	font-size:10px;
+	color:#6d6d6d;
+	font-style:italic;
+	padding-top:3px;
+	
+}
+
+
+.tooltips .one{
+    left: 15px;
+	display:none;
+	
+	
+}
+
+
+.tooltips .two{
+    left: 115px;
+	display:none;
+}
+
+
+.tooltips .three{
+    left: 210px;
+	display:none;
+}
+
+
+.tooltips .four{
+
+    left: 309px;
+	display:none;
+}
+
+
+.tooltips .five{
+    left: 408px;
+	display:none;
+}
+
+
+
+.currenttooltip{
+	display:block;
+}
+
+.hiddentooltip{
+	display:none !important;
+}
+
+/*Sliders */
+
+
+
+
+/*Creation*/
+
+.creationControls{
+	width:585px;
+	display:block;
+	height: 175px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.looksnice{
+	width:597px;
+	display:block;
+	height: 82px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.hashshiftyourway{
+	width:178px;
+	display:block;
+	height: 31px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.cta{
+	width:310px;
+	height:61px;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	background-image:url(../img/cta.png);
+	background-repeat:no-repeat;
+}
+
+
+
+.cta:hover{
+	background-image:url(../img/cta_hover.png);
+}
+
+.summaryText{
+	width: 200px;
+	height:60px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	color:#FFF;
+	font-size: 13px;
+	font-style:italic;
+	margin-top: 23px;
+	text-align: center;
+	text-transform:uppercase;
+}
+/*Creation*/
+
+
+
+/*Cups*/
+#cupimg{
+	position:absolute;
+	z-index:70;
+	left:0px;
+}
+
+
+#sprinklesimg{
+	position:absolute;
+	z-index: 100;
+	left:0px;
+	display:none;
+}
+
+#icingimg{
+	position:absolute;
+	z-index: 90;
+	left:0px;
+}
+
+#freshimg{
+	position:absolute;
+	z-index:50;
+	left:0px;
+	display:none;
+}
+
+#fillingimg{
+	position:absolute;
+	z-index: 60;
+	left:0px;
+}
+
+
+#madnessimg{
+	position:absolute;
+	z-index:50;
+	left:0px;
+	display:none;
+	
+}
+
+
+#spongeimg{
+	position:absolute;
+	z-index:50;
+	left:0px;
+}
+
+/*Cups*/

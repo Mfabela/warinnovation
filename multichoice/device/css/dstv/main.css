@@ -1,0 +1,204 @@
+nav.black .wrapper1 {
+    margin: 0 auto
+}
+
+nav.black .dropdown {
+    top: 46px;
+}
+
+nav.black .drop-trigger {
+    width: auto;
+    height: 40px;
+    padding: 5px 10px 10px;
+    margin: 5px 0 0;
+    line-height: 25px;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0
+}
+
+nav.black .drop-trigger a#displayText {
+    width: 145px;
+    margin: 0;
+    padding: 0;
+    background: none
+}
+
+nav.black .drop-trigger i {
+    display: inline-block;
+    width: 16px;
+    height: 25px;
+    margin-left: 5px;
+    float: right;
+    background: url("../../images/conarrow2.png") no-repeat center center;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out
+}
+
+nav.black .drop-trigger:hover {
+    background-color: #fff
+}
+
+nav.black .drop-trigger:hover i {
+    background: url("../../images/conarrow.png") no-repeat center center
+}
+
+nav.black .drop-trigger:hover a {
+    color: #0095DA
+}
+
+nav.black .drop-trigger .translatable {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none
+}
+
+nav.mega {
+	/*padding-top: 50px;*/
+	border:0px solid black;
+    overflow: hidden;
+    /*display: none;*/
+    width: 100%;
+	max-width: 980px;
+	margin:0px auto;
+    /*height: 0px*/
+}
+
+.socialm li{
+    position:absolute;
+    right:10px;
+    color:#ffffff;
+    font-size:10px;
+    text-transform:capitalize;
+    z-index: 25;
+    width:20%;
+    float:right;
+    margin-top:7px;
+    filter:alpha(opacity=60); opacity:0.6;
+}
+
+.socialm img{
+    width: 30px;
+    height: 30px;
+}
+
+.socialm small {
+    display:inline;
+    float:right;
+    padding-left:5px;
+}
+
+.socialm small :hover {
+    filter:alpha(opacity=90); opacity:0.9;
+}
+
+#dstv_meganav_main {
+    width: 980px;
+    position: relative;
+    width: 980px;
+    height: auto;
+    margin: 0 auto;
+    top: 0;
+}
+
+nav.mega {
+	/*display: block;
+	width: 980px;
+	height: auto;
+	margin: 0 auto*/
+}
+
+nav.mega .toplogo {
+	border:0px solid black;
+	float:left;
+	max-width:238px;
+	width:25%;
+	max-height: 112px;
+	margin-left: 20px;
+	margin-right: 10px
+}
+
+nav.mega .global_header1 {
+	margin-top: -25px
+}
+
+nav.mega .headerBoard {
+	/*margin-top: -161px*/
+}
+
+nav.mega a {
+	color: #0175B2
+}
+
+nav.mega #main-nav-wrap ul {
+	float: left;
+	margin: 0;
+	padding:0;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #fff;
+    border-top: solid 1px #c8c3b2;
+    padding: 20px 20px 40px 20px
+}
+
+footer .content {
+    width: 100%
+}
+
+footer .copy {
+    color: #333;
+    font-size: 12px;
+    text-align: center
+}
+
+footer .copy a {
+    color: #666;
+    font-weight: bold
+}
+
+footer .copy a:hover {
+    color: #999
+}
+
+footer .logo {
+    text-align: center;
+    padding-bottom: 10px
+}
+
+@media only screen and (min-width: 480px) {
+    footer {
+        z-index: 1
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    footer {
+        padding: 0 0 80px 0
+    }
+
+    footer .content {
+        width: 980px;
+        margin: 20px auto 0 auto
+    }
+
+    footer .logo {
+        float: left;
+        width: 12.5%
+    }
+
+    footer .copy {
+        float: left;
+        text-align: left;
+        width: 87.5%;
+        padding-left: 60px;
+        padding-top: 30px
+    }
+}

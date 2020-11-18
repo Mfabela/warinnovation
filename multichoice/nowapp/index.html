@@ -1,0 +1,778 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css' />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Multichoice</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- DSTV CSS -->
+
+    <link href="css/dstv/magnific-popup.css" rel="stylesheet">
+    <link href="css/dstv/main.css" rel="stylesheet">
+    <link href="http://cdn.dstv.com/www.dstv.com/header/header.css" rel="stylesheet">
+    <link href="http://cdn.dstv.com/www.dstv.com/MegaNav/CSS/mega_nav.css" rel="stylesheet">
+    <link href="css/dstv/dstv-footer.css" rel="stylesheet">
+    <link href="css/dstv/dstv-black-nav.css" rel="stylesheet">
+
+    <!--This file is the same as header.css above. But here we are overwriting their styles for our responsive menu-->
+    <link href="css/dstv/header.css" rel="stylesheet">
+    <link href="css/dstv/mega_nav.css" rel="stylesheet">
+
+    <!-- Aqua CSS (Add all Aqua styles with prefix ".aqua_" -->
+    <link href="css/aqua.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/now.css" rel="stylesheet" />
+
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <link href="css/ie.css" rel="stylesheet" />
+    <![endif]-->
+    <!--Flexslider-->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    
+    <script src="js/jquery.flexslider.js"></script>
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+    <script type="text/javascript">
+        $(window).load(function () {
+			
+			
+			
+		var text = ["1 059", "1 169", "2 739"];
+		var text2 = ["260", "370", "740"];
+        var counter = 0;
+		var banner1 = document.getElementById("bannerprice1");
+		var banner2 = document.getElementById("bannerprice2");
+        var elem = document.getElementById("changeText");
+       /* setInterval(change, 7000);*/
+        function change() {
+        banner1.innerHTML = text[counter];
+		banner2.innerHTML = text2[counter];
+		//alert(counter);
+        counter++;
+        if(counter >= text.length) { counter = 0; }
+        }
+			
+			
+            
+			
+	 
+		
+		
+		
+        $('.flexslider').flexslider({
+        after: function(){ // After Call back
+         change();
+        }
+            });
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/compare.js"></script>
+
+    <!--Flexslider-->
+    <!--Pop Up-->
+    <script src="js/venobox/venobox.js"></script>
+    <link rel="stylesheet" href="js/venobox/venobox.css" type="text/css" media="screen" />
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            /* default settings */
+            $('.venobox').venobox();
+
+
+            /* custom settings */
+            $('.venobox_custom').venobox({
+                framewidth: '400px',        // default: ''
+                frameheight: '300px',       // default: ''
+                border: '10px',             // default: '0'
+                bgcolor: '#000',         // default: '#fff'
+                titleattr: 'data-title',    // default: 'title'
+                numeratio: true,            // default: false
+                infinigall: true            // default: false
+            });
+
+            /* auto-open #firstlink on page load */
+            $("#firstlink").venobox().trigger('click');
+
+
+        });
+
+
+    </script>
+    
+    
+    
+    
+    
+     <script type="text/javascript">
+/*
+       $(window).load(function() {
+		var text = ["2 739", "1 059", "1 169"];
+		var text2 = ["740", "260", "370"];
+        var counter = 0;
+		var banner1 = document.getElementById("bannerprice1");
+		var banner2 = document.getElementById("bannerprice2");
+        var elem = document.getElementById("changeText");
+        setInterval(change, 7000);
+        function change() {
+        banner1.innerHTML = text[counter];
+		banner2.innerHTML = text2[counter];
+		//alert(counter);
+        counter++;
+        if(counter >= text.length) { counter = 0; }
+        }
+		
+         });*/
+    </script>
+    
+    
+    
+    <!--Pop Up-->
+    
+    
+    <style>
+    
+    
+    .flexslider {
+margin: 0 0 0px;
+background: #fff;
+position: relative;
+-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+zoom: 1;
+overflow:hidden;
+}
+
+
+.flex-next , .flex-prev {display:none;}
+    
+  </style>
+    
+    
+  
+    
+
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1435426993388802&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <!-- Navigation -->
+    <!-- DStv navigation start -->
+    <!-- DStv navigation start -->
+    <nav id="blackNav" class="black">
+        <div id="con_headContainer">
+            <div class="con_toprow">
+                <div class="wrapper1">
+                    <span id="AuthenticationMenu1_SiteSelectorSection" class="con_network">
+                        <div class="con_networkLink drop-trigger">
+                            <a id="displayText">
+                                <span class="translatable">DStv Network<i></i></span>
+                            </a>
+                        </div>
+                        <div id="AuthenticationMenu1_divSiteSelector" class="siteSelector dnFrame dropdown">
+                            <div id="divConsumerColumn1" class="consumerCol">
+                                <a class="consumerSite" onmouseover="showtip(event,'Africa&rsquo;s leading online TV guide and entertainment video destination.','ConnectTooltip')" onmousemove="showtip(event,'Africa&rsquo;s leading online TV guide and entertainment video destination.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://www.dstv.com">
+                                    DStv.com
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Product information and self service for DStv customers.','ConnectTooltip')" onmousemove="showtip(event,'Product information and self service for DStv customers.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://selfservice.dstv.com">
+                                    DStv Self Service
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Full DStv com TV Guide: Grid View, Channel View, advanced search, set reminders.','ConnectTooltip')" onmousemove="showtip(event,'Full DStv com TV Guide: Grid View, Channel View, advanced search, set reminders.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://www.dstv.com/guide/">
+                                    TV Guide
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'DStv iPad App','ConnectTooltip')" onmousemove="showtip(event,'DStv iPad App','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://www.dstv.com/content/Mobile%20Guides/115">
+                                    DStv iPad App
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Get connected and unlock a world of digital entertainment.','ConnectTooltip')" onmousemove="showtip(event,'Get connected and unlock a world of digital entertainment.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://campaigns.dstv.com/getconnected/  ">
+                                    DStv Connect
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'The new watch wherever you are broadcast TV service.','ConnectTooltip')" onmousemove="showtip(event,'The new " watch wherever you are" broadcast tv service.','connecttooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://dstvmobile.com">
+                                    DStv Mobile
+                                </a>
+                            </div>
+                            <div id="divLine1" class="siteSelectorline" style="left:150px"></div>
+                            <div id="divConsumerColumn2" class="consumerCol">
+                                <a class="consumerSite" onmouseover="showtip(event,'Watch your favourite TV shows, sport and movies online whenever you want.','ConnectTooltip')" onmousemove="showtip(event,'Watch your favourite TV shows, sport and movies online whenever you want.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://catchup.dstv.com">
+                                    DStv Catch Up
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Africa\u0027s leading sports website, the latest in sports news, live scoring, live video streaming and video highlights.','ConnectTooltip')" onmousemove="showtip(event,'Africa\u0027s leading sports website, the latest in sports news, live scoring, live video streaming and video highlights.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://www.supersport.com">
+                                    SuperSport.com
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Predict the score or select your team to put your knowledge to the test and you could win great prizes','ConnectTooltip')" onmousemove="showtip(event,'Predict the score or select your team to put your knowledge to the test and you could win great prizes','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://gaming.supersport.com">
+                                    SuperSport Games
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Live Video Streaming of soccer, rugby and cricket matches from supersport.com','ConnectTooltip')" onmousemove="showtip(event,'Live Video Streaming of soccer, rugby and cricket matches from supersport.com','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://www.supersport.com/live-video">
+                                    SuperSport Live Streaming
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'African programming made by Africans','ConnectTooltip')" onmousemove="showtip(event,'African programming made by Africans','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://africamagic.dstv.com">
+                                    Africa Magic
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Compelling entertainment content, produced and acquired for the people of Africa.','ConnectTooltip')" onmousemove="showtip(event,'Compelling entertainment content, produced and acquired for the people of Africa.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://mnet.dstv.com">
+                                    M-Net
+                                </a>
+                            </div>
+                            <div id="divLine2" class="siteSelectorline" style="left:300px"></div>
+                            <div id="divConsumerColumn3" class="consumerCol">
+                                <a class="consumerSite" onmouseover="showtip(event,'The ultimate movies destination','ConnectTooltip')" onmousemove="showtip(event,'The ultimate movies destination','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://mnetmovies.dstv.com">
+                                    M-Net Movies
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Series just the way you like it! ','ConnectTooltip')" onmousemove="showtip(event,'Series just the way you like it! ','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://mnetseries.dstv.com">
+                                    M-Net Series
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Survivor South Africa: Champions will be the fifth local version of this hit reality series.','ConnectTooltip')" onmousemove="showtip(event,'Survivor South Africa: Champions will be the fifth local version of this hit reality series.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://survivorsa.dstv.com/">
+                                    Survivor Champions
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'All the goss from the Big Brother house','ConnectTooltip')" onmousemove="showtip(event,'All the goss from the Big Brother house','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://www.bigbrothermzansi.tv">
+                                    Big Brother Mzansi
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'The top SA singing talent show.','ConnectTooltip')" onmousemove="showtip(event,'The top SA singing talent show.','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://idolssa.dstv.com">
+                                    Idols SA
+                                </a>
+                                <a class="consumerSite" onmouseover="showtip(event,'Watch a live video stream of the Oscar Pistorius trial','ConnectTooltip')" onmousemove="showtip(event,'Watch a live video stream of the Oscar Pistorius trial','ConnectTooltip')" onmouseout="hidetip('ConnectTooltip')" href="http://oscartrial.com/ ">
+                                    The Oscar Pistorius Trial live video stream
+                                </a>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Meganav-->
+    <nav class="mega">
+        <div id='dstv_meganav_search'></div>
+        <div id='dstv_meganav_main'></div>
+    </nav>
+    <!--Meganav-->
+
+    <div class="aqua_promodiv_inner" style="display:none">
+        <div class="aqua_hamburger"><a href="javascript://">Hamburger</a><br /></div>
+        <div class="aqua_minimenu1">
+            <div class="aqua_submenu_first">
+                <ul>
+                    <li class="aqua_hover"><a href="javascript://" class="movenav whatson">What's on</a></li>
+                    <li class="aqua_hover"><a href="javascript://">Watch now</a></li>
+                    <li class="aqua_hover"><a href="javascript://">Shows</a></li>
+                    <li class="aqua_hover"><a href="javascript://">Latest</a></li>
+                </ul>
+            </div>
+            <div class="aqua_submenu_01">
+                <ul>
+                    <li class="aqua_hover"><a href="javascript://" class="movenav_back_01">back</a></li>
+                    <li class="aqua_hover"><a href="javascript://" class="movenav_sub">on 1</a></li>
+                    <li class="aqua_hover"><a href="javascript://">on 2</a></li>
+                    <li class="aqua_hover"><a href="javascript://">on 3</a></li>
+                    <li class="aqua_hover"><a href="javascript://">on 4</a></li>
+                </ul>
+            </div>
+            <div class="on_tree">
+                <ul>
+                    <li class="aqua_hover"><a href="javascript://" class="movenav_back_02">back</a></li>
+                    <li class="aqua_hover"><a href="javascript://">on xx</a></li>
+                    <li class="aqua_hover"><a href="javascript://">on tttt</a></li>
+                    <li class="aqua_hover"><a href="javascript://">on nnnn</a></li>
+                    <li class="aqua_hover"><a href="javascript://">on mmmmm</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navigation -->
+    <!--Promo start-->
+    <div class="aqua_promodiv">
+       <!--Holding div-->
+        <div class="aqua_promodiv_inner">
+
+       <!--Content-->
+          <div class="holder">
+            
+            
+           <!-- FlexiSlider -->
+            <div class="flexslider" id="slidebig"  style="position:relative; z-index:100000000;">
+
+                
+                
+                
+                
+                <!--Main Heading--
+                <div class="row">
+                    <div class="span12 ">
+                        <h1 class="page-header bolder600 bigger" align="center"> <span class="txtlightblue">Don't miss</span><span class="txtnavy"> out on this </span><span class="txtgrey"> Premium</span> <span class="txtnavy">deal. </span></h1>
+                    </div>
+                </div>
+                <!--Main Heading-->
+
+                <ul class="slides">
+                    <li> <img src="images/slide1.jpg" alt="image" /> </li>
+                    <li> <img src="images/slide2.jpg" alt="image" /> </li>
+                    <li> <img src="images/slide3.jpg" alt="image" /> </li>
+                    <li> <img src="images/slide4.jpg" alt="image" /> </li>
+                </ul>
+
+
+            </div>    
+            <!-- /FlexiSlider -->
+
+
+
+            
+            <!-- FlexiSlider 2-->
+            <div class="flexslider" id="slidesmall" style="position:relative; z-index:100000000">
+
+
+
+
+                <ul class="slides">
+                    <li> <img src="images/slide1_small.jpg" alt="image" /> </li>
+                    <li> <img src="images/slide2_small.jpg" alt="image" /> </li>
+                    <li> <img src="images/slide3_small.jpg" alt="image" /> </li>
+                </ul>
+
+
+            </div>
+            <!-- /FlexiSlider 2-->
+
+            <!--App Content-->
+            <div class="appcontent" id="appcontent" >
+                
+                <!--Header Content-->
+                <div id="headercontent" >
+
+                    <h4>Watch movies, series, sports and DStv Catch Up content on your tablet or smartphone</h4>
+                    <h6>Now you can enjoy show time anytime with the DStv Now app.</h6>
+
+                    <div id="call2action" >
+
+                        <div id="createid">
+                            <div class="half floatleft" >1. <a>your Connect ID ></a></div>
+                            <div class="half floatleft"><img src="images/power.png" width="70" height="70"></div>
+                        </div>
+
+
+                        <div id="downloadapp">
+                            <div class="third floatleft" >2. Download DStv Now 
+    in your app store:  </div>
+                            <div class="third floatleft"><img src="images/apple.png" width="100%" ></div>
+                            <div class="third floatleft"><img src="images/android.png"  width="100%"></div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>  
+                <!--Header Content-->
+               
+               <!--Carousel-->
+              <div id="apppreveiw" class="fullwidth">
+                <div class="fullwidth" >
+                        <h4> Take a look</h4>
+                </div>
+                
+                <!--Slides-->
+                <div id="carousel"> 
+                <!-- FlexiSlider 2-->
+            <div class="flexslider" id="#carouselslide">
+
+
+
+
+                <ul class="slides">
+                    <li> <img src="images/preview1.jpg" alt="image" /> </li>
+                    <li> <img src="images/preview1.jpg" alt="image" /> </li>
+                    <li> <img src="images/preview1.jpg" alt="image" /> </li>
+                    <li> <img src="images/preview1.jpg" alt="image" /> </li>
+                </ul>
+
+
+            </div>
+            <!-- /FlexiSlider 2-->
+                </div>
+                <!--Slides-->
+              
+              </div>
+              <!--Carousel-->
+              
+              
+              
+               <!--See all channels-->
+          <div id="allchannels" >
+
+                    <h4>Your favourite channels, anywhere, anytime</h4>
+                    <p>DStv Now puts a wide selection of channels in the palm of your hand, from SuperSport to M-Net, from KykNET to the History Channel.</p>
+
+                    <a id="comparebtn1" class="btn comparebut btn-default ">See all channels</a>
+
+
+                </div>  
+                <!--See all channels-->
+                
+                
+                
+                
+                
+                
+                <!--See all channels-->
+           <div id="explorer" >
+             <div class="half" >
+             <h4>Record your favourite shows from anywhere</h4>
+             <p>Missing the big game? With DStv Now, you can remote record to your 
+internet-enabled DStv Explora wherever you are.</p>
+             <a class="venobox" id="morebtnpackages" data-type="inline" href="#premiumpoup"><div class="panelmore" >
+               <h5><strong>Connect your DStv Explora to the internet</strong></h5>
+             </div></a>
+             </div>
+             
+             
+             
+              <div class="half" > <img src="images/decoder.png" width="90%" ></div>     
+
+                </div>  
+                <!--See all channels-->
+                
+                
+                
+                
+                 <!--Apps-->
+                  
+     <div   id="apps" >
+
+                   
+
+                    
+                        
+                         <h4 class="whitetxt">Get DStv Now in your app store:</h4>
+
+                        <div   class="fullwidth ">
+                            
+                            <div class="third floatleft"><img src="images/apple.png" width="100%" ></div>
+                            <div class="third floatleft"><img src="images/android.png"  width="100%"></div>
+
+                        </div>
+
+                   
+
+
+                </div>  
+                
+                <!--Apps-->
+                
+                <!--Terms and conditions-->
+                <div class="fullwidth" >For more info and full Terms & Conditions go to <a href="#">www.dstv.com/DStvNowTermsAndConditions</a></div>
+                <!--/Terms and conditions-->
+                     
+                     
+                     
+                     <!-- Popup-->
+            <div class="hide " style="background-color: #01598e;" id="premiumpoup">
+                <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>DStv Premium combines the best programming from across the globe with the latest in technology to create the ultimate entertainment package. With more than 80 world-class television channels and 40 CD-quality audio channels, DStv Premium gives you an unparalleled viewing experience.</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+
+
+
+            <div class="hide" id="extrapopup">
+                <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>With over 90 channels, DStv Extra brings you great entertainment that offers great value. Catch your favourite movies, series and live news with a selection of premium channels and value added services to suit every taste.</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+
+
+
+            <div class="hide" id="compactopup">
+                <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>Enjoy hundreds of programmes and thousands of stars with DStv Compact. This package comes packed with premium entertainment channels like M-Net Action, M-Net Series, Animal Planet and National Geographic channel.</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+
+
+            <div class="hide" id="familypopup">
+                 <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>With the perfect selection of hot and happening channels, DStv Family offers you more entertainment at an affordable price. Enjoy over 60 channels of movies, series and more</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+            
+            
+            <div class="hide" id="accesspopup">
+                <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>The latest addition to the DStv family, DStv Access opens up a whole new viewing experience, from movies and entertainment, news and commerce to culture and lifestyle. And all at just R99pm!</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+            
+            
+            <div class="hide" id="easyviewpopup">
+                <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>Our most affordable package, DStv EasyView lets you enjoy a selection of news, general entertainment, religious, interactive channels, shopping, and free-to-air channels, including radio stations and open weekends</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+            
+            
+            <div class="hide" id="hdpopup">
+                 <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>DStv Premium combines the best programming from across the globe with the latest in technology to create the ultimate entertainment package. With more than 80 world-class television channels and 40 CD-quality audio channels, DStv Premium gives you an unparalleled viewing experience.</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+
+
+            <div class="hide" id="explorerpopup">
+                 <div  style="padding-top:0px">
+                    <!--Heading-->
+                    <div class="row marginleftright" style="margin-bottom: 10px;">
+                        <div class=" panel-heading  txtnavy whitebg ">
+                            <h1>More</h1>
+                        </div>
+                    </div>
+                   <!--Heading-->
+                   <!--Text-->
+                   <div class="col-md-12">
+                    <p>DStv Premium combines the best programming from across the globe with the latest in technology to create the ultimate entertainment package. With more than 80 world-class television channels and 40 CD-quality audio channels, DStv Premium gives you an unparalleled viewing experience.</p>
+                    </div>
+                   <!--Text-->
+                </div>
+            </div>
+
+            <!--Popup-->
+
+                     
+                     
+      </div>
+            <!--App Content-->
+            
+            </div>
+
+        <!--Content-->    
+        
+        </div>
+       <!--Holding div-->
+
+    </div>
+    <!--Promo end-->
+    
+    
+    
+    <!-- DStv footer start -->
+    <footer>
+      <div id="DSTVFooter">
+        <div class="global_footer">
+          <div id="footer_ctrlFooter_zaFooter" class='dstv-footer-sa'>
+            <div class="siteMap">
+              <div class="contentL"> HOME <br>
+                <a href="http://www.dstv.com">DStv.com</a> <br>
+                <a target="_blank" href="http://www.supersport.com">SuperSport.com</a> <br>
+                <a href="http://boxoffice.dstv.com"></a><a href="http://boxoffice.dstv.com/">BoxOffice</a> <br>
+                <a href="http://catchup.dstv.com">Catch Up</a> <br>
+                <a href="/Channels/">Channels</a> </div>
+              <div class="contentL"> WHAT'S ON <br>
+                <a href="/guide">TV Guide</a> <br>
+                <a href="http://www.dstv.com/Highlights">Highlights</a> <br>
+                <a href="http://www.dstv.com/SubPages/DStv%20Digital%20Magazine/1151/1281">DStv Digital Magazine</a> <br>
+                <a href="http://www.dstv.com/News/Series-Calendar/326">Series Calendar</a> <br>
+                <a href="http://www.dstv.com/News/Movies%20Calendar/81051">Movies Calendar</a> <br>
+                <a href="http://www.dstv.com/News/On-Demand-PVR-Guide/73971">Catch Up PVR</a> <br>
+                <a href="http://www.dstv.com/Account/Newsletters.aspx"></a> </div>
+              <div class="contentL"> SOCIAL <br>
+                <a onClick="var s=s_gi('s_account');s.linkTrackVars='prop20,eVar40,events';s.linkTrackEvents='event14';s.prop20='facebook';s.eVar40='facebook';s.events='event14';s.tl(this,'e','facebook');" target="_blank" href="http://www.facebook.com/dstv">Facebook</a> <br>
+                <a onClick="var s=s_gi('s_account');s.linkTrackVars='prop20,eVar40,events';s.linkTrackEvents='event14';s.prop20='twitter';s.eVar40='twitter';s.events='event14';s.tl(this,'e','twitter');" target="_blank" href="http://twitter.com/dstv">Twitter</a> <br>
+                <a href="http://forum.dstv.com/index.php">Forum</a> </div>
+              <div class="contentL"> MOBILE <br>
+                <a href="http://mobi.dstv.com">mobi.dstv.com</a> <br>
+                <a href="http://www.dstv.com/mobile/broadcast/" target="_blank">DStv Mobile</a> </div>
+              <div class="contentL"> CONTACT US <br>
+                <a href="https://selfservice.dstv.com/self-service/contact-us/">Contact DStv</a> <br>
+                <a href="https://selfservice.dstv.com">Self Service</a> <br>
+                <a target="_blank" href="http://www.multichoice.co.za/multichoice/view/multichoice/en/page44245">Contact MultiChoice</a> <br>
+                <a target="_blank" href="http://www.multichoice.co.za">MultiChoice</a> <br>
+                <a target="_blank" href="http://shop.dstv.com/">Online Shop</a> </div>
+            </div>
+          </div>
+          <div id="footer_ctrlFooter_pnlSubFooter" class='dstv-footer-sa'>
+            <div class="footer_content">
+              <div class="logo"> <a href="http://www.multichoice.co.za" target="_blank"> <img alt="MultiChoice" src="images/logo_multiChoice.jpg" width="124" height="77" border="0" /> </a> </div>
+              <div class="copy"> &copy; MultiChoice (Pty) Ltd <br>
+                <a href="http://www.multichoice.co.za" target="_blank"> MultiChoice Website </a> | <a href="http://www.dstv.com/TermsAndConditions/" target="_blank"> Terms of Use </a> | <a href="http://www.dstv.com/PrivacyPolicy/" target="_blank"> Privacy Policy </a> | <a href="http://www.dstv.com/Copyright/" target="_blank"> Copyright </a> | <a href="http://www.dstv.com/Glossary/" target="_blank"> Glossary </a> | <a href="http://www.dstv.com/DStv-i/" target="_blank"> DStv-i </a> | <a href="https://selfservice.dstv.com/self-service/decoders/open-source-software" target="_blank"> Open Source </a> | <a href="http://www.dmma.co.za/" target="_blank"> DMMA </a> | <a href="http://selfservice.dstv.com/self-service/contact-us/" target="_blank"> Contact us </a> | <a href="http://www.effectivemeasure.com/privacy-policy" target="_blank"> Effective Measure </a> | <a href="http://careers.multichoice.co.za" target="_blank"> Careers </a> | </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </footer>
+    <!-- DStv footer end -->
+    <!-- jQuery Version 1.11.0 -->
+    <!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/TweenMax.js"></script>
+    <script src="js/aqua.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- DSTV Javascript --
+        <script src="js/dstv/jquery_meganav.js"></script>
+    -->
+    <script type="text/javascript">
+
+        //var api_prefix = 'http://dstvapps.dstv.com/api/';
+        //var api_suffix ='?apikey=39def06f-9f2b-4ece-bfa1-4551cca60536&c=za&l=English&o=dstv.com&p=false&d=dstv.com';
+
+        //function getContent(api_method, target_div) {
+        //$.get(api_prefix + api_method + api_suffix, function(data) {
+        //content_raw = data;
+        //$(target_div).html(content_raw);
+        //});
+        //}
+
+        //getContent('getMegaNavigation', '#dstv_meganav_main');
+        //getContent('getHeaderSection', '#dstv_meganav_search');
+
+        //$.get("http://dstvapps.dstv.com/api/getHeaderSection?apikey=39def06f-9f2b-4ece-bfa1-4551cca60536&c=za&l=English&o=dstv.com&p=false&d=dstv.com", function(data) {
+        //content_raw = data;
+        //$("#dstv_meganav_search").html(content_raw);
+        //});
+        //$.get("http://dstvapps.dstv.com/api/getMegaNavigation?apikey=39def06f-9f2b-4ece-bfa1-4551cca60536&c=za&l=english&p=false", function(data) {
+        //content_raw = data;
+        //$("#dstv_meganav_main").html(content_raw);
+        //});
+
+        var loadedData = 0;
+
+        $.ajax({
+            url: "http://dstvapps.dstv.com/api/getHeaderSection?apikey=39def06f-9f2b-4ece-bfa1-4551cca60536&c=za&l=English&o=dstv.com&p=false&d=dstv.com",
+            context: document.body
+        }).done(function(data) {
+
+            $('#dstv_meganav_search').html(data);
+            loadedData++;
+            //  console.log('DSTVHeader: ' + loadedData);
+            $.getScript( "http://cdn.dstv.com/www.dstv.com/MegaNav/Scripts/meganav.js", function( data, textStatus, jqxhr ) {});
+
+        });
+
+        $.ajax({
+            url: "http://dstvapps.dstv.com/api/getMegaNavigation?apikey=39def06f-9f2b-4ece-bfa1-4551cca60536&c=za&l=english&p=false",
+            context: document.body
+        }).done(function(data) {
+            loadedData++;
+            $('#dstv_meganav_main').html(data);
+            loadedData++;
+            //console.log('DSTVMegaNav: ' + loadedData);
+            $.getScript( "http://cdn.dstv.com/www.dstv.com/MegaNav/Scripts/meganav.js", function( data, textStatus, jqxhr ) {});
+
+        });
+
+    </script>
+
+
+</body>
+</html>

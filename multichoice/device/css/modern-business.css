@@ -1,0 +1,169 @@
+/*!
+ * Start Bootstrap - Modern Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+#extras{ width:206px; height:39px; background:url(../images/on.png);}
+#jump{ display: none;}
+/*#comparedcoder{display:none;}
+#comparepack{ display:none;}*/
+.nopaddingleftright{padding-left: 0px; padding-right: 0px;}
+.blue{ background-color: #0095dd;color:#FFF; border-color: #0095dd;}
+.lightblue{ background-color: #00aff1; color:#FFF;  border-color: #0095dd;}
+.green{ color: #a9db60 }
+.bgnavy{ background-color: #01598e; color:#FFF; padding: 10px;}
+.txtnavy{color:#01598e;}
+.txtlightblue{color:#00aff1;}
+.txtgrey{color:#ccc;}
+.bigger{ font-size: 50px;}
+.darkgrey{background-color:#a5aaaf;}
+.panel-body h4 .heading{ margin-top: -10px; margin-bottom: 0px;}
+.movedown{ margin-top: 40px;}
+.movedown10{ margin-top: 10px;}
+.paneltop{ margin-left: 10px; margin-right: 10px; min-height:350px;}
+.panelmore{ background-color:#01598e; padding: 10px 0px; color:white; min-height: 54px; }
+.panel-body{color:#005791;}
+.bump-left{padding-left:35px;}
+.bump-right{padding-right: 35px;}
+.bump-left-10{padding-left:20px;}
+.bump-right-10{padding-right:20px;}
+.radius-5{ border-radius: 5px;}
+.nomargin{ margin: 0px;}
+.bolder600 { font-weight: 700;}
+.container{ padding-bottom:30px;}
+.greenbg{ background-color: #5faeab; color: #fff;}
+.yellowbg{ background-color: #f7dc06;  color: #fff;}
+.lime{ background-color: #84b341;  color: #fff;}
+.meroon{ background-color: #c30336;  color: #fff;}
+.orange{ background-color: #d57d1c;  color: #fff;}
+.panel-body ul {list-style:inherit;}
+.panel-body ul li { margin-bottom:10px;}
+.whitebg{ background-color:#FFF; color:#01598e;}
+.fullWidthButt{ width: 100%; text-align:left;}
+.greenbgdropdown{ background-color: #5faeab; color: #fff; border: thin solid #5faeab}
+.yellowbgdropdown{ background-color: #f7dc06;  color: #fff; border: thin solid #f7dc06}
+.limebgdropdown{ background-color: #84b341;  color: #fff; border: thin solid #84b341}
+.meroonbgdropdown{ background-color: #c30336;  color: #fff;  border: thin solid #c30336}
+.orangebgdropdown{ background-color: #d57d1c;  color: #fff;  border: thin solid #d57d1c}
+.darkgreydropdown{ background-color: #a5aaaf;  color: #fff;  border: thin solid #a5aaaf}
+.bgnavydropdown{ background-color: #01598e; color:#FFF; border: thin solid #01598e}
+.smallprices{ float: right;  margin-top:7px;}
+.radius{ border-radius: 0px 0px 0px 0px;}
+.floatright{ float:right;}
+.minheight670{ min-height: 670px; background-color:#FFF;}
+.minheight604{ min-height: 604px;}
+.minheight450{ min-height: 506px;}
+.noborder{ border: none;}
+.nopaddingleft{padding-left:0px; padding-right: 0px;}
+.whitetxt{ color:#FFF;}
+.pushdown20px{ margin-top: 20px;}
+.pushdown40px{ margin-top: 30px;}
+.borderleftcolor{ border-left: #01598e thin solid;}
+.marginleftright{ margin-left:0px; margin-right:0px;}
+.open > .dropdown-menu{ margin-top:-60px;}
+.whiteborder{border: #fff solid 1px; border-top: none;}
+.whiteborderleft{border: #fff solid 1px; border-top: none; border-left: none}
+.height68{ height:67px;}
+.height69{ height:69px;}
+.padding10{padding: 10px;}
+.hide{display: none; color:#000;}
+.venobox{ color: #fff;}
+.divhide{ display:none;}
+.divshow{ display: block;}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+
+.fullWidth{ width:100%; min-height: 60px; text-align:left; font-size: 18px;}
+.noLeftPadding{ padding-right: 0px; padding-left: 0px; padding-top: 0px; padding-bottom: 0px;}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    background-color :#faf3e0;
+    height: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 0px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}

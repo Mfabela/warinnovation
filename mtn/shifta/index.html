@@ -1,0 +1,1444 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--Loading --
+<script>
+window.addEventListener("load",function(){
+var load_screen = document.getElementById("loader");
+var conatainer = document.getElementById("container");
+conatainer.removeChild(load_screen);
+});
+</script>
+<!--Loading -->
+
+
+
+<title>Shifta</title>
+<link href="css/main.css" rel="stylesheet" />
+<script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+
+<!--Slider-->
+<link href="css/jquery.nouislider.pips.css" rel="stylesheet"/>
+<script src="js/jquery.nouislider.all.js" type="text/javascript"></script>
+<!--Slider-->
+
+<!--Dropdown-->
+<link href="css/ddSlick.css" rel="stylesheet" />
+<script src="js/jquery.ddSlick.js"></script>
+<!--Dropdown-->
+<script type="text/javascript">
+
+
+
+//Image URLS
+var spongeGroup = ["img/cupcakes/sponge/vanilla.png","img/cupcakes/sponge/blue_velvet.png","img/cupcakes/sponge/red_velvet.png","img/cupcakes/sponge/chocolate.png","img/cupcakes/sponge/rainbow.png"];
+var fillingGroup = ["img/cupcakes/filling/white_chocolate.png","img/cupcakes/filling/caramel_swirl.png","img/cupcakes/filling/strawberry_swirl.png","img/cupcakes/filling/blueberries.png","img/cupcakes/filling/rainbow_bits.png"];
+var icingGroup = ["img/cupcakes/icing/cream.png","img/cupcakes/icing/strawberry.png","img/cupcakes/icing/caramel.png","img/cupcakes/icing/coffee.png","img/cupcakes/icing/bubble_gum.png"];
+var sprinklesGroup = ["img/cupcakes/sprinkles/sliver_balls.png","img/cupcakes/sprinkles/chocolate.png","img/cupcakes/sprinkles/hearts.png","img/cupcakes/sprinkles/mint_crisp.png","img/cupcakes/sprinkles/rainbow_sprinkles.png"];
+var freshGroup = ["img/cupcakes/fresh/lemon.png","img/cupcakes/fresh/mint.png","img/cupcakes/fresh/strawberry.png","img/cupcakes/fresh/cherry.png","img/cupcakes/fresh/mulberries.png"];
+var madnessGroup = ["img/cupcakes/madness/cookies.png","img/cupcakes/madness/jelly_babies.png","img/cupcakes/madness/bubble_gum.png","img/cupcakes/madness/licorice.png","img/cupcakes/madness/cheese_curl.png"];
+//Image URLS
+
+var cupCakeProps = '{"employees":[' +
+'{"backgroundimg":"img/sharesectionbg.jpg","customize":"img/customise.png","shiftyourway":"img/shiftyourway.png","filling":"img/cupcakes/filling/white_chocolate.png","icing":"img/cupcakes/icing/cream.png","sprinkles":"img/cupcakes/sprinkles/sliver_balls.png","fresh":"img/cupcakes/fresh/lemon.png","madness":"img/cupcakes/madness/cookies.png","ribbon":"img/ribbon.png" }]}';
+
+cupCakeObj = JSON.parse(cupCakeProps);
+
+
+var jsonSponge = cupCakeObj.employees[0].sponge;
+var jsonFilling = cupCakeObj.employees[0].filling;
+var jsonIcing = cupCakeObj.employees[0].icing;
+var jsonSprinkles = cupCakeObj.employees[0].sprinkles;
+var jsonFresh = cupCakeObj.employees[0].fresh;
+var jsonMadness = cupCakeObj.employees[0].madness;
+
+
+$(document).ready(function () {
+preloader();
+
+//Sliders
+slideSponge();
+slideFilling();
+slideIcing();
+slideSprinkles();
+slideFresh();
+slideMadness();
+//Sliders
+
+//Dropdown
+whatYouLike();
+whatYouLike();
+whatTheFlavor();
+whatTheIcing();
+whatTheDescription();
+bgColor();
+//Dropdown
+
+//Change Text
+dropDownClickOne();
+dropDownClickTwo();
+dropDownClickThree();
+dropDownClickFour();
+//Change Text
+
+//Change Img
+spongeImg();
+fillingImg();
+icingImg();
+spriklesImg();
+freshImg();
+madnessImg()
+//Change Img
+
+//Slide In
+slideShow();
+//Slide In
+
+
+//Color
+color();
+//Color
+
+
+//Mouse Events
+handlemouseEvents();
+//Mouse Events
+
+});
+
+
+function preloader(){
+	$("#loader").hide()
+}
+
+function slideSponge(){
+	var steps = 10;
+	 $("#sponge").noUiSlider({
+           start: [10],
+            step: steps,
+            range: {
+                'min': 0,
+				'10%': [10,20],
+				'30%': [30, 50],
+				'50%': [50, 70],
+				'70%': [70, 90],
+				'90%': [90, 100],
+                'max': 100
+            }
+   });
+   
+   setInterval(checkSpongeVal, 300);
+	 
+	//Check value function 
+   function checkSpongeVal(){
+   //Getting value 
+   var currValue;
+   var otherValue;
+   $("#sponge").Link('lower').to(function ( otherValue ) {
+   currValue = otherValue;
+   currValue = Math.floor(currValue);
+	});
+	//Getting value
+	console.log();
+	}
+	//Check value function 
+	
+}
+
+//Slider//
+function slideFilling(){
+	 $("#filling").noUiSlider({
+           start: [10],
+            step: 10,
+            range: {
+                'min': 0,
+				'10%': [10,20],
+				'30%': [30, 50],
+				'50%': [50, 70],
+				'70%': [70, 90],
+				'90%': [90, 100],
+                'max': 100
+            }
+   });
+}
+
+
+function slideIcing(){
+	 $("#icing").noUiSlider({
+            start: [10],
+            step: 10,
+            range: {
+                'min': 0,
+				'10%': [10,20],
+				'30%': [30, 50],
+				'50%': [50, 70],
+				'70%': [70, 90],
+				'90%': [90, 100],
+                'max': 100
+            }
+   });
+}
+
+
+
+function slideSprinkles(){
+	 $("#sprinkles").noUiSlider({
+            start: [10],
+            step: 10,
+            range: {
+                'min': 0,
+				'10%': [10,20],
+				'30%': [30, 50],
+				'50%': [50, 70],
+				'70%': [70, 90],
+				'90%': [90, 100],
+                'max': 100
+            }
+   });
+}
+
+function slideFresh(){
+	 $("#fresh").noUiSlider({
+            start: [10],
+            step: 10,
+            range: {
+                'min': 0,
+				'10%': [10,20],
+				'30%': [30, 50],
+				'50%': [50, 70],
+				'70%': [70, 90],
+				'90%': [90, 100],
+                'max': 100
+            }
+   });
+}
+
+
+function slideMadness(){
+	 $("#madness").noUiSlider({
+            start: [10],
+            step: 10,
+            range: {
+                'min': 0,
+				'10%': [10,20],
+				'30%': [30, 50],
+				'50%': [50, 70],
+				'70%': [70, 90],
+				'90%': [90, 100],
+                'max': 100
+            }
+   });
+}
+
+//Slider
+
+
+//Dropdown
+function whatYouLike(){
+$('#wuLike:visible').ddslick();
+}
+
+
+function whatTheFlavor(){
+$('#wtFlavor:visible').ddslick();
+}
+
+
+function whatTheIcing(){
+$('#wtIcing:visible').ddslick();
+}
+
+
+function whatTheDescription(){
+$('#wtDescription:visible').ddslick();
+}
+
+
+function bgColor(){
+//var children = $( ".dd-options" ).children().css( "background-color", "#ccc" );
+var wuLikeBg = $( "#wuLike .dd-options" ).children();
+var wtFlavor = $( "#wtFlavor .dd-options" ).children();
+var wtIcing = $( "#wtIcing .dd-options" ).children();
+var wtDescription = $( "#wtDescription .dd-options" ).children();
+
+//var children=$('.dd-options').children();
+for(var i = 1;i < wuLikeBg.length;i++){
+    wuLikeBg.eq(i).css( "background-color", "#fff" );
+	++i;
+}
+
+for(var i = 1;i < wtFlavor.length;i++){
+    wtFlavor.eq(i).css( "background-color", "#fff" );
+	++i;
+}
+
+
+for(var i = 1;i < wtIcing.length;i++){
+    wtIcing.eq(i).css( "background-color", "#fff" );
+	++i;
+}
+
+
+for(var i = 1;i < wtDescription.length;i++){
+    wtDescription.eq(i).css( "background-color", "#fff" );
+	++i;
+}
+
+}
+
+//Dropdown
+
+
+
+
+//Change Text
+var questions = ["What does it look like?","What's the flavour?","What's the icing?","Choose a description?"];
+
+function dropDownClickOne(){		
+$("#wuLike .dd-select").click(function(){
+setInterval(changeLookLike, 300);
+});
+}
+
+function dropDownClickTwo(){	
+$("#wtFlavor .dd-select").click(function(){
+setInterval(changeFlovor, 300);
+});
+}
+
+
+
+function dropDownClickThree(){	
+$("#wtIcing .dd-select").click(function(){
+setInterval(changeIcing, 300);
+});
+}
+
+
+function dropDownClickFour(){	
+$("#wtDescription .dd-select").click(function(){
+setInterval(changeDescr, 300);
+});
+}
+
+
+//Check copy
+function changeLookLike(){
+var looklike = $( "#wuLike .dd-selected-text" ).text();
+$( "#looklike" ).html( looklike );
+if(looklike == questions[0] ){
+	$( "#looklike" ).html("");
+}
+}
+
+function changeFlovor(){
+var flavor = $( "#wtFlavor .dd-selected-text" ).text();
+$( "#flavor" ).html( flavor );
+if(flavor == questions[1] ){
+	$( "#flavor" ).html("");
+}
+
+}
+
+function changeIcing(){
+var theIcing = $( "#wtIcing .dd-selected-text" ).text();
+$( "#theIcing" ).html( theIcing );
+
+if(theIcing == questions[2] ){
+	$( "#theIcing" ).html("");
+}
+}
+
+function changeDescr(){
+var theDescr = $( "#wtDescription .dd-selected-text" ).text();
+$( "#description" ).html( theDescr );
+
+if(theDescr == questions[3] ){
+	$( "#description" ).html("");
+}
+}
+//Check copy
+//Change Text
+
+
+//Change images
+
+
+
+//Sponge Image
+function spongeImg(){
+   
+   var newValue;
+   var presentValue;
+   var nextvalue;
+   
+   $( "#spongeimg" ).attr("src",spongeGroup[0]);
+	
+	//Slide events
+   $("#sponge").on({
+	slide: function(){
+		    
+			
+			
+			$("#sponge").Link('lower').to(function ( nextvalue ) {
+		      newValue = nextvalue;
+		      newValue = Math.floor( newValue);
+	         });
+			
+			 if(newValue ==10){
+				 $( "#spongeimg" ).attr("src",spongeGroup[0]);
+				 $( "#sponge .tooltip" ).addClass("hiddentooltip");
+				 $( "#sponge  .one" ).addClass("currenttooltip");
+				 $( "#sponge  .one" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sponge = spongeGroup[0];
+				 console.log(cupCakeObj.employees[0].sponge);
+				 
+				 //Change Text
+				 var spongeOne = $( "#sponge .one" ).attr("title");
+                 $( "#flavor" ).html(spongeOne);
+				 $( "#wtFlavor .dd-selected-text" ).html(spongeOne);
+				 $( "#wtFlavor .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+			  }
+			  
+			   if(newValue ==30){
+				 $( "#spongeimg" ).attr("src",spongeGroup[1]);
+				 $( "#sponge .tooltip" ).addClass("hiddentooltip");
+				 $( "#sponge  .two" ).addClass("currenttooltip");
+				 $( "#sponge  .two" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sponge = spongeGroup[1];
+				 console.log(cupCakeObj.employees[0].sponge);
+				 
+				 //Change Text
+				 var spongeTwo = $( "#sponge .two" ).attr("title");
+                 $( "#flavor" ).html(spongeTwo);
+				 $( "#wtFlavor .dd-selected-text" ).html(spongeTwo);
+				 $( "#wtFlavor .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+				 
+			  }
+			  
+			   if(newValue==50){
+				 $( "#spongeimg" ).attr("src",spongeGroup[2]);
+				 $( "#sponge .tooltip" ).addClass("hiddentooltip");
+				 $( "#sponge  .three" ).addClass("currenttooltip");
+				 $( "#sponge  .three" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sponge = spongeGroup[2];
+				 console.log(cupCakeObj.employees[0].sponge);
+				 
+				  //Change Text
+				 var spongeThree = $( "#sponge .three" ).attr("title");
+                 $( "#flavor" ).html(spongeThree);
+				 $( "#wtFlavor .dd-selected-text" ).html(spongeThree);
+				 $( "#wtFlavor .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+				 
+			  }
+			  
+			  if(newValue==70){
+				 $( "#spongeimg" ).attr("src",spongeGroup[3]);
+				  $( "#sponge .tooltip" ).addClass("hiddentooltip");
+				 $( "#sponge  .four" ).addClass("currenttooltip");
+				 $( "#sponge  .four" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sponge = spongeGroup[3];
+				 console.log(cupCakeObj.employees[0].sponge);
+				 
+				 //Change Text
+				 var spongeFour = $( "#sponge .four" ).attr("title");
+                 $( "#flavor" ).html(spongeFour);
+				 $( "#wtFlavor .dd-selected-text" ).html(spongeFour);
+				 $( "#wtFlavor .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+				
+			  }
+			  
+			  if(newValue==90){
+				 $( "#spongeimg" ).attr("src",spongeGroup[4]);
+				  $( "#sponge .tooltip" ).addClass("hiddentooltip");
+				 $( "#sponge  .five" ).addClass("currenttooltip");
+				 $( "#sponge  .five" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sponge = spongeGroup[4];
+				 console.log(cupCakeObj.employees[0].sponge);
+				 
+				 //Change Text
+				 var spongeFive = $( "#sponge .five" ).attr("title");
+                 $( "#flavor" ).html(spongeFive);
+				 $( "#wtFlavor .dd-selected-text" ).html(spongeFive);
+				 $( "#wtFlavor .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+				 
+			  }
+			  
+			  
+    	},
+    });
+	//Slide events
+	
+	
+}
+//Sponge Image
+
+function fillingImg(){
+   var newValue;
+   
+   var presentValue;
+   
+	$( "#fillingimg" ).attr("src",fillingGroup[0]);
+	
+	//Slide events
+   $("#filling").on({
+	slide: function(){
+			newValue;
+			$("#filling").Link('lower').to(function ( nextvalue ) {
+		      newValue = nextvalue;
+		      newValue = Math.floor( newValue);
+	         });
+			
+			 if(newValue ==10){
+				 $( "#fillingimg" ).attr("src",fillingGroup[0]);
+				 $( "#filling .tooltip" ).addClass("hiddentooltip");
+				 $( "#filling  .one" ).addClass("currenttooltip");
+				 $( "#filling  .one" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].filling = fillingGroup[0];
+				 console.log(cupCakeObj.employees[0].filling);
+				 
+			  }
+			  
+			   if(newValue ==30){
+				 $( "#fillingimg" ).attr("src",fillingGroup[1]);
+				 $( "#filling .tooltip" ).addClass("hiddentooltip");
+				 $( "#filling  .two" ).addClass("currenttooltip");
+				 $( "#filling  .two" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].filling = fillingGroup[1];
+				 console.log(cupCakeObj.employees[0].filling);
+				 
+			  }
+			  
+			   if(newValue==50){
+				 $( "#fillingimg" ).attr("src",fillingGroup[2]);
+				 $( "#filling .tooltip" ).addClass("hiddentooltip");
+				 $( "#filling  .three" ).addClass("currenttooltip");
+				 $( "#filling  .three" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].filling = fillingGroup[2];
+				 console.log(cupCakeObj.employees[0].filling);
+				 
+			  }
+			  
+			  if(newValue==70){
+				 $( "#fillingimg" ).attr("src",fillingGroup[3]);
+				 $( "#filling .tooltip" ).addClass("hiddentooltip");
+				 $( "#filling  .four" ).addClass("currenttooltip");
+				 $( "#filling  .four" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].filling = fillingGroup[3];
+				 console.log(cupCakeObj.employees[0].filling);
+				 
+			  }
+			  
+			  if(newValue==90){
+				 $( "#fillingimg" ).attr("src",fillingGroup[4]);
+				 $( "#filling .tooltip" ).addClass("hiddentooltip");
+				 $( "#filling  .five" ).addClass("currenttooltip");
+				 $( "#filling  .five" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].filling = fillingGroup[4];
+				 console.log(cupCakeObj.employees[0].filling);
+				 
+			  }
+    	},
+    });
+	//Slide events
+}
+
+function icingImg(){
+	
+	var newValue;
+    var presentValue;
+	
+	$( "#icingimg" ).attr("src",icingGroup[0]);
+	
+	//Slide events
+   $("#icing").on({
+	slide: function(){
+			newValue;
+			$("#icing").Link('lower').to(function ( nextvalue ) {
+		      newValue = nextvalue;
+		      newValue = Math.floor( newValue);
+	         });
+			
+			 if(newValue ==10){
+				 $( "#icingimg" ).attr("src",icingGroup[0]);
+				 $( "#icing .tooltip" ).addClass("hiddentooltip");
+				 $( "#icing  .one" ).addClass("currenttooltip");
+				 $( "#icing  .one" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].icing = icingGroup[0];
+				 console.log(cupCakeObj.employees[0].icing);
+				 
+				 //Change Text
+				 var icingOne = $( "#icing .one" ).attr("title");
+                 $( "#theIcing" ).html(icingOne);
+				 $( "#wtIcing .dd-selected-text" ).html(icingOne);
+				 $( "#wtIcing .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+				 
+			  }
+			  
+			   if(newValue ==30){
+				 $( "#icingimg" ).attr("src",icingGroup[1]);
+				 $( "#icing .tooltip" ).addClass("hiddentooltip");
+				 $( "#icing  .two" ).addClass("currenttooltip");
+				 $( "#icing  .two" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].icing = icingGroup[1];
+				 console.log(cupCakeObj.employees[0].icing);
+				 
+				 //Change Text
+				 var icingTwo = $( "#icing .two" ).attr("title");
+                 $( "#theIcing" ).html(icingTwo);
+				 $( "#wtIcing .dd-selected-text" ).html(icingTwo);
+				 $( "#wtIcing .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+				
+			  }
+			  
+			   if(newValue==50){
+				 $( "#icingimg" ).attr("src",icingGroup[2]);
+				 $( "#icing .tooltip" ).addClass("hiddentooltip");
+				 $( "#icing  .three" ).addClass("currenttooltip");
+				 $( "#icing  .three" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].icing = icingGroup[2];
+				 console.log(cupCakeObj.employees[0].icing);
+				 
+				 //Change Text
+				 var icingThree = $( "#icing .three" ).attr("title");
+                 $( "#theIcing" ).html(icingThree);
+				 $( "#wtIcing .dd-selected-text" ).html(icingThree);
+				 $( "#wtIcing .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+			  }
+			  
+			  if(newValue==70){
+				 $( "#icingimg" ).attr("src",icingGroup[3]);
+				 $( "#icing .tooltip" ).addClass("hiddentooltip");
+				 $( "#icing  .four" ).addClass("currenttooltip");
+				 $( "#icing  .four" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].icing = icingGroup[3];
+				 console.log(cupCakeObj.employees[0].icing);
+				 
+				 //Change Text
+				 var icingFour = $( "#icing .four" ).attr("title");
+                 $( "#theIcing" ).html(icingFour);
+				  $( "#wtIcing .dd-selected-text" ).html(icingFour);
+				  $( "#wtIcing .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+			  }
+			  
+			  if(newValue==90){
+				 $( "#icingimg" ).attr("src",icingGroup[4]);
+				 $( "#icing .tooltip" ).addClass("hiddentooltip");
+				 $( "#icing  .five" ).addClass("currenttooltip");
+				 $( "#icing  .five" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].icing = icingGroup[4];
+				 console.log(cupCakeObj.employees[0].icing);
+				 
+				 //Change Text
+				 var icingFive = $( "#icing .five" ).attr("title");
+                 $( "#theIcing" ).html(icingFive);
+				 $( "#wtIcing .dd-selected-text" ).html(icingFive);
+				 $( "#wtIcing .dd-selected-text" ).attr("style","color:#00B7F9");
+				 //Change Text
+			  }
+    	},
+    });
+	//Slide events
+	
+}
+
+function spriklesImg(){
+	
+	var newValue;
+   var presentValue;
+	
+	$( "#sprinlesimg" ).attr("src",sprinklesGroup[0]);
+	
+	
+	//Slide events
+   $("#sprinkles").on({
+	slide: function(){
+		    
+			newValue;
+			$("#sprinkles").Link('lower').to(function ( nextvalue ) {
+		      newValue = nextvalue;
+		      newValue = Math.floor( newValue);
+	         });
+			
+			 if(newValue ==10){
+				 $( "#sprinklesimg" ).attr("src",sprinklesGroup[0]);
+				 $( "#sprinkles .tooltip" ).addClass("hiddentooltip");
+				 $( "#sprinkles  .one" ).addClass("currenttooltip");
+				 $( "#sprinkles  .one" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sprinkles = sprinklesGroup[0];
+				 
+				 
+				 
+			  }
+			  
+			   if(newValue ==30){
+				 $( "#sprinklesimg" ).attr("src",sprinklesGroup[1]);
+				 $( "#sprinkles .tooltip" ).addClass("hiddentooltip");
+				 $( "#sprinkles  .two" ).addClass("currenttooltip");
+				 $( "#sprinkles  .two" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sprinkles = sprinklesGroup[1];
+			  }
+			  
+			   if(newValue==50){
+				 $( "#sprinklesimg" ).attr("src",sprinklesGroup[2]);
+				 $( "#sprinkles .tooltip" ).addClass("hiddentooltip");
+				 $( "#sprinkles  .three" ).addClass("currenttooltip");
+				 $( "#sprinkles  .three" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sprinkles = sprinklesGroup[2];
+			  }
+			  
+			  if(newValue==70){
+				 $( "#sprinklesimg" ).attr("src",sprinklesGroup[3]);
+				 $( "#sprinkles .tooltip" ).addClass("hiddentooltip");
+				 $( "#sprinkles  .four" ).addClass("currenttooltip");
+				 $( "#sprinkles  .four" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sprinkles = sprinklesGroup[3];
+			  }
+			  
+			  if(newValue==90){
+				 $( "#sprinklesimg" ).attr("src",sprinklesGroup[4]);
+				 $( "#sprinkles .tooltip" ).addClass("hiddentooltip");
+				 $( "#sprinkles  .five" ).addClass("currenttooltip");
+				 $( "#sprinkles  .five" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].sprinkles = sprinklesGroup[4];
+			  }
+			  
+			  
+			  
+			  
+    	},
+    });
+	//Slide events
+}
+
+function freshImg(){
+	var newValue;
+   var presentValue;
+	
+	$( "#freshimg" ).attr("src",freshGroup[0]);
+	
+	//Slide events
+   $("#fresh").on({
+	slide: function(){
+		    
+			newValue;
+			$("#fresh").Link('lower').to(function ( nextvalue ) {
+		      newValue = nextvalue;
+		      newValue = Math.floor( newValue);
+			  
+			  jsonSprinkles = sprinklesGroup[4];
+			  console.log(jsonSprinkles);
+	         });
+			
+			 if(newValue ==10){
+				 $( "#freshimg" ).attr("src",freshGroup[0]);
+				 $( "#fresh .tooltip" ).addClass("hiddentooltip");
+				 $( "#fresh  .one" ).addClass("currenttooltip");
+				 $( "#fresh  .one" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].fresh = freshGroup[0];
+			  }
+			  
+			   if(newValue ==30){
+				 $( "#freshimg" ).attr("src",freshGroup[1]);
+				 $( "#fresh .tooltip" ).addClass("hiddentooltip");
+				 $( "#fresh  .two" ).addClass("currenttooltip");
+				 $( "#fresh  .two" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].fresh = freshGroup[1];
+			  }
+			  
+			   if(newValue==50){
+				 $( "#freshimg" ).attr("src",freshGroup[2]);
+				 $( "#fresh .tooltip" ).addClass("hiddentooltip");
+				 $( "#fresh  .three" ).addClass("currenttooltip");
+				 $( "#fresh  .three" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].fresh = freshGroup[2];
+			  }
+			  
+			  if(newValue==70){
+				 $( "#freshimg" ).attr("src",freshGroup[3]);
+				 $( "#fresh .tooltip" ).addClass("hiddentooltip");
+				 $( "#fresh  .four" ).addClass("currenttooltip");
+				 $( "#fresh  .four" ).removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].fresh = freshGroup[3];
+			  }
+			  
+			  if(newValue==90){
+				 $( "#freshimg" ).attr("src",freshGroup[4]);
+				 $( "#fresh .tooltip" ).addClass("hiddentooltip");
+				 $( "#fresh  .five" ).addClass("currenttooltip");
+				 $( "#fresh  .five" ).removeClass("hiddentooltip");
+				  /* $( "#madness .tooltip").addClass("hiddentooltip");
+				 $( "#madness  .five").addClass("currenttooltip");
+				 $( "#madness  .five").removeClass("hiddentooltip");*/
+				 cupCakeObj.employees[0].fresh = freshGroup[4];
+			  }
+    	},
+    });
+	//Slide events
+}
+
+function madnessImg(){
+	
+	var newValue;
+   var presentValue;
+	
+	$( "#madnessimg" ).attr("src",madnessGroup[0]);
+	
+   //Slide events
+   $("#madness").on({
+	slide: function(){
+		   
+			newValue;
+			$("#madness").Link('lower').to(function ( nextvalue ) {
+		      newValue = nextvalue;
+		      newValue = Math.floor( newValue);
+	         });
+			
+			 if(newValue ==10){
+				 $( "#madnessimg" ).attr("src",madnessGroup[0]);
+				 $( "#madness .tooltip").addClass("hiddentooltip");
+				 $( "#madness  .one").addClass("currenttooltip");
+				 $( "#madness  .one").removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].madness = madnessGroup[0];
+				 
+			  }
+			  
+			   if(newValue ==30){
+				 $( "#madnessimg" ).attr("src",madnessGroup[1]);
+				 $( "#madness .tooltip").addClass("hiddentooltip");
+				 $( "#madness  .two").addClass("currenttooltip");
+				 $( "#madness  .two").removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].madness = madnessGroup[1];
+			  }
+			  
+			   if(newValue==50){
+				 $( "#madnessimg").attr("src",madnessGroup[2]);
+				 $( "#madness .tooltip").addClass("hiddentooltip");
+				 $( "#madness  .three").addClass("currenttooltip");
+				 $( "#madness  .three").removeClass("hiddentooltip");
+				 jsonMadness = madnessGroup[2];
+				 console.log(jsonMadness);
+			  }
+			  
+			  if(newValue==70){
+				 $( "#madnessimg" ).attr("src",madnessGroup[3]);
+				 $( "#madness .tooltip").addClass("hiddentooltip");
+				 $( "#madness  .four").addClass("currenttooltip");
+				 $( "#madness  .four").removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].madness = madnessGroup[3];
+			  }
+			  
+			  if(newValue==90){
+				 $( "#madnessimg" ).attr("src",madnessGroup[4]);
+				 $( "#madness .tooltip").addClass("hiddentooltip");
+				 $( "#madness  .five").addClass("currenttooltip");
+				 $( "#madness  .five").removeClass("hiddentooltip");
+				 cupCakeObj.employees[0].madness = (madnessGroup[4]);
+				 console.log("     Sponge: " +cupCakeObj.employees[0].sponge + "    Filling: "+ cupCakeObj.employees[0].filling + "     Icing: " + cupCakeObj.employees[0].icing + "     Sprinkles:  "+  cupCakeObj.employees[0].sprinkles + "    Fresh: " + cupCakeObj.employees[0].fresh + "    Madness: " + cupCakeObj.employees[0].madness);
+			  }
+    	},
+    });
+	//Slide events
+	
+}
+//Change images
+
+
+//Slidein
+function slideShow(){
+	$("#rightBasics").click(function(){
+	 /*$(".cupCakeOptions").animate({left: "600px"});*/
+	 $(".cupCakeOptions").animate({left: "-654px"});
+	 /*alert("Hello");*/
+	 $(".moreopimg").show();
+     });
+	 
+	 $("#leftBasics").click(function(){
+	 /*$(".cupCakeOptions").animate({left: "600px"});*/
+	// $(".cupCakeOptions").animate({left: "0px"});
+	 /*alert("Hello");*/
+	 $(".cupCakeOptions").animate({left: "-1308px"});
+     });
+	 
+	 
+	 $("#rightChoose").click(function(){
+	 /*$(".cupCakeOptions").animate({left: "600px"});*/
+	 $(".cupCakeOptions").animate({left: "-1308px"});
+	 $("#hooray").show();
+	 setTimeout(function(){ $("#hooray").remove(); }, 7000);
+	 $(".ribbon").attr("style","display:block");
+	 /*alert("Hello");*/
+	 
+	 $("#leftBasics").show();
+	 $("#leftDisabled").hide();
+	 
+     });
+	 
+	 
+	 $("#leftChoose").click(function(){
+	 /*$(".cupCakeOptions").animate({left: "600px"});*/
+	 $(".cupCakeOptions").animate({left: "0px"});
+	 
+	 
+	 /*alert("Hello");*/
+	  
+     });
+	 
+	 
+	 $("#rightCreation").click(function(){
+	 /*$(".cupCakeOptions").animate({left: "600px"});*/
+	 $(".cupCakeOptions").animate({left: "0px"});
+	 /*alert("Hello");*/
+     });
+	 
+	 
+	 $("#leftCreation").click(function(){
+	 /*$(".cupCakeOptions").animate({left: "600px"});*/
+	 $(".cupCakeOptions").animate({left: "-654px"});
+	 /*alert("Hello");*/
+	 $(".ribbon").attr("style","display:none");
+     });
+	 
+	 
+}
+//Slidein
+
+
+
+//Mouse handle
+	/*var hoverValue;
+	var hovernextValue;
+	$("#sponge").Link('lower').to(function ( hovernextValue ) {
+		      hoverValue = hovernextValue;
+		      hoverValue = Math.floor( hoverValue);
+	 });
+	
+	
+  if(hoverValue==10){ 
+	setInterval(function(){ handlemouseOver("#sponge .noUi-handle","#sponge  .one"); }, 300);
+	setInterval(function(){ handlemouseOut("#sponge .noUi-handle","#sponge  .one"); }, 300);
+	
+	}
+	
+	if(hoverValue>10){ 
+	setInterval(function(){ handlemouseOver("#sponge .noUi-handle","#sponge  .two"); }, 300);
+	setInterval(function(){ handlemouseOut("#sponge .noUi-handle","#sponge .two"); }, 300);
+	}*/
+	//Mouse handle
+
+
+//Mouseover
+function handlemouseEvents(){
+	
+//Sponge	
+$("#sponge .noUi-handle").mouseover(
+function (){
+$("#sponge .currenttooltip").show();
+}
+)
+
+
+$("#sponge .noUi-handle").mouseout(
+function (){
+$("#sponge .currenttooltip").hide();
+}
+)
+//Sponge
+
+
+
+//Filling
+$("#filling .noUi-handle").mouseover(
+function (){
+$("#filling .currenttooltip").show();
+}
+)
+
+
+$("#filling .noUi-handle").mouseout(
+function (){
+$("#filling .currenttooltip").hide();
+}
+)
+//Filling
+
+
+
+//Icing
+$("#icing .noUi-handle").mouseover(
+function (){
+$("#icing .currenttooltip").show();
+}
+)
+
+
+$("#icing .noUi-handle").mouseout(
+function (){
+$("#icing .currenttooltip").hide();
+}
+)
+//Icing
+
+
+
+
+//Sprinkles
+$("#sprinkles .noUi-handle").mouseover(
+function (){
+$("#sprinkles .currenttooltip").show();
+}
+)
+
+
+$("#sprinkles .noUi-handle").mouseout(
+function (){
+$("#sprinkles .currenttooltip").hide();
+}
+)
+//Sprinkles
+
+
+
+//Fresh
+$("#fresh .noUi-handle").mouseover(
+function (){
+$("#fresh .currenttooltip").show();
+}
+)
+
+
+$("#fresh .noUi-handle").mouseout(
+function (){
+$("#fresh .currenttooltip").hide();
+}
+)
+//Fresh
+
+
+
+//Madness
+$("#madness .noUi-handle").mouseover(
+function (){
+$("#madness .currenttooltip").show();
+}
+)
+
+
+$("#madness .noUi-handle").mouseout(
+function (){
+$("#madness .currenttooltip").hide();
+}
+)
+//Madness
+
+
+
+
+}
+//Mouseover
+
+
+
+
+/*//Mouseout
+function handlemouseOut(){
+
+
+
+}
+//Mouseout*/
+
+function color(){
+
+$( "#wuLike .dd-options" ).click(
+function(){
+	$("#wuLike .dd-selected-text" ).attr("style","color:#00B7F9");
+	}
+);
+
+
+$( "#wtFlavor .dd-options" ).click(
+function(){
+	$("#wtFlavor .dd-selected-text" ).attr("style","color:#00B7F9");
+	}
+);
+
+
+$( "#wtIcing .dd-options" ).click(
+function(){
+	$("#wtIcing .dd-selected-text" ).attr("style","color:#00B7F9");
+	}
+);
+
+
+$( "#wtDescription .dd-options" ).click(
+function(){
+	$("#wtDescription .dd-selected-text" ).attr("style","color:#00B7F9");
+	}
+);
+
+
+
+}
+</script>
+</head>
+<body>
+
+
+<!--Container-->
+<div class="container" id="container">
+
+<!--Loader-->
+<div  id="loader"><img src="img/pre-loader.gif" height="90" width="90" /></div>
+<!--Loader-->
+
+<!--Share Section -->
+<div class="shareSection">
+
+<div class="shiftYourWay">
+  <img src="img/shiftyourway.png" width="397" height="325" alt="ShiftYourWay">
+ </div>
+
+<div class="customizeYourCupCake">
+   <img src="img/customise.png" >
+</div>
+<div class="cupCakes">
+  <!--Cup-->
+  <img id="cupimg" src="img/cupcakes/cup/cup.png" width="654" height="431">
+  <!--/Cup-->
+  <!--Sprinkles-->
+  <img id="sprinklesimg" class="moreopimg" src="img/cupcakes/sprinkles/chocolate.png" width="654" height="431">
+  <!--/Sprinkles-->
+  <!--Icing-->
+  <img id="icingimg" src="img/cupcakes/icing/cream.png" width="654" height="431">
+  <!--/Icing-->
+  <!--Fresh-->
+  <img id="freshimg" class="moreopimg" src="img/cupcakes/fresh/lemon.png" width="654" height="431">
+  <!--/Fresh-->
+  <!--Filling-->
+  <img id="fillingimg" src='img/cupcakes/filling/white_chocolate.png' width="654" height="431">
+  <!--Filling-->
+  <!--Madness-->
+  <img id="madnessimg" class="moreopimg" src="img/cupcakes/madness/jelly_babies.png" width="654" height="431">
+  <!--/Madness-->
+  <!--Sponge-->
+  <img id="spongeimg" src="img/cupcakes/sponge/vanilla.png" width="654" height="431">
+  <!--/Sponge-->
+  
+  <!--hooray-->
+  <div id="hooray">
+    <img src="img/hooray.gif" width="300" height="200" alt="Hooray">
+   </div>
+  <!--/hooray-->
+  
+  <div class="ribbon">
+  <div class="summaryText">
+    the <span id="looklike"></span>
+   
+    <span id="flavor">chocolate</span>
+     and<br />
+    <span id="theIcing">Bubblegum</span> 
+    <span id="description">cupcake</span>
+  </div>
+  </div>
+</div>
+
+</div>
+<!--/Share Section -->
+<!--Cup cake holder -->
+<div id="slidersHolder">
+<!--cupCakeOptions-->
+<div class="cupCakeOptions">
+
+<!--Slide1 - Choose Basics -->
+<div class="slidez" id="basics">
+
+<!--Title-->
+<div class="sliderTop">
+<div class="leftControl" id="leftBasics">
+</div>
+
+<div  id="leftDisabled">
+</div>
+
+<div class="sliderTitle">
+<img src="img/sliderone/slide1title.png" width="405" height="65" alt="Choose The Basics">
+</div>
+<div class="rightControl" id="rightBasics">
+</div>
+</div>
+<!--Title-->
+
+<!--Slide Controls Sponge-->
+<div class="sliderControls">
+<div class="sliderz" id="sponge">
+<!--Tooltips-->
+<div class="tooltips">
+<div class="tooltip one currenttooltip" title="Vanilla">vanilla</div>
+<div class="tooltip two" title="Blue velvet">blue velvet</div>
+<div class="tooltip three" title="Red velvet">red velvet</div>
+<div class="tooltip four" title="Chocolate">chocolate</div>
+<div class="tooltip five" title="Rainbow">rainbow</div>
+</div>
+<!--Tooltips-->
+</div>
+<div class="slidezTitle" ><img src="img/sliderone/sponge.png" width="585" height="57" alt="Sponge"></div>
+</div>
+<!--/Slide Controls Sponge-->
+
+<!--Slide Controls Filling-->
+<div class="sliderControls">
+<div class="sliderz"  id="filling">
+<!--Tooltips-->
+<div class="tooltips">
+<div class="tooltip one currenttooltip" title="White chocolate">white chocolate</div>
+<div class="tooltip two" title="Caramel swirl">caramel swirl</div>
+<div class="tooltip three" title="Strawberry swirl">strawberry swirl</div>
+<div class="tooltip four" title="Blueberries">blueberries</div>
+<div class="tooltip five" title="Rainbow bits">rainbow bits</div>
+</div>
+<!--Tooltips-->
+</div>
+<div class="slidezTitle" ><img src="img/sliderone/filling.png" width="585" height="57" alt="Sponge"></div>
+</div>
+<!--/Slide Controls Filling-->
+
+
+<!--Slide Controls Ice-->
+<div class="sliderControls">
+<div class="sliderz"  id="icing">
+<!--Tooltips-->
+<div class="tooltips">
+<div class="tooltip one currenttooltip" title="Cream">cream</div>
+<div class="tooltip two" title="Strawberry">strawberry</div>
+<div class="tooltip three" title="Caramel">caramel</div>
+<div class="tooltip four" title="Coffee">coffee</div>
+<div class="tooltip five" title="Bubblegum">bubblegum</div>
+</div>
+<!--Tooltips-->
+</div>
+<div class="slidezTitle" ><img src="img/sliderone/icing.png" width="585" alt="Sponge"></div>
+</div>
+<!--/Slide Controls Ice-->
+
+
+</div>
+<!--/Slide1 - Choose Basics -->
+
+
+
+<!--Slide2 - Choose Toppings -->
+<div class="slidez" id="toppings">
+
+<!--Title-->
+<div class="sliderTop">
+<div class="leftControl" id="leftChoose">
+</div>
+<div class="sliderTitle">
+<img src="img/slidertwo/slide2title.png" width="405" height="65" alt="Choose The Basics">
+</div>
+<div class="rightControl" id="rightChoose">
+</div>
+</div>
+<!--Title-->
+
+<!--Slide Controls Sponge-->
+<div class="sliderControls">
+<div class="sliderz" id="sprinkles">
+<!--Tooltips-->
+<div class="tooltips">
+<div class="tooltip one currenttooltip">silver balls</div>
+<div class="tooltip two">chocolate</div>
+<div class="tooltip three">hearts</div>
+<div class="tooltip four">mint crisp</div>
+<div class="tooltip five">rainbow</div>
+</div>
+<!--Tooltips-->
+</div>
+<div class="slidezTitle" ><img src="img/slidertwo/sprinkles.png" width="585" height="57" alt="Sponge"></div>
+</div>
+<!--/Slide Controls Sponge-->
+
+<!--Slide Controls Filling-->
+<div class="sliderControls">
+<div class="sliderz"  id="fresh">
+<!--Tooltips-->
+<div class="tooltips">
+<div class="tooltip one currenttooltip">lemon slices</div>
+<div class="tooltip two">mint</div>
+<div class="tooltip three">strawberry</div>
+<div class="tooltip four">cherry</div>
+<div class="tooltip five">mulberries</div>
+</div>
+<!--Tooltips-->
+</div>
+<div class="slidezTitle" ><img src="img/slidertwo/fresh.png" width="585" height="57" alt="Sponge"></div>
+</div>
+<!--/Slide Controls Filling-->
+
+
+<!--Slide Controls Ice-->
+<div class="sliderControls">
+<div class="sliderz"  id="madness">
+<!--Tooltips-->
+<div class="tooltips">
+<div class="tooltip one currenttooltip">cookies</div>
+<div class="tooltip two">jelly babies</div>
+<div class="tooltip three">bubble-gum</div>
+<div class="tooltip four">licorice</div>
+<div class="tooltip five">cheese curl</div>
+</div>
+<!--Tooltips-->
+</div>
+<div class="slidezTitle" ><img src="img/slidertwo/madness.png" width="585" alt="Sponge"></div>
+</div>
+<!--/Slide Controls Ice-->
+
+
+</div>
+<!--/Slide2 - Choose Toppings -->
+
+
+
+
+<!--Slide3 - Name Creation -->
+<div class="slidez" id="creation">
+
+<!--Title-->
+<div class="sliderTop">
+<div class="leftControl" id="leftCreation">
+</div>
+<div class="sliderTitle">
+<img src="img/namecreation/namecreation.png" width="405" height="65" alt="Choose The Basics">
+</div>
+<div class="rightControl" id="rightCreation">
+</div>
+</div>
+<!--Title-->
+
+<!--Creation Controls-->
+<div class="creationControls">
+<div class="sliderz" id="sprinkles">
+<select class="filterdropdown" id="wuLike">
+                <option  class="filterdropdownoption" value="volvo">What does it look like?</option>
+                <option  class="filterdropdownoption" value="volvo">Sparkly</option>
+                <option  class="filterdropdownoption" value="volvo">Sunshine</option>
+                <option  class="filterdropdownoption" value="volvo">Scrumptious</option>
+                <option  class="filterdropdownoption" value="volvo">Refreshing</option>
+                <option  class="filterdropdownoption" value="volvo">Sensational</option>
+                <option  class="filterdropdownoption" value="volvo">Wonderful</option>
+                <option  class="filterdropdownoption" value="volvo">Amazing</option>
+                <option  class="filterdropdownoption" value="volvo">Devilishly good</option>
+                <option  class="filterdropdownoption" value="volvo">Yummy</option>
+</select>
+
+
+<select class="filterdropdown" id="wtFlavor">
+                <option  class="filterdropdownoption" value="volvo">What's the flavour?</option>
+                <option  class="filterdropdownoption" value="volvo">Vanilla</option>
+                <option  class="filterdropdownoption" value="volvo">Red velvet</option>
+                <option  class="filterdropdownoption" value="volvo">Chocolate</option>
+                <option  class="filterdropdownoption" value="volvo">Rainbow</option>
+</select>
+
+
+<select class="filterdropdown" id="wtIcing">
+                <option  class="filterdropdownoption" value="volvo">What's the icing?</option>
+                <option  class="filterdropdownoption" value="volvo">Cream</option>
+                <option  class="filterdropdownoption" value="volvo">Strawberry</option>
+                <option  class="filterdropdownoption" value="volvo">Coffee</option>
+                <option  class="filterdropdownoption" value="volvo">Caramel</option>
+                <option  class="filterdropdownoption" value="volvo">Bubblegum</option>
+</select>
+
+
+<select class="filterdropdown" id="wtDescription">
+                <option  class="filterdropdownoption" value="volvo">Choose a description?</option>
+                <option  class="filterdropdownoption" value="volvo">Bonanza </option>
+                <option  class="filterdropdownoption" value="volvo">Extravaganza </option>
+                <option  class="filterdropdownoption" value="volvo">Surprise</option>
+                <option  class="filterdropdownoption" value="volvo">Masterpiece</option>
+                <option  class="filterdropdownoption" value="volvo">Inspiration</option>
+                <option  class="filterdropdownoption" value="volvo">Delight</option>
+                <option  class="filterdropdownoption" value="volvo">Burst </option>
+                <option  class="filterdropdownoption" value="volvo">Fantasy</option>
+                <option  class="filterdropdownoption" value="volvo">Classic</option>
+                <option  class="filterdropdownoption" value="volvo">Specialty</option>
+</select>
+
+
+
+</div>
+
+</div>
+<!--/Creation Controls-->
+
+<!--Looks Nice-->
+<div class="looksnice">
+  <img src="img/cupcakelooksgreat.png" width="597" height="82">
+  </div>
+<!--Looks Nice -->
+
+<!--hash-->
+<div class="hashshiftyourway">
+  <a href="#" title="Shift_Your_Way" target="_blank"><img src="img/shiftyourway_hash.png" width="178" height="31"></a>
+ </div>
+<!--hash-->
+
+
+
+<!--CTA-->
+<a href="#" title="Shift_Your_Way" target="_blank">
+<div class="cta">
+  
+ </div>
+ </a>
+<!--CTA-->
+
+<!--Line-->
+<div class="line">
+  <a href="#" title="Shift_Your_Way" target="_blank"><img src="img/line.png" ></a>
+</div>
+<!--Line-->
+
+
+<!--Share-->
+<div class="share">
+  <img src="img/share_your_cupcake.png" width="192" height="38">
+</div>
+<!--Share-->
+
+<!--Social-->
+<div class="social">
+  <a href="#" target="_blank"><div class="facebook"></div></a>
+  <a href="#" target="_blank"><div class="twitter"></div></a>
+</div>
+<!--/Social-->
+
+</div>
+<!--/Slide3 - Name Creation -->
+
+
+
+
+</div>
+<!--cupCakeOptions-->
+
+</div>
+<!--Cup cake holder -->
+
+</div>
+<!--/Container -->
+</body>
+</html>

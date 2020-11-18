@@ -1,0 +1,942 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ShareACoke.FrontEnd.Index" %>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI, Version=2013.1.220.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4" %>
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1.0" />
+
+
+
+
+    <link rel="icon" type="image/png" href="http://www.coke.co.za/pages/common/favicon.ico" />
+    <title>Coca-Cola | Share a Coke</title>
+
+    <link href="css/styles.css?v=2" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css?v=2" rel="stylesheet" />
+    <link href="css/names.css?v=2" rel="stylesheet" />
+    <link href="css/colorbox.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.spritespin.js"></script>
+    <script type="text/javascript" src="js/jquery.tinycarousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fs.selecter.js"></script>
+    <script type="text/javascript" src="js/scripts.js?v=3"></script>
+    <script type="text/javascript" src="js/easySlider1.7.js?v=1"></script>
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+    <%--  <script type="text/javascript" src="js/names.js"></script>--%>
+    <script type="text/javascript" src="js/botech.js?v=2"></script>
+    
+    <!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="css/ie.css" />
+    
+    <script>
+   
+        $( document ).ready(function() {
+    alert("hello");
+          });
+             
+        
+   </script>
+
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-10572967-18']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <script type="text/javascript">
+
+        function openTwitterWindow(link) {
+
+            showSocialLoading();
+
+            _gaq.push(['_trackEvent', 'Share', 'Share A Virtual Coke', 'Twitter']);
+            //mmConversionTag(390235, this);
+
+            var w = 650;
+            var h = 440;
+            var xLeft = parseInt((screen.width / 2) - (w / 2));
+            var xTop = parseInt((screen.height / 2) - (h / 2));
+
+            window.open(link, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=' +
+                w + ',height=' + h + ', top=' + xTop + ', left=' + xLeft + '');
+
+            hideSocialLoading();
+        }
+
+        function showSocialLoading() {
+            $("#divFBShare").hide();
+            $("#divTwitterShare").hide();
+
+            $("#divLoadSocial")[0].innerHTML = "<img src='img/redloader.gif'>";
+            $("#divLoadSocial").show();
+        }
+
+        function hideSocialLoading() {
+
+            $("#divLoadSocial")[0].innerHTML = "";
+            $("#divLoadSocial").hide();
+
+            $("#divFBShare").show();
+            $("#divTwitterShare").show();
+        }
+
+        function addPicture(link) {
+
+            showSocialLoading();
+
+            _gaq.push(['_trackEvent', 'Share', 'Share A Virtual Coke', 'Facebook']);
+            //mmConversionTag(390235, this);
+
+            var w = 650;
+            var h = 440;
+            var xLeft = parseInt((screen.width / 2) - (w / 2));
+            var xTop = parseInt((screen.height / 2) - (h / 2));
+
+            window.open(link, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=' +
+                w + ',height=' + h + ', top=' + xTop + ', left=' + xLeft + '');
+
+            hideSocialLoading();
+
+        }
+
+        function fbShare(message, linkUrl, image, desc) {
+
+            showSocialLoading();
+
+            _gaq.push(['_trackEvent', 'Share', 'Share A Virtual Coke', 'Facebook']);
+
+            useFBFeed(message, linkUrl, image, desc);
+
+            hideSocialLoading();
+        }
+
+        function useFBFeed(message, linkUrl, image, desc) {
+
+            var obj = {
+                method: 'feed',
+                name: 'Share a coke',
+                link: linkUrl,
+                picture: image,
+                caption: message,
+                description: desc
+            };
+            function callback(response) {
+                // callback if needed
+                if (response && response.post_id && response.post_id != "") {
+
+                }
+            }
+            FB.ui(obj, callback);
+        }
+
+        function pushImage(image) {
+
+            try {
+                // "bigger" image into the users profile
+                var accessToken = FB.getAuthResponse()['accessToken'];
+                var eventData = {
+                    "access_token": accessToken,
+                    "message": "Share a coke.",
+                    "url": image
+                };
+                FB.api('/me/photos', 'post', eventData, function (resp) {
+
+                    if (typeof resp.error != 'undefined') {
+
+                    }
+                    else {
+                        alert('We added this picture to your Facebook profile...!!');
+                    }
+                    //once the callback fires - hide the loader
+                    hideSocialLoading();
+
+                });
+
+            }
+            catch (ex) { }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="fb-root"></div>
+    <script>
+
+        window.fbAsyncInit = function () {
+            // init the FB JS SDK
+            FB.init({
+                appId: '<%=FBAppID%>',                        // App ID from the app dashboard
+                channelUrl: '<%= Aqua.Development.Common.Utilities.GetSiteRoot() %>/channel.html', // Channel file for x-domain comms
+                status: true,                                 // Check Facebook Login status
+                xfbml: true                                  // Look for social plugins on the page
+            });
+        };
+
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/all.js"; //#xfbml=1&appId=<%=FBAppID%>";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="True"></telerik:RadScriptManager>
+        <asp:HiddenField runat="server" ID="hdnTopInstanceID" />
+        <asp:HiddenField runat="server" ID="hdnTopCapID" />
+        <asp:HiddenField runat="server" ID="hdnBotCapID" />
+        <asp:HiddenField runat="server" ID="hdnBotInstanceID" />
+        <div runat="server" id="UserLoggedInHidden" style="display: none" data=""></div>
+        <!--Modal Overlay-->
+        <div class="modalOverlay"></div>
+
+        <%--<!-- signup Modal -->
+        <div class="modal signInModal">
+            <a href="javascript:;" class="modalClose" title="Close"></a>
+            <div class="inner">
+                <p>
+                    To continue, please sign in with:
+                    <br />
+
+                </p>
+                <div class="carouselSocialBtns">
+                    <a href="index.aspx?fblogin=y" class="facebookBtn" title="Share this Coke® on Facebook" onclick="_gaq.push(['_trackEvent', 'ClickMNenu', 'Sign in with Facebook', 'CentreNav']);"></a>
+                    <a href="index.aspx?twitterlogin=y" class="twitterBtn" title="Share this Coke® on Twitter" onclick="_gaq.push(['_trackEvent', 'ClickMNenu', 'Sign in with Twitter', 'CentreNav']);"></a>
+
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>--%>
+
+        <div class="siteWrapper">
+
+            <%--<div class="modal dateofbirthModal">
+                <a href="javascript:;" class="modalClose" title="Close"></a>
+                <div class="inner Do">
+                    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Skin="Default">
+                    </telerik:RadAjaxLoadingPanel>
+
+                    <telerik:RadAjaxPanel ID="RadAjaxPanel1" LoadingPanelID="RadAjaxLoadingPanel1" runat="server">
+                        <p>
+                            To continue with your registration,
+                    <br />
+                            please enter your date of birth:
+                        </p>
+                        <div class="carouselSocialBtns" style="padding-left: 64px">
+                            <div>
+                                <asp:DropDownList CssClass="selecter_basic_small" runat="server" ID="YearDropDown" />
+                            </div>
+                            <div>
+                                <asp:DropDownList CssClass="selecter_basic_small" runat="server" ID="MonthDropDown" />
+                            </div>
+                            <div>
+                                <asp:DropDownList CssClass="selecter_basic_small" runat="server" ID="DayDropDown" />
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        <asp:Button runat="server" ID="AgeValidationButton" OnClick="AgeValidationButton_Click" CssClass="redBtn nextBtn ageValid" />
+                    </telerik:RadAjaxPanel>
+                </div>
+                <div class="inner DoNot" style="display: none">
+                    <p>
+                        We are unable to accept your registration at this time.
+                 
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal voteThanksModal">
+                <a href="javascript:;" class="modalClose" title="Close"></a>
+                <div class="inner Do">
+                    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel2" runat="server" Skin="Default">
+                    </telerik:RadAjaxLoadingPanel>
+
+                    <telerik:RadAjaxPanel ID="RadAjaxPanel2" LoadingPanelID="RadAjaxLoadingPanel2" runat="server">
+                        <p>
+                            Thank you for your vote. Let's hope SA agrees with you
+                            <br />
+                            and gets&nbsp;<span class="spanNomonateName"></span>&nbsp;on a Coke can.
+                            <br />
+                            <br />
+                            <label>
+                                Get your friends to vote for <span class="spanNomonateName"></span>&nbsp;too.
+                                  <br />
+                                Share this now on:
+                            </label>
+                        </p>
+                        <div class="carouselSocialBtns" style="padding-left: 64px">
+
+                            <div id="divSocialVoteFB"></div>
+                            <div id="divSocialVoteTwitter"></div>
+
+                            <div class="clear"></div>
+                        </div>
+
+                    </telerik:RadAjaxPanel>
+                </div>
+                <div class="inner DoNot" style="display: none">
+                    <p>
+                        We are unable to accept your registration at this time.                 
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal ageLoginModal">
+                <a href="javascript:;" class="modalClose" title="Close"></a>
+                <div class="inner">
+
+                    <div class="prettyfied ageSelect">
+                        <select name="">
+                            <option class="option" selected="selected">Day</option>
+                            <option class="option">1</option>
+                            <option class="option">2</option>
+                            <option class="option">3</option>
+                            <option class="option">4</option>
+                            <option class="option">5</option>
+                            <option class="option">6</option>
+                            <option class="option">7</option>
+                            <option class="option">8</option>
+                            <option class="option">9</option>
+                            <option class="option">10</option>
+                            <option class="option">11</option>
+                            <option class="option">12</option>
+                            <option class="option">13</option>
+                            <option class="option">14</option>
+                            <option class="option">15</option>
+                            <option class="option">16</option>
+                            <option class="option">17</option>
+                            <option class="option">18</option>
+                            <option class="option">19</option>
+                            <option class="option">20</option>
+                            <option class="option">21</option>
+                            <option class="option">22</option>
+                            <option class="option">23</option>
+                            <option class="option">24</option>
+                            <option class="option">25</option>
+                            <option class="option">26</option>
+                            <option class="option">27</option>
+                            <option class="option">28</option>
+                            <option class="option">29</option>
+                            <option class="option">30</option>
+                            <option class="option">31</option>
+                        </select>
+                    </div>
+
+                    <div class="prettyfied ageSelect">
+                        <select name="">
+                            <option class="option" selected="selected">Month</option>
+                            <option class="option">Jan</option>
+                            <option class="option">Feb</option>
+                            <option class="option">Mar</option>
+                            <option class="option">Apr</option>
+                            <option class="option">May</option>
+                            <option class="option">Jun</option>
+                            <option class="option">Jul</option>
+                            <option class="option">Aug</option>
+                            <option class="option">Sep</option>
+                            <option class="option">Oct</option>
+                            <option class="option">Nov</option>
+                            <option class="option">Dec</option>
+                        </select>
+                    </div>
+
+                    <div class="prettyfied ageSelect">
+                        <select name="">
+                            <option class="option" selected="selected">Year</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                            <option class="option">1980</option>
+                        </select>
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            </div>
+            <!--Wrapper starts-->--%>
+
+
+            <!--Share a Coke landing-->
+            <div class="div div1">
+
+                <div class="inner_x">
+
+                    <div class="schrink_sp">
+                        <img src="img/smartphone/shareHeading2.png" title="Share a Virtual Coke&reg;" />
+                    </div>
+
+                    <div class="leftfloat leftspace hideme">
+                        <div class="schrink">
+                            <img src="img/shareHeading_x.png" title="Share a Virtual Coke&reg;" />
+                        </div>
+                    </div>
+
+                    <div class="rightfloat">
+                        <div class="canimation"></div>
+                        <div class="canimationTablet"></div>
+                        <!--Desktop names-->
+                        <div class="canNames desktop">
+                            <div id="canNamesCarousel">
+                                <div class="viewport">
+                                    <ul class="overview">
+                                        <li class="name name1"></li>
+                                        <li class="name name2"></li>
+                                        <li class="name name3"></li>
+                                        <li class="name name4"></li>
+                                        <li class="name name5"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Tablet names-->
+                        <div class="canNames tablet">
+                            <div id="canNamesCarouselTablet">
+                                <div class="viewport">
+                                    <ul class="overview">
+                                        <li class="name name1"></li>
+                                        <li class="name name2"></li>
+                                        <li class="name name3"></li>
+                                        <li class="name name4"></li>
+                                        <li class="name name5"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Smartphone names-->
+                        <div class="canNames smartphone">
+                            <div id="canNamesCarouselSmartphone">
+                                <div class="viewport">
+                                    <ul class="overview">
+                                        <li class="name name1"></li>
+                                        <li class="name name2"></li>
+                                        <li class="name name3"></li>
+                                        <li class="name name4"></li>
+                                        <li class="name name5"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br class="clear" />
+
+
+                    <div class="creatediv"><a href="javascript://" class="createbtn mobiNavLink mobimainNav1" onclick="_gaq.push(['_trackEvent', 'ClickMNenu', 'Share A Virtual Coke', 'CentreNav']);">create your own</a></div>
+
+                    <div class="droplet">
+                        <img src="img/droplet.png" />
+                    </div>
+
+                    <p class="bold">We’re inviting you to say it with a Coke<sup>&reg;</sup> to those whom you hold dear. We’re swapping our name with that of your most cherished relations. That’s right; you can Open Happiness with your favourite people by sharing a message from our list, or adding a personal touch by creating a customized message. </p>
+
+                    <div class="hashTag"></div>
+
+                    <img src="img/dots.png" class="pathIndicator" alt="Scroll down" title="Scroll down" />
+
+
+                </div>
+
+            </div>
+            <!--Share a Coke landing ends-->
+
+            <div class="clear"></div>
+
+            <!--Share a Virtual Coke-->
+            <div class="div div2">
+
+                <div class="inner">
+
+                    <img src="img/pathIndicator.png" class="pathIndicator" alt="Scroll down" title="Scroll down" />
+
+
+                    <div class="shareHeading2" title="Share a virtual Coke&reg;"></div>
+
+                    <div class="shareCarouselBG">
+
+                        <div class="canBg">
+                            <div class="top"></div>
+                            <div class="right"></div>
+                            <div class="bottom"></div>
+                            <div class="left"></div>
+                            <!--Virtual can slider starts-->
+                            <div class="virtualCanSliderContainer">
+                                <div id="virtualCanSlider">
+                                    <ul>
+                                        <!--Step 1-->
+                                        <li class="step1">
+
+                                            <div id="divBadWordError" style="display: none;" class="errorstep">
+                                                <img src="img/errorIcon.png" />
+                                                <p>
+                                                    YOUR NAME IS SO UNIQUE WE CAN'T FIND IT ON OUR LIST OF 650 NAMES.
+                                                    <br />
+                                                    PLEASE NOMINATE A NAME TO BE ADDED TO OUR LIST OF NAMES.
+                                                </p>
+                                            </div>
+
+                                            <input type="text" runat="server" maxlength="12" id="txtName" value="Type a name" onclick="clearText(this)" onblur="restoreText(this)" title="Type a name" />
+
+                                        </li>
+                                        <!--Step 2-->
+                                        <li class="step1">
+
+                                            <div id="hide_relationship">
+
+                                                <div class="space_a white">
+                                                    Select a Song from<br />
+                                                    the drop-down list.
+                                                </div>
+
+                                                <div id="divBadWordError" style="display: none;" class="errorstep">
+                                                    <img src="img/errorIcon.png" />
+                                                    <p>
+                                                        YOUR NAME IS SO UNIQUE WE CAN'T FIND IT ON OUR LIST OF 650 NAMES.
+                                                    <br />
+                                                        PLEASE NOMINATE A NAME TO BE ADDED TO OUR LIST OF NAMES.
+                                                    </p>
+                                                </div>
+
+                                                <a href="javascript://" onclick="open_relationship_POP()">
+                                                    <div class="share_drop">
+                                                        <div class="share_bg">
+                                                            <img src="img/share_drop2.png" />
+                                                        </div>
+                                                        <div class="share_who" id="relationshipsdiv" runat="server"></div>
+                                                    </div>
+                                                </a>
+
+                                                <div style="display: none" id="relationships">
+                                                    <div class="customselect">
+                                                        <div class="customselectfirst">Select an option</div>
+                                                        <div class="customselect_div" id="relationshipOptions" runat="server">
+                                                            <asp:Repeater ID="rSongs" runat="server">
+                                                                <ItemTemplate>
+                                                                    <a href="javascript://" class="customdrops" onclick="changerel('<%#DataBinder.Eval(Container.DataItem, "SongName")%>')"><%#DataBinder.Eval(Container.DataItem, "SongName")%></a>
+                                                                </ItemTemplate>
+                                                            </asp:Repeater>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </li>
+                                        <!--Step 3-->
+                                        <li class="step2">
+
+                                            <div id="botInputError" style="display: none;" class="errorstep">
+                                                <img src="img/errorIcon.png" /><br />
+                                                OOPS. YOUR ENTRY IS INVALID.<br />
+                                                SURE YOU ARE NOT A BOT? GO AHEAD AND TRY AGAIN.
+                                                
+                                            </div>
+
+                                            <p runat="server" id="pNormalBotMessage">
+                                                Type in the text and<br />
+                                                show us you're not a bot.
+                                            </p>
+
+                                            <div class="captchaControl">
+                                                <BotDetect:Captcha ID="SampleCaptcha" runat="server" />
+                                            </div>
+                                            <input runat="server" id="CaptchaCodeTextBox" type="text" value="Type unique code" onclick="clearText(this)" onblur="restoreText(this)" title="Type unique code" />
+
+                                        </li>
+                                        <!--Step 1-->
+                                        <li class="step3">
+
+                                            <!--This is a placeholder image, to be replaced-->
+                                            <img id="imgRedLoader" src="img/preloader_Red.gif" style="margin-top: 165px; margin-bottom: 75px; margin-left: auto; margin-right: auto;" />
+
+                                            <!--This is a placeholder image, to be replaced-->
+                                            <div id="divCanGenerator">
+                                            </div>
+                                            <p id="pShareText" style="display: none;">Share this Coke<sup>&reg;</sup> on:</p>
+
+                                            <div class="carouselSocialBtns">
+                                                <div id="divLoadSocial" style="display: none;"></div>
+                                                <div id="divFBShare"></div>
+                                                <div id="divTwitterShare"></div>
+
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#" id="btnCreateAnother" class="redBtn createAnother"></a>
+                            <!--Virtual can slider ends-->
+                        </div>
+
+                    </div>
+
+                    <img src="img/pathIndicator.png" class="pathIndicatorBottom" alt="Scroll down" title="Scroll down" />
+
+                </div>
+
+            </div>
+            <!--Share a Virtual Coke ends-->
+            <div class="clear"></div>
+
+        </div>
+
+
+        <div class="clear customise_xx"></div>
+        <!--error popup-->
+        <div class="emailpopdiv">
+            <div id="err_popup" class="errors">
+                <div align="center" style="height: 100px; padding-top: 30px;">
+                    <img src="img/pleasenote.png" />
+                </div>
+                <div id="msg" align="center" style="color: #000; height: 50px; width: 200px; margin: 0px auto"></div>
+                <!--div align="center"><a href="javascript://" onclick="hide_err()"><img src="images/close.png" border="0" /></a></div-->
+            </div>
+        </div>
+        <!--error popup end-->
+
+
+
+         <!--Success popup-->
+        <div class="emailpopdiv">
+            <div id="success_popup" class="success">
+                <div align="center" style="height: 100px; padding-top: 30px; padding-left: 15px; padding-right: 15px;">
+                    <!--<img src="img/pleasenote.png" />--><h2>Name successufully submitted. An email will be sent to you once approved.</h2>
+                </div>
+                <div id="msg" align="center" style="color: #000; height: 50px; width: 200px; margin: 0px auto"></div>
+                <!--div align="center"><a href="javascript://" onclick="hide_err()"><img src="images/close.png" border="0" /></a></div-->
+            </div>
+        </div>
+        <!--Success popup-->
+
+
+        <div class="customise">
+            <!--<form method="post" onsubmit name="cust_mssg" id="cust_mssg">-->
+            <div class="customise_header">
+                <img src="img/customise_header.png" class="img" alt="Customize your message here. If the message is approved, we will email you the customized virtual Coke&reg; can." title="Customize your message here. If the message is approved, we will email you the customized virtual Coke&reg; can." />
+            </div>
+            <div class="customise_subheader">Type in a name you would like to see on a can of Coke&reg;. <span>* Character limit = 14</span></div>
+            
+            <!--Wrapper-->
+            <div  class="inputwrapper">
+            <div class="customise_input">
+                <input type="text" class="cust_input" name="custom_message" id="custom_message" maxlength="14" value="Enter your name" title="Enter your name" onclick="clearText(this)" onblur="restoreText(this)" />
+            </div>
+            <div class="customise_captchadiv">
+                <div class="captchaControl_bg">
+                    <div class="arrow"></div>
+                    <div class="captchaControl">
+                        <BotDetect:Captcha ID="NominateCaptcha" runat="server" />
+                    </div>
+                </div>
+                <div class="captchainput_bg">
+                    <input runat="server" id="nominateCaptchaText" class="customise_inputcaptcha" type="text" value="Enter the code" onclick="clearText(this)" onblur="restoreText(this)" title="Type unique code" />
+                </div>
+                <div class="clr"></div>
+                <div class="captchainput_submit">
+                    <button type="submit"  name="Submit" class="redbuttons_submit" onclick="return validateNomination();" />Submit</button>
+                </div>
+                <div class="clr"></div>
+            </div>
+
+            </div>
+            <!--Wrapper End-->
+            <!--</form>-->
+        </div>
+
+        <p style="display: none;"><a class="inline" href="#emailpop">Inline HTML</a></p>
+        <div class="emailpopdiv">
+            <div id="emailpop">
+                <div class="emailpop_lock">
+                    <img src="img/lock.png" />
+                </div>
+                <p>
+                    Please confirm your email address. If the message is approved,<br />
+                    we will email you the customized virtual Coke® can.
+                </p>
+                <div class="emailpop_inputs">
+                    <input type="text" class="cust_input_pop" value="Enter email address" title="Enter email address" onclick="clearText(this)" onblur="restoreText(this)" id="nominationEmail"/>
+                </div>
+                <div class="emailpop_inputs">
+                    <input type="text" class="cust_input_pop" value="Confirm email address" title="Confirm email address" onclick="clearText(this)" onblur="restoreText(this)" id="confirmNominationEmail"/>
+                </div>
+                <div class="captchainput_submit">
+                    <input type="button" name="Submit" value="Submit" class="greybuttons_submit" onclick="return SaveNominations();"/>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+        <div class="footer">
+
+            <div class="inner">
+
+                <img src="img/logobot.png" class="footerLogo" alt="Coca-Cola&reg;" title="Coca-Cola&reg;" />
+
+                <div id="socials" class="links">
+
+                    <p>&copy; 2014 The Coca-Cola Company, all rights reserved.</p>
+                    <p class="linksP">
+
+                        <span>&bull;&nbsp;&nbsp;</span><a href="terms_pakistan.html"  onclick="_gaq.push(['_trackEvent', 'Footerclick', 'Terms and Conditions', 'Footer']);" title="Terms and Conditions" target="_blank">Terms and Conditions</a>&nbsp;&nbsp;
+                        <span>&bull;&nbsp;&nbsp;</span><a href="http://www.coca-colacompany.com/our-company/the-coca-cola-company-terms-of-use" onclick="_gaq.push(['_trackEvent', 'Footerclick', 'Terms Of Use', 'Footer']);" title="Terms of Use" target="_blank">Terms of Use</a>&nbsp;&nbsp;
+                        <span>&bull;&nbsp;&nbsp;</span><a href="http://www.coca-colacompany.com/our-company/privacy-policy" onclick="_gaq.push(['_trackEvent', 'Footerclick', 'Privacy Policy', 'Footer']);" title="Privacy Policy" target="_blank">Privacy Policy</a>&nbsp;&nbsp;                       
+                    </p>
+
+
+                    <div  id="socialBtns" class="socialBtns">
+
+
+
+
+
+                        <div id="leftsocial" class="leftsocial ">
+                            <div  id="fb" class="fb-like" data-href="http://www.coca-cola.com.pk/pages/landing/index.html" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+                        </div>
+
+
+                        <div id="leftsocial" class="clearleft leftsocial ">
+                            <div id="fb" class="fb-like" data-href="http://www.cokestudio.com.pk/season7/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+                        </div>
+
+
+                        <div id="leftsocial" class="leftsocial">
+                            <a href="https://twitter.com/cokepk" class="twitter-follow-button" data-show-count="false">Follow @CokePk</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+                        </div>
+
+
+
+                        <div id="leftsocial" class="clearleft leftsocial ">
+                            <a href="https://twitter.com/cokestudio" class="twitter-follow-button" data-show-count="false">Follow @CocaStudio</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+                        </div>
+
+                        <div id="leftsocial" class="leftsocial vimeo">
+                            <a href="http://vimeo.com/cokestudio" target="_blank" class="youtube" title="Coca-Cola on Youtube"></a>
+                        </div>
+
+
+
+
+                        <br />
+                        <br />
+                        <br />
+                        <div class="lastlogo hashTag "></div>
+
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+
+        <%--</div>--%>
+
+        <!--Wrapper ends-->
+
+        <div id="hidenav_btn">
+            <a href="javascript://" id="hidenav_btn_click">
+                <img src="img/navTrigger.jpg" border="0" /></a>
+        </div>
+
+
+        <div class="mainNav" id="hidenav">
+            <div class="inner">
+                <div class="third">
+                    <a href="http://www.coca-cola.com.pk/pages/landing/index.html" target="_blank" class="logo" title="Coca-Cola&reg;">
+                        <img src="img/logo.png" alt="Coca-Cola&reg;" /></a>
+                </div>
+                <div class="third logo_center">
+                    <a href="http://www.cokestudio.com.pk/" class="mainNav0" title="Share a Coke&reg;">
+                        <img src="img/shareLogo.png" alt="Share a Coke&reg;" /></a>
+                </div>
+
+                <div class="third">
+                    <div class="close_nav_drop">
+                        <a href="javascript://" id="close_nav_drop_btn">
+                            <img src="img/errorIcon.png" border="0" /></a>
+                    </div>
+                    <div class="links">
+                        <div runat="server" id="DesktopNominateLink" visible="False">
+                        </div>
+                    </div>
+
+                    <div class="social" runat="server" id="SocialLogInLinksDiv">
+                        <!--
+                        <p runat="server" id="pSignInWith">
+                            Sign in with
+                        </p>
+                        -->
+                        <a href="index.aspx?fblogin=y" class="signIn facebook" id="FacebookLoginButton" runat="server" title="Sign in with Facebook"></a>
+                        <a href="index.aspx?twitterlogin=y" class="signIn twitter" id="TwitterLoginButton" runat="server" title="Sign in with Twitter"></a>
+
+                        <a runat="server" id="aFBlogout" href="Index.aspx?logout=true" class="signOut facebook" title="Sign out" style="display: none;"></a>
+                        <a runat="server" id="aTwitterlogout" href="Index.aspx?logout=true" class="signOut twitter" title="Sign out" style="display: none;"></a>
+
+                    </div>
+                </div>
+
+
+
+                <div class="mobiNavTrigger"></div>
+
+                <div class="navDropdown">
+                    <%--a href="#" class="mobiNavLink mobimainNav1" onclick="_gaq.push(['_trackEvent', 'ClickMNenu', 'Share A Virtual Coke', 'CentreNav']);">Share a virtual Coke</a>
+                    <div class="seperator"></div>
+                    <a href="#" class="mobiNavLink mobimainNav2" onclick="_gaq.push(['_trackEvent', 'ClickMNenu', 'Get a personalised can', 'CentreNav']);">Get a personalised can</a>
+                    <div class="seperator"></div>
+                    <a href="#" class="mobiNavLink mobimainNav3" runat="server" id="MobiNominateLink" visible="False">Nominate a name</a>
+                    <div class="seperator"></div>
+                    <a href="#" class="mobiNavLink mobimainNav3">List of names</a--%>
+
+                    <div class="seperator"></div>
+
+                    <img src="img/smartphone/navSignIn.png" runat="server" id="signinimage" class="navSignIn" alt="Sign in with" style="display: none" />
+
+                    <div class="social">
+                        <div id="MobiSocial" runat="server">
+
+
+                            <a href="index.aspx?fblogin=y">
+                                <img src="img/smartphone/fbBtn.png" class="fbBtn" /></a>
+                            <a href="index.aspx?twitterlogin=y">
+                                <img src="img/smartphone/twitterBtn.png" class="fbBtn" /></a>
+
+
+                            <%--<a href="https://www.facebook.com/cocacola" target="_blank">
+                                <img src="img/smartphone/fbBtn.png" class="fbBtn" onclick="_gaq.push(['_trackEvent', 'ClickMNenu', 'Facebook', 'CentreNav']);" /></a>
+                            <a href="https://twitter.com/CocaCola" target="_blank">
+                                <img src="img/smartphone/twitterBtn.png" class="fbBtn" onclick="_gaq.push(['_trackEvent', 'ClickMNenu', 'Twitter', 'CentreNav']);" /></a>--%>
+                        </div>
+                        <div id="MobiSocialLogOut" runat="server" visible="False">
+
+                            <a runat="server" id="aFBMObilogout" href="Index.aspx?logout=true" class="signOut facebook" title="Sign out" style="display: none;"></a>
+                            <a runat="server" id="aTwitterMobilogout" href="Index.aspx?logout=true" class="signOut twitter" title="Sign out" style="display: none;"></a>
+
+                            <%-- <a id="MobiLogOutButton" href="Index.aspx?logout=true" style="text-decoration: underline; color: #f40009; display: block; font-weight: bold; font-size: 14px; padding: 14px 14px 14px 0">Log Out</a>
+                            --%>
+                            <%--<a href="javascript:;" class="signOut facebook"></a>
+                            <a href="javascript:;" class="signOut twitter"></a>--%>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </form>
+
+
+
+    <!--[if IE 8]>
+<style>
+.socialBtns{ width: 10px;}
+.mainNav {
+position: fixed;
+top: 0px;
+}
+.loading {
+left: 400px !important;
+}
+.selecter {margin: 20px 0;}
+
+.nominateAlert .alertArrowBg {
+position: absolute;
+bottom: -18px;
+left: 50%;
+margin-left: -8px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+$(document).ready(function () {
+//Nav click fix for IE 8
+$('.mainNav0').click(function (event) {
+    var offset = $('body').offset();
+    $('html,body').animate({
+        scrollTop: offset.top
+    });
+    event.preventDefault();
+    return;
+});
+$('.mainNav1').click(function (event) {
+    var offset = $('body').offset();
+    $('html,body').animate({
+        scrollTop: offset.top + 1080
+    });
+    event.preventDefault();
+    return;
+});
+$('.mainNav2').click(function (event) {
+    var offset = $('body').offset();
+    $('html,body').animate({
+        scrollTop: offset.top + 2000
+    });
+    event.preventDefault();
+    return;
+});
+$('.mainNav3').click(function (event) {
+    var offset = $('body').offset();
+    $('html,body').animate({
+        scrollTop: offset.top + 3050
+    });
+    event.preventDefault();
+    return;
+});
+
+});
+</script>
+<![endif]-->
+
+
+
+
+
+
+</body>
+</html>

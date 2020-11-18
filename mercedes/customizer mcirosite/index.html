@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mercedes</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<!-- Slider -->
+	 <link rel="stylesheet" href="css/responsiveslides.css">
+  <link rel="stylesheet" href="css/demo.css">
+  <script src="js/jquery-1.11.1.js"></script>
+  <script src="js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      
+	  
+	  hamburger();
+	  resize();
+	  slider();
+	  dropdown();
+     
+	  //function toggle(){
+
+       //$(".dropdown a").click(function(){
+      // $(this).next('.submenu').slideToggle();
+       //});
+
+       //};
+	  
+	  
+	 
+	  
+	  
+	  
+
+    });
+	
+	
+	
+	function hamburger(){
+		
+	$("#hamburger").click(function(){
+      $(".navlinks").slideToggle();
+      });	
+    
+	
+	}
+	
+	
+	
+	
+	function resize(){
+	
+	setInterval(
+	  function(){
+	   var windowSize = window.innerWidth;
+	   
+	   if( windowSize > 640){
+		   
+		   $(".navlinks").removeAttr("style");
+		}
+	   //
+	   }
+	  
+	  ,500)
+		
+	
+	}
+	
+	
+	
+	
+	function slider(){
+	
+	// Slideshow 3
+      $("#slider").responsiveSlides({
+		auto: false,
+        manualControls: '#slider3-pager',
+		speed: 1000,
+       /* maxwidth: 540*/
+      });	
+		
+	}
+	
+	
+	
+	
+	function dropdown(){
+		
+	  if(window.innerWidth > 640){
+	  
+	 $(".dropdown a").mouseover(function(){
+	$(this).next('.submenu').show();
+	
+	
+	//$(this).next('.submenu').animate({opacity: "1"});
+     });
+	 
+	 
+	 
+	 $(".dropdown a").mouseleave(function(){
+	 $(this).next('.submenu').hide();
+	 //$(this).next('.submenu').animate({opacity: "0"});
+      });
+	  
+	  
+	  //Submenu
+	  $(".submenu").mouseleave(function(){
+	  $(this).hide();
+	  //$(this).animate({opacity: "0"});
+      });
+	  
+	  
+	   $(".submenu").mouseenter(function(){
+	  $(this).show();
+	  //$(this).animate({opacity: "1"});
+      });
+	  
+	  
+	  
+	  
+	  
+	 
+	  
+	  }else{
+		 
+	   $(".dropdown a").click(function(){
+       $(this).next('.submenu').slideToggle();
+       }); 
+		  
+		 }
+		
+		
+	}
+	
+  </script>
+<!--Slider-->
+
+</head>
+
+<body>
+<div class="container">
+  <div class="nav">
+  <div class="logo"> <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van.flash.skipintro.html?csref=website_VitoRelaunch_2015"><img src="img/logo.png" width="297" height="104"></a>
+  </div>
+  
+  <div id="hamburgerholder">
+  <div id="hamburger"></div>
+  </div>
+  
+  <div class="navlinks">
+  <div class="navrow" id="search">
+  
+  <ul>
+  <!--<li class="bordernone dropdown">
+    <a href="javascript:void(0)" class="dropdownlink" >Search</a>
+    
+    <ul class="submenu" id="searchsection">
+    <li>
+    <a href="#">
+    <form>
+    <input type="text" id="searchinput" value=""/>
+    <input type="submit" id="submit" value="Search"/>
+    </form>
+    </a>
+    </li>
+    </ul>
+    
+    </li>-->
+    
+    
+    
+  <li class="dropdown bordernone">
+    <a href="http://www.mercedes-benzsa.co.za/contact-us?csref=website_VitoRelaunch_2015" target="_blank">Contact Us</a></li>
+  </ul>
+  </div>
+  <div class="navrow" id="lowerlinks">
+  <ul>
+  
+  <li class="bordernone dropdown">
+    <a href="javascript:void(0)" class="dropdownlink">New vehicles</a>
+    
+    <ul class="submenu" >
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/new_vans/showroom.flash.html#_int_van:home:core-navi:showroom?csref=website_VitoRelaunch_2015" target="_blank">Model overview</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/new_vans/vans_current_offers.html?csref=website_VitoRelaunch_2015" target="_blank">Current Offers</a></li>
+    
+    <ul class="quickentries">
+    <li>Quick Entries</li>
+    <li><a href="http://www.mercedes-benzsa.co.za/dealer-locator/vans?csref=website_VitoRelaunch_2015" target="_blank">Dealer locator</a></li>
+    <li><a href="http://www.mbfssa.co.za/mbfs/calculator.aspx?csref=website_VitoRelaunch_2015" target="_blank">Financial calculator</a></li>
+    <!--<li><a href="http://www.mercedes-benzsa.co.za/mercedes-benz/eMB/CV/customerupdate?csref=website_VitoRelaunch_2015" target="_blank">Update your details</a></li>-->
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/contact_us.html?csref=website_VitoRelaunch_2015" target="_blank">Contact Us</a></li>
+    </ul>
+    
+    </ul>
+  </li>
+    
+    
+    
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropdownlink" >After-Sales</a>
+    
+    <ul class="submenu" >
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/services_accessories/mpv_cv_services.html?csref=website_VitoRelaunch_2015" target="_blank">Quality Service</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/services_accessories/genuine_parts.html?csref=website_VitoRelaunch_2015" target="_blank">Genuine Parts &amp; Accesories</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/services_accessories/CharterWay.html?csref=website_VitoRelaunch_2015" target="_blank">CharterWay products</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/services_accessories/parts_store_new.html?csref=website_VitoRelaunch_2015" target="_blank">Parts Store</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/services_accessories/Terms_and_Conditions.html?csref=website_VitoRelaunch_2015" target="_blank">Terms and Conditions</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/services_accessories/Advantages_of_Parts_Store.html?csref=website_VitoRelaunch_2015" target="_blank">Advantages of Parts Store</a></li>
+    
+    <ul class="quickentries">
+    <li>Quick Entries</li>
+    <li><a href="http://www.mercedes-benzsa.co.za/dealer-locator/vans?csref=website_VitoRelaunch_2015">Dealer locator</a></li>
+    <!--<li><a href="http://www.mercedes-benzsa.co.za/mercedes-benz/eMB/CV/customerupdate?csref=website_VitoRelaunch_2015">Update your details</a></li>-->
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/contact_us.html?csref=website_VitoRelaunch_2015" target="_blank">Contact Us</a></li>
+    </ul>
+    
+    </ul>
+  </li>
+    
+  <li class="dropdown" >
+    <a href="javascript:void(0)" class="dropdownlink" >Pre-Owned</a>
+    <ul class="submenu" >
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/Pre_Owned/rep_PreOwned.html?csref=website_VitoRelaunch_2015" target="_blank">Pre-Owned</a></li>
+    
+    <ul class="quickentries">
+    <li>Quick Entries</li>
+    <li><a href="http://www.mercedes-benzsa.co.za/dealer-locator/vans?csref=website_VitoRelaunch_2015" target="_blank">Dealer Locator</a></li>
+    <li><a href="http://www.mbfssa.co.za/mbfs/calculator.aspx?csref=website_VitoRelaunch_2015" target="_blank">Financial calculator</a></li>
+    <!--<li><a href="http://www.mercedes-benzsa.co.za/mercedes-benz/eMB/CV/customerupdate?csref=website_VitoRelaunch_2015" target="_blank">Update your details</a></li>-->
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/contact_us.html?csref=website_VitoRelaunch_2015" target="_blank">Contact Us</a></li>
+    </ul>
+    
+    </ul>
+  </li>
+  
+  
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropdownlink">Mercedes World</a>
+    
+    <ul class="submenu" >
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/vans_world/news_events.html?csref=website_VitoRelaunch_2015" target="_blank">News &amp; Events</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/vans_world/transport_magazine.html?csref=website_VitoRelaunch_2015" target="_blank">Transport Magazine</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/vans_world/training.html?csref=website_VitoRelaunch_2015" target="_blank">Driver Training</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/vans_world/driver_training.html?csref=website_VitoRelaunch_2015" target="_blank">Body Builder</a></li>
+    <li><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/vans_world/whats_new.html?csref=website_VitoRelaunch_2015" target="_blank">What's new</a></li>
+    <li class="lastborder"><a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/vans_world/blueefficiency.html?csref=website_VitoRelaunch_2015" target="_blank">BlueEFFICIENCY</a></li>
+    </ul>
+ </li>
+ 
+  </ul>
+  </div>
+  </div>
+  </div>
+  
+  
+  <!--Slider-->
+  <div class="slider">
+  <ul class="rslides" id="slider">
+      <li><img src="img/img1.jpg" width="100%"  alt="Img1"></li>
+      <li><img src="img/img1.jpg" width="100%"  alt="Img1"></li>
+      <li><img src="img/img1.jpg" width="100%"  alt="Img1"></li>
+  
+  </ul>
+  
+  <!--<div class="indicator">
+  <a href="#" ><div class="dots active"></div></a>
+  <a href="#" ><div class="dots inactive"></div></a>
+  <a href="#" ><div class="dots inactive"></div></a>
+  </div>-->
+  
+  <ul id="slider3-pager" class="indicator">
+      <li ><a class="dots inactive" href="#"></a></li>
+      <li ><a class="dots inactive" href="#"></a></li>
+      <li ><a class="dots inactive" href="#"></a></li>
+    </ul>
+  
+  </div>
+  
+  <!-- Slideshow 3 --
+    <ul class="rslides" id="slider3">
+      <li><img src="img/1.jpg" alt=""></li>
+      <li><img src="img/2.jpg" alt=""></li>
+      <li><img src="img/3.jpg" alt=""></li>
+    </ul>
+
+    <!-- Slideshow 3 Pager --
+    <ul id="slider3-pager">
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+
+  <!--Slider-->
+  
+  <div class="content">
+    <div class="colholder">
+     
+      <div class="col">
+      <div class="title">
+        <img src="img/tilteone.jpg" width="199" height="44">
+        </div>
+      <div class="colmainimg">
+        <img src="img/info.png" width="100%">
+       </div>
+       <div class="text">
+       If you want to know more about the new Mercedes-Benz Vito, and how it can help your business, click to 
+learn more.
+       </div>
+       
+       <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/new_vans/showroom.tabsys1-0-0001.flash.html#_int_van:home:model-navi:showroom?csref=website_VitoRelaunch_2015
+" target="_blank">
+      <div class="cta">
+      Find out more
+      </div>
+      </a>
+      
+      </div>
+      
+      
+      
+      <div class="col">
+      
+       <div class="title">
+        <img src="img/tiltetwo.jpg" width="199" height="44">
+        </div>
+      <div class="colmainimg">
+        <img src="img/location.png" width="100%">
+       </div>
+      
+      <div class="text">
+       If you require assistance or have a query, kindly select your region and nearest dealership.
+       </div>
+      
+      <a href="http://www.mercedes-benzsa.co.za/dealer-locator/vans/?csref=website_VitoRelaunch_2015" target="_blank">
+<div class="cta">
+      Find a dealer
+      </div>
+      </a>
+      </div>
+      
+      
+      
+      <div class="col">
+      
+       <div class="title">
+        <img src="img/tiltethree.jpg" width="199" height="44">
+        </div>
+      <div class="colmainimg">
+        <img src="img/car.png" width="100%">
+       </div>
+      
+      <div class="text">
+       If you'd like to test-drive the new Vito, kindly complete the questionnaire. One of our dealership representatives will contact you shortly. 
+       </div>
+      <a href="http://www.mercedes-benzsa.co.za/dealer-locator/vans/?csref=website_VitoRelaunch_2015" target="_blank">
+      <div class="cta">
+      Book now
+      </div>
+      </a>
+      </div>
+      
+      
+      
+      <div class="col">
+      
+       <div class="title">
+        <img src="img/tiltefour.jpg" width="199" height="44">
+        </div>
+      
+      <div class="colmainimg">
+        <img src="img/percent.png" width="100%">
+       </div>
+       <div class="text">
+       Finance your Vito through Agility and you'll enjoy the highest guaranteed future value. So you can drive a new Mercedes-Benz every three years.
+       </div>
+       <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van/home/new_vans/vans_current_offers/vito___sprinter_offer.html?csref=website_VitoRelaunch_2015" target="_blank">
+      <div class="cta">
+      Finance your Vito
+      </div>
+      </a>
+      </div>
+      
+    </div>
+  </div>
+  <div  class="footer">
+  <ul>
+<li class="bordernone dropdown">
+  <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/van.html?csref=website_VitoRelaunch_2015" target="_blank">English</a></li>
+ <li class="dropdown">
+   <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/copyright.ngrb.html?csref=website_VitoRelaunch_2015" target="_blank">© 2015 Mercedes-Benz South Africa</a></li>
+ <li class="dropdown">
+   <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/cookies.ngrb.html?csref=website_VitoRelaunch_2015" target="_blank">Cookies</a></li>
+ <li class="dropdown">
+   <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/privacy_statement.ngrb.html?csref=website_VitoRelaunch_2015" target="_blank">Privacy Policy</a></li>
+ <li class="dropdown">
+   <a href="http://www.mercedes-benz.co.za/content/south_africa/mpc/mpc_south_africa_website/en/home_mpc/legal_notice.ngrb.html?csref=website_VitoRelaunch_2015" target="_blank">Legal Notice</a></li>
+  </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+.fullwidth{
+width:100%;
+height:auto;
+
+}
+
+.half{ 
+    
+    width:50%;
+    float:left;
+    height:auto;
+
+}
+.third{
+    
+     width: 30%;
+      float:left;
+      height:auto;
+}
+
+.tenth{
+
+    width:10%;
+     float:left;
+     height:auto;
+}
+
+
+.twentith{
+    width:20%;
+     float:left;
+     height:auto;
+}
+
+.floatleft{float:left; height:auto;}
+.floatright{ float:right; height:auto;}
+
+
+
+#appcontent{
+
+    background-color:#323232;
+    width:100%;
+    height: auto;
+    padding:50px;
+	
+}
+
+#appcontent h4 ,h6{
+    color:#73d0f4;
+    height:auto;
+}
+
+
+#createid{  
+
+    width: 285px;
+    margin-right:10px;
+    height:auto;
+    min-height: 100px;
+    float:left;
+}
+
+
+#downloadapp{  
+
+    width: 580px;
+    height:auto;
+    min-height: 100px;
+    float:left;
+}
+
+
+#headercontent{ min-height:200px;}
+
+
+#allchannels{ min-height:150px;}
+
+#call2action{width: 100%; clear:both;  height:auto; min-height: 100px; float:left;margin-top:40px; margin-bottom:40px;}
+
+#carousel{width:100%; min-height:300px; margin-bottom:40px;}
+#carouselslide{ display:block;}
+
+
+#explorer{background-color: #0795d7; min-height:200px; margin-bottom:20px; padding: 20px 50px;  margin-left:-50px; margin-right:-50px;}
+
+#apps{ min-height:150px;}
+
+
+#apps h4{ color: #FFF;}
+
+
+#explorer h4{ color: #FFF;}
+#explorer img{ float:right;}
+.panelmore{text-align:center; min-height:30px; margin-bottom: 20px;}
+
+.holder{max-width:980px;}
+
+
+#slidebig  .flex-control-nav{display:none;}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+

@@ -1,0 +1,175 @@
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+	background-color:#343434;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+/*
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+*/
+
+.aqua_promodiv{
+	padding-top: 0px;	
+}
+.aqua_promodiv_inner{
+	margin:0px auto;
+	max-width:980px;
+	/*border:1px solid red;*/
+	background-color:#01598e;	
+}
+/*.aqua_hamburger{
+	background-color:#00F;
+	padding-top: 45px;
+}*/
+footer {
+    width: 100%;
+    background-color: #fff;
+    border-top: solid 1px #c8c3b2;
+    padding: 0px 20px 40px 20px;
+}
+
+
+@media only screen and (max-width: 980px) {
+    .toplogo, .headerBoard /*#dstv_meganav_main*/ {
+        display: none;
+    }
+	#main-nav li {
+		display: table;
+		float: none;
+		width: 100%;
+		border-left: none;
+		border-right: 0px solid #0a6d9a;
+		cursor:	pointer;
+		position: relative;
+		height: 44px;
+		font-family: Helvetica, Arial;
+		font-weight: 300;
+		font-size:16px;
+		letter-spacing: 0.01em;
+	}
+	#main-nav li a{
+		display: table;
+		width:100%;
+	}
+	#dstv_meganav_main {
+		width:98%;
+		z-index: 9999;
+		padding-left:3%;
+		padding-right:3%;
+    	position: absolute;
+    	height: auto;
+    	margin: 0 auto;
+    	top: 70px;
+	}
+	nav.mega #main-nav-wrap ul {
+		float: left;
+		width:100%;
+		margin: 0;
+		padding:0;
+	}
+	.aqua_minimenu1{
+		z-index: 9999;
+		width:90%;
+		height:50%;
+		position:absolute;
+		overflow-x:hidden;
+		margin: 0% 3% 0% 3%;
+	}
+	nav{
+		margin-top: 180px !important;	
+	}
+	.aqua_submenu{
+			
+	}
+	.aqua_minimenu1 li{
+		display: table;
+		float: none;
+		width: 100%;
+		border-left: none;
+		border-right: 0px solid #0a6d9a;
+		cursor:	pointer;
+		height: 44px;
+	}
+	.aqua_minimenu1 ul{
+		margin:0;
+		padding:0;	
+	}
+	.aqua_minimenu1 a{
+		border:0px solid yellow;
+		padding: 12px 0px 0px 30px !important;
+		margin:0;
+    	display: block !important;
+    	color: #fff;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:18px;
+		line-height:26px;
+		font-weight: normal;
+		letter-spacing: 0.01em;
+		height: 44px;
+	}
+	.aqua_minimenu1 li:hover{
+		background: #e8e7e7; /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZTdlNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM0JSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top,  #e8e7e7 0%, #ffffff 34%, #ffffff 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e7e7), color-stop(34%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #e8e7e7 0%,#ffffff 34%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #e8e7e7 0%,#ffffff 34%,#ffffff 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #e8e7e7 0%,#ffffff 34%,#ffffff 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #e8e7e7 0%,#ffffff 34%,#ffffff 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e7e7', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+	}
+	.aqua_minimenu1 a:hover{
+    	color: #0066a2;
+	}
+	.aqua_submenu_first{
+		top:0;
+		background:#999;
+		width:100%;
+		height:100% !important;
+		border:1px solid red;
+	}
+	.aqua_submenu_01{
+		top:0;
+		background:#0F0;
+		width:100%;
+		height:100% !important;
+		border:1px solid red;
+		position:absolute;
+		margin-left:100%;	
+	}
+	.on_tree{
+		top:0;
+		background:#000;
+		width:100%;
+		height:100% !important;
+		border:1px solid red;
+		position:absolute;
+		margin-left:100%;	
+	}
+}
+
+

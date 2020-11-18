@@ -1,0 +1,9 @@
+
+.rslides_tabs .rslides_here a {
+
+  background-image:url(../img/active.png) !important;
+  }
+
+#slider3-pager .rslides_here a {
+  background-image:url(../img/active.png) !important;
+}

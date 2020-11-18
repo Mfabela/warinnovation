@@ -1,0 +1,39 @@
+
+body{ width: 1880px;}
+.inputwrapper{ width: 1000px; height: 229px;}
+.socialBtns{ width: 1000px;max-width: 1000px;}
+.customise_input{width: 665px;}
+.customise_captchadiv {width: 665px;}
+.links{width: 1000px;  max-width: 1000px;}
+.leftsocial { width: 100px;float: left; display: inline-block;}
+#socials {
+    width: 850px;
+    max-width: 850px;
+}
+#socialBtns{width:850px; max-width:850px;  border: thin solid #ff0000;}
+#leftsocial{ width: 150px; float:left; border: thin solid #ff0000;}
+#fb{height: 30px;}
+#fb span{  margin-top: -70px;}
+ */
+
+#socials {
+    margin-left:-300px;
+    width: 700px;
+    max-width: 700px;
+}
+
+#socialBtns {
+    margin: 0px auto;
+    width: 700px;
+    max-width: 700px;
+    display: inline;
+}
+
+body{ width: 1880px;}
+
+#leftsocial {
+    width: 130px;
+    float: left;
+    border: thin solid #ff0000;
+    display: inline;
+}
