@@ -1,0 +1,174 @@
+.content{
+	display: block;
+}
+
+.itemText {
+position: absolute;
+top: 30%;
+transform: translateY(-50%);
+left: 25%;
+margin-left: 15px;
+}
+
+
+.headLinks {
+display: block;
+width: 22%;
+float: right;
+height: auto;
+position: absolute;
+right: 135px;
+top: 0px;
+}
+
+
+.trialBtn {
+padding: 8px 9%;
+font-family: "Neue Helvetica W01", sans-serif;
+border-radius: 3px;
+line-height: 0.95;
+position: relative;
+text-decoration: none;
+text-align: center;
+display: inline-block;
+letter-spacing: 0.4px;
+cursor: pointer;
+border: 1px solid #BA5E00;
+font-weight: 500;
+margin: 0.9em 0 0.7em;
+transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out;
+background-color: #EA7600;
+color: white;
+float: right;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+font-size: 14px;
+height: 11px;
+position: absolute;
+left: 0px;
+}
+
+
+.headBtn {
+display: block;
+}
+
+
+#content_pos1{
+display: block;
+margin-top: 20px;
+position: relative;
+flex-flow: row nowrap;
+width: 100%;
+}
+
+
+
+.flex-container {
+margin: 0;
+list-style: none;
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-flex-flow: row nowrap;
+flex: 0 1 88%;
+display: block;
+width: 1000px;
+height: auto;
+float: left;
+}
+
+
+.flex-item {
+font-size: 14px;
+padding-left: 10px !important;
+padding-top: 5px !important;
+width: 22%;
+display: block;
+float: left;
+margin-left: 17px;
+}
+
+
+.adding {
+height: 125px;
+border: 1px solid #C4C4C4;
+border-width: 3px 1px 1px 1px;
+border-radius: 3px;
+position: absolute;
+cursor: pointer;
+flex: 0 1 11%;
+padding: 0px !important;
+float: left;
+margin-left: 0%;
+display: block;
+width: 125px;
+right: 20px;
+top: 0px;
+}
+
+
+.add {
+padding: 0px 20%;
+padding-left: 5%;
+margin: 0px;
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-family: "Source Sans Pro Regular", Arial;
+}
+
+
+
+#content_pos2 {
+display: block;
+margin-top: 20px;
+position: relative;
+flex-flow: row nowrap;
+width: 100%;
+display: block;
+float: left;
+}
+
+#map {
+width: 685px;
+}
+
+
+.stats {
+height: 387px;
+overflow: hidden;
+margin-bottom: 0px !important;
+border: 1px solid #C4C4C4;
+border-radius: 4px;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+margin-top: 20px;
+width: 372px;
+margin-left: 11px;
+margin-right: 20px;
+float: left;
+}
+
+
+
+.reportList {
+width: auto;
+border-radius: 2px;
+background-color: transparent;
+border: 1px solid gray;
+margin-left: 2%;
+margin-top: 10px;
+display: flex;
+width: 300px;
+}
+
+
+.statsList {
+width: 80px;
+height: 30px;
+font-size: 12px;
+}

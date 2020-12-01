@@ -1,0 +1,34 @@
+HQ	                Headquarters	Los Angeles, CA	
+Warehouse - Fresno	Warehouse	Fresno, CA
+Store - Phoenix	        Store 2	        Phoenix, AZ	
+Store Irvine	        Store 4	        Irvine, CA
+Store - Las Vegas	Store 1	        Las Vegas, NV
+Store - San Diego	Store 5	        San Diego, CA
+Store - Sacramento	Store 3	        Sacramento, CA
+
+
+<!--Venues-->
+<select class="dropDown">
+                    <option value='all'>All Venues</option>
+                    <option value='HQ'>HQ</option>
+                    <option value='Warehouse - Fresno'>Warehouse - Fresno</option>
+                    <option value='Store - Phoenix'>Store - Phoenix</option>
+                    <option value='Store Irvine'>Store Irvine</option>
+                    <option value='Store - Las Vegas'>Store - Las Vegas</option>
+                    <option value='Store - San Diego'>Store - San Diego</option>
+                    <option value='Store - Sacramento'>Store - Sacramento</option>
+                </select>
+
+
+<!--Ciies-->
+<select class="dropDown">
+                    <option value='all'>All Venues</option>
+                    <option value='Los Angeles, CA'>Los Angeles, CA</option>
+                    <option value='Fresno, CA'>Fresno, CA</option>
+                    <option value='Phoenix, AZ'>Phoenix, AZ</option>
+                    <option value='Irvine, CA'>Irvine, CA</option>
+                    <option value='Las Vegas, NV'>Las Vegas, NV</option>
+                    <option value='San Diego, CA'>San Diego, CA</option>
+                    <option value='Sacramento, CA'>Sacramento, CA</option>
+                </select>
+

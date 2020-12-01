@@ -1,0 +1,471 @@
+London: 51.507258, -0.111350   	LUK
+Oxford: 51.749076, -1.257410    OUK
+Cambridge: 52.203770, 0.117044	CUK
+Edinburg: 55.958212, -3.187489  ESC
+Brussels: 50.876005, 4.344495   BBE
+Cologne: 50.933965, 6.946321    CDE
+Paris: 48.853865, 2.369647      PFR
+
+
+
+
+<!--Venues-->
+<select class="dropDown">
+                    <option value='all'>All Venues</option>
+                    <option value='HQ'>HQ</option>
+                    <option value='Warehouse - Oxford'>Warehouse - Oxford</option>
+                    <option value='Store - Cambridge'>Store - Cambridge</option>
+                    <option value='Store - Edinburgh'>Store - Edinburgh</option>
+                    <option value='Store - Brussels'>Store - Brussels</option>
+                    <option value='Store - Cologne'>Store - Cologne</option>
+                    <option value='Store - Paris'> Store - Paris</option>
+                </select>
+
+
+<!--Ciies-->
+<select class="dropDown">
+                    <option value='all'>All cities</option>
+                    <option value='London, UK'>London, UK</option>
+                    <option value='Oxford, UK'> Oxford, UK</option>
+                    <option value='Cambridge, UK'>Cambridge, UK</option>
+                    <option value='Edinburgh, Scotland'>Edinburgh, Scotland</option>
+                    <option value='Brussels, Belgium'>Brussels, Belgium</option>
+                    <option value='Cologne, Germany'>Cologne, Germany</option>
+                    <option value='Paris, France'>Paris, France</option>
+                </select>
+
+<!--APs-->
+<select class="dropDown">
+                    <option value='all'>All cities</option>
+                    <option value='London, UK'>London, UK</option>
+                    <option value='Oxford, UK'> Oxford, UK</option>
+                    <option value='Cambridge, UK'>Cambridge, UK</option>
+                    <option value='Edinburgh, Scotland'>Edinburgh, Scotland</option>
+                    <option value='Brussels, Belgium'>Brussels, Belgium</option>
+                    <option value='Cologne, Germany'>Cologne, Germany</option>
+                    <option value='Paris, France'>Paris, France</option>
+                </select>
+
+Todo 25-03-2018:
+Fix US:
+16:00 - 16:30
+-Analytics popup screen doesn't translate accordingly.*
+Translate pages *        
+16:30 - 17:00
+-The language dropdown selector: as discussed in our meeting the other day, it should only be on the popup messages.*
+
+
+-Feedback from Phase 1
+Dashboard:
+Done:
+- The figures on the dashboard does not provide accurate info on the amount of venues (7) / APs (32) / clients (1253).*
+17:00 - 17:30
+- The bottom of the screen does not show the map accordingly*
+17:30 - 18:00
+- APs: The 32 APs do not show once you click on 'expand all' (2. Attached)*
+
+Create New WiFI Network:
+18:00 - 18:30
+- On step 5:Please populate our venues data on this step (7. Attached) - Updated only 1 venue, please populate the remaining 6 venues. Also with other relevant venues on the list.*
+Done
+- Network name the user inputs on step 1. Network Details to reflect on step 5. Summary page (8. Attached) - Implemented*
+
+Screen:
+18:30 - 19:00
+-1. On screenshot 1, you can see the BeCaleb version, on two of my screens. On the left, my laptop 13" screen, on the right my 24" extended screen, both running the BeCaleb version. You'll notice on the right, that there are controls on the map, that are cut-off, as well as the bottom "end" line. On both these screenshots, I am also not seeing the horizontal "timeline" for the second graph, as it does for the first. Please also note the 100% zoom popup. *
+19:00 - 19:30
+-2. On screenshot 2, it's the same thing, but only running the currently live Ruckus Demo. You can ignore the menu on the left being truncated. What you can see however, is that on the same setup, I can see both maps without the scaling issue, and the graphs horizontal timelines. (QQ: is there no way to have our 2nd graph show as a line, like the demo version does? I know you mentioned before that we're limited in that area, but let me know). *
+19:30 - 20:00
+-3. Screenshot 3 is an extension of what the client is experiencing. If you scale the window size down (zoom remaining at 100%), you'll notice that the bottom graph get cut-off.*
+
+
+
+Analytics:
+20:00 - 20:30 
+-For both Unique Clients & Applications By Traffic: All Venues / APs / Networks dropdowns should reflect the respective data. E.g. Currently under the 'venues' dropdown: District Office is still showing. (6. Attached) - Only venues updated, not APs / Networks*
+
+20:30 - 22:00
+-Graphs Configuration
+
+22:00 - 23:00
+-Arrows*
+- Fluidity*
+- Dynamic Tables/ Venues JS  (Euro Version)*
+- Next / Create Network Modal Clients*
+- Form Buttons Being Cut Off Network Image Buttons*
+- AddSelectTab base.css 4595 itemSelect*
+- Epand with icons Phase 1
+- Fix padding on graphs on the right*
+- Home Add Section Font*
+- select postiotioning*
+- Check Translations*
+
+23:00 - 00:00 
+Copy files 1x1 to each relevant Region/Phase
+
+
+changed:
+- Dynamic Tables/ Venues JS  (Euro Version)*
+US/init.js (JavaScript Euro Version)*
+Deutsche/analycticsswitch.html*
+English/recommend.html*
+US/addNetwork.php - header/step1/step2  Line 295 step5 tables*
+US/modalSignUpSmall.html - line 28 class*
+Dashboard/index.html - line 68, 115, 324*
+base.css 3168*
+Analyctics traffic 348*
+unique Clients 134*
+DemoAP.html line 28*
+All apcont2,html*
+
+venuesmore.html:
+Padding: line 549 ,447 *
+layout: {
+                padding: {
+                left: 10,
+                right: 10,
+                top: 10,
+                bottom: 10
+                        }
+                    }, 
+
+line 15 59 136 *
+ datasets: [{
+        radius: 0, // radius is 0 for only this dataset
+    }]
+ options: {
+                maintainAspectRatio: false,  line 264
+
+
+
+spanish/demo2*
+us/step2*
+us/step3*
+us/step4*
+
+QA'ed:
+English*
+Deutsche*
+Dutch*
+French*
+Italian*
+
+
+base.css*
+init.js*
+US/modalSignUpSearch.html*
+All/searchpop.html*
+
+
+Changed 28-03-2018:
+us/base.css:*
+line 3963 - 3968*
+
+us/venuesmore.html:
+line 457 Line 2344 Line 2787*
+
+
+addAp.php
+Line 45*
+
+
+
+us/users line 399 - 413 remove disable*
+
+
+analyctics/traffic 403 - 406*
+
+
+analyctics/clients 178 - 197*
+us/img*
+Update drop downs
+us/demo.html 258-286, 206- 211*
+us/step3*
+us/step2*
+us/demoAp.html 97-115*
+us/apcont_2.html*
+us/analycticsload 39 - 42*
+us/analycticsswitch 1-3*
+French next*
+Init Js 61 , 1288*
+Network modal position and preview pop*
+US/Dashboard/index.html 179 *
+us/dashboard/index.html 82 50 988 1031 121 638-952
+CSS decrease other marker apocity
+
+Changed:
+index /init.js**
+eu/dashboard/index.html 344 - 35**
+us only/us/events/index.html 130-152**
+eu/venues/index.html 95*
+eu/venues/index.html/venues.html/venuedrillown.html/ 975,978,983*
+eu/ap/index.html all venues dropdown 56, 61*
+eu/users/index.html all aps dropdown 413*
+eu/analyctics/uniqueclients all aps dropdown  all networks dropdown 143, 185
+eu/analyctics/applicationbytraffic 358, 401
+
+
+
+To change:
+Dropdowns:
+eu/venues/index.html/venues.html/venuedrillown.html/clients enable and add  relevant info*
+eu/ap/index.html all venues dropdown*
+eu/ap/index.html all categories dropdown*
+eu/users/index.html all aps dropdown*
+eu/analyctics/uniqueclients all aps dropdown  all networks dropdown*
+eu/analyctics/applicationbytraffic all aps dropdown  all networks dropdown*
+
+
+
+US
+<!--Ciies-->
+<select class="dropDown">
+                    <option value='all'>All cities</option>
+                    <option value='Los Angeles, CA'>Los Angeles, CA</option>
+                    <option value='Fresno, CA'>Fresno, CA</option>
+                    <option value='Phoenix, AZ'>Phoenix, AZ</option>
+                    <option value='Irvine, CA'>Irvine, CA</option>
+                    <option value='Las Vegas, NV'>Las Vegas, NV</option>
+                    <option value='San Diego, CA'>San Diego, CA</option>
+                    <option value='Sacramento, CA'>Sacramento, CA</option>
+                </select>
+
+
+
+<!--Venues-->
+<select class="dropDown">
+                    <option value='all'>All Venues</option>
+                    <option value='HQ'>HQ</option>
+                    <option value='Warehouse - Fresno'>Warehouse - Fresno</option>
+                    <option value='Store - Phoenix'>Store - Phoenix</option>
+                    <option value='Store Irvine'>Store Irvine</option>
+                    <option value='Store - Las Vegas'>Store - Las Vegas</option>
+                    <option value='Store - San Diego'>Store - San Diego</option>
+                    <option value='Store - Sacramento'>Store - Sacramento</option>
+                </select>
+
+
+
+
+<!--Categories-->
+<option value='all'>All Status Categories</option>
+                    <option value=''>Requires Attention</option>
+                    <option value=''>Temporarily Degraded</option>
+                    <option value=''>In setup phases</option>
+                    <option value=''>Operational</option>
+
+<!--Models-->
+<option value='all'>All Models</option>
+                    <option value='R310'>R510</option>
+                    <option value='R600'>R610</option>
+
+
+<!--APs-->
+<select class="dropDown">
+                    <option value='all'>All APs</option>
+                    <option>LCA-AP-GYM</option>
+                    <option>LCA-AP-Conf</option>
+                    <option>LCA-AP-LRC</option>
+                    <option>LCA-AP-229</option>
+                    <option>LCA-AP-128</option>
+                    <option>LCA-AP-235</option>
+                    <option>LCA-AP-136</option>
+
+                    <option>LCA-AP-132</option>
+                    <option>LCA-AP-129</option>
+                    <option>LCA-AP-Office</option>
+                    <option>LCA-AP-227</option>
+                    <option>LCA-AP-135</option>
+                    <option>LCA-AP-SPARE-1</option>
+                    <option>LCA-AP-126</option>
+
+                    <option>LCA-AP-Tech Hall</option>
+                    <option>FCA-AP-210</option>
+                    <option>FCA-AP-212</option>
+                    <option>FCA-AP-218</option>
+                    <option>FCA-AP-TrackShed</option>
+                    <option>PAZ-AP-119</option>
+                    <option>PAZ-Hallway-Art</option>
+
+                    <option>PAZ-AP-112</option>
+                    <option>PAZ-AP-108</option>
+                    <option>PAZ-AP-219</option>
+                    <option>ICA-Rm801</option>
+                    <option>ICA-Rm209</option>
+                    <option>LNV-Rm109</option>
+                    <option>LNV-Rm201</option>
+
+                    <option>SDCA-AP-160</option>
+                    <option>SDCA-AP-157</option>
+                    <option>SCA-AP-160</option>
+                    <option>SCA-AP-157</option>
+                </select>
+
+
+
+
+                <!--Networks-->
+<select class="dropDown">
+                    <option value='all'>All Networks</option>
+                    <option>LCA-JH-D201</option>
+                    <option>LCA-D201-Guest</option>
+                    <option>LCA-D201-Staff</option>
+                    <option>LCA-D201</option>
+                    <option>LCA-BG-D201</option>
+                    <option>LCA-MIS-BYOD</option>
+                    <option>LCA-WT-D201-Staff</option>
+
+                    <option>FCA-D201</option>
+                    <option>FCA-D201-Guest</option>
+                    <option>FCA-D201-Staff</option>
+                    <option>PAZ-D201</option>
+                    <option>PAZ-BYOD</option>
+                    <option>PAZ D201-STAFF</option>
+                    <option>PAZ-D201-Staff</option>
+
+                    <option>ICA_D201</option>
+                    <option>ICA-D201-Staff</option>
+                    <option>LNV-D201-Public</option>
+                    <option>LNV-D201-Staff</option>
+                    <option>LNV-D201</option>
+                    <option>SDCA-D201-Public</option>
+                    <option>SDCA-D201</option>
+
+                    <option>SDCA-D201-Staff</option>
+                    <option>SCA-D201</option>
+                    <option>SCA-BYOD</option>
+                </select>
+
+
+
+Europe
+<!--Ciies-->
+<select class="dropDown">
+                    <option value='all'>All cities</option>
+                    <option value='London, UK'>London, UK</option>
+                    <option value='Oxford, UK'> Oxford, UK</option>
+                    <option value='Cambridge, UK'>Cambridge, UK</option>
+                    <option value='Edinburgh, Scotland'>Edinburgh, Scotland</option>
+                    <option value='Brussels, Belgium'>Brussels, Belgium</option>
+                    <option value='Cologne, Germany'>Cologne, Germany</option>
+                    <option value='Paris, France'>Paris, France</option>
+                </select>
+
+
+<!--Categories-->
+<option value='all'>All Status Categories</option>
+                    <option value='wifi'>Requires Attention</option>
+                    <option value='wifi'>Temporarily Degraded</option>
+                    <option value='wifi'>In setup phases</option>
+                    <option value='wifi'>Operational</option>
+
+<!--Venues-->
+<select class="dropDown">
+                    <option value='all'>All Venues</option>
+                    <option value='HQ'>HQ</option>
+                    <option value='Warehouse - Oxford'>Warehouse - Oxford</option>
+                    <option value='Store - Cambridge'>Store - Cambridge</option>
+                    <option value='Store - Edinburgh'>Store - Edinburgh</option>
+                    <option value='Store - Brussels'>Store - Brussels</option>
+                    <option value='Store - Cologne'>Store - Cologne</option>
+                    <option value='Store - Paris'> Store - Paris</option>
+                </select>
+
+
+<!--APs-->
+<select class="dropDown">
+                    <option value='all'>All APs</option>
+                    <option>LUK-AP-GYM</option>
+                    <option>LUK-AP-Conf</option>
+                    <option>LUK-AP-LRC</option>
+                    <option>LUK-AP-229</option>
+                    <option>LUK-AP-128</option>
+                    <option>LUK-AP-235</option>
+                    <option>LUK-AP-136</option>
+
+                    <option>LUK-AP-132</option>
+                    <option>LUK-AP-129</option>
+                    <option>LUK-AP-Office</option>
+                    <option>LUK-AP-227</option>
+                    <option>LUK-AP-135</option>
+                    <option>LUK-AP-SPARE-1</option>
+                    <option>LUK-AP-126</option>
+
+                    <option>LUK-AP-Tech Hall</option>
+                    <option>OUK-AP-210</option>
+                    <option>OUK-AP-212</option>
+                    <option>OUK-AP-218</option>
+                    <option>OUK-AP-TrackShed</option>
+                    <option>CUK-AP-119</option>
+                    <option>CUK-Hallway-Art</option>
+
+                    <option>CUK-AP-112</option>
+                    <option>CUK-AP-108</option>
+                    <option>CUK-AP-219</option>
+                    <option>ESC-Rm801</option>
+                    <option>ESC-Rm209</option>
+                    <option>BBE-Rm109</option>
+                    <option>BBE-Rm201</option>
+
+                    <option>CDE-AP-160</option>
+                    <option>CDE-AP-157</option>
+                    <option>PFR-AP-160</option>
+                    <option>PFR-AP-157</option>
+                </select>
+
+
+
+
+                <!--Networks-->
+<select class="dropDown">
+                    <option value='all'>All Networks</option>
+                    <option>LUK-JH-D201</option>
+                    <option>LUK-D201-Guest</option>
+                    <option>LUK-D201-Staff</option>
+                    <option>LUK-D201</option>
+                    <option>LUK-BG-D201</option>
+                    <option>LUK-MIS-BYOD</option>
+                    <option>LUK-WT-D201-Staff</option>
+
+                    <option>OUK-D201</option>
+                    <option>OUK-D201-Guest</option>
+                    <option>OUK-D201-Staff</option>
+                    <option>CUK-D201</option>
+                    <option>CUK-BYOD</option>
+                    <option>CUK D201-STAFF</option>
+                    <option>CUK-D201-Staff</option>
+
+                    <option>ESC_D201</option>
+                    <option>ESC-D201-Staff</option>
+                    <option>BBE-D201-Public</option>
+                    <option>BBE-D201-Staff</option>
+                    <option>BBE-D201</option>
+                    <option>CDE-D201-Public</option>
+                    <option>CDE-D201</option>
+
+                    <option>CDE-D201-Staff</option>
+                    <option>PFR-D201</option>
+                    <option>PFR-BYOD</option>
+                </select>
+
+
+
+Deutche to Deutche changes (1 hour)
+Additions(folder structure change, logo change, Dropdown change)(1 hour)
+URL Change (1 hour)
+
+
+Changes:
+addVenue.html
+base.css
+venueload() 1145
+
+
+Google Maps Library Places:
+https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
+
+Make sure to include city and country in the address.
+

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>THIS IS WAAAR!!!</title>
+    <!--Fav Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <!--Fav Icon-->
+    <link rel="icon" href="http://example.com/favicon.png">
+    <!--Open Graph-->
+    <meta property="og:title" content="THIS IS WAAAR!!!" />
+    <!--<meta property="og:type" content="video.movie" />-->
+    <meta property="og:url" content="http://warinnovation.co.za/" />
+    <meta property="og:image" content="http://warinnovation.co.za/images/opengraph.jpg" />
+    <meta property="og:description" content="WAR is an innovations company that aims to make your life just a little better" />
+    <!--Open Graph-->
+    <meta name="author" content="Luthando Mfabe">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Web Development, Augmented Reality, Virtual Reality, Game Development, HTML5 Development,I llustration, VR, AR, IOS Development, Android Development, Illustration, UI Design, UX Design, User Experience Design, Web GL, Graphic Design, Respberry PI, Leapmotion, Robotics">
+    <meta name="description" content="WAR is an innovations company that aims to make your life just a little better ">
+    <meta name="Resource-type" content="Document" />
+
+     
+    
+     <!--Font-->
+    <link rel="stylesheet" href="css/font.css" type="text/css" charset="utf-8" />
+    <!--Font-->
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/war.css" />
+
+      <!--Link-->
+    <style>
+    .worklink{
+        background-color: rgb(93, 189, 181);
+    }
+    .worklink a{
+        color: #fff !important;
+    }
+    h3{
+        color: rgb(93, 189, 181);
+    }
+    </style>
+    <!--Link -->
+
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48391381-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/war_angular.js"></script>
+    <script src="js/jquery-1.11.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+    
+    <script>
+	//BodyContent
+    app.controller('contentCtrl', function($scope, $http) {
+   $http.get("headercontent.php").then(function(response) {
+    	$scope.workheaderContent = response.data.workpageheader;
+    });
+	
+	$http.get("pagecontent.php").then(function(response) {
+    	$scope.projectscontent = response.data.projects;
+    });
+	
+   });
+   
+
+//BodyContent
+    </script>
+	
+    
+    <script type="text/javascript">
+    if (
+    	location.href.indexOf("#/mercedes_customizer") != -1 ||
+    	location.href.indexOf("#/vito-campaign-page") != -1 ||
+    	location.href.indexOf("#/vito_mailer") != -1 ||
+    	location.href.indexOf("#/mbamba") != -1 ||
+    	location.href.indexOf("#/music") != -1 ||
+    	location.href.indexOf("#/joburg") != -1 
+    	) {
+      
+       setTimeout(function(){
+        $("#animatedModal").removeClass("animatedModal-off");
+        $("#animatedModal").addClass("animatedModal-on slideInUp");
+        $("#animatedModal").css("z-index","9999");
+        $("#animatedModal").css("opacity","1");
+        //z-index: 9999;
+       },1500);
+        
+    }
+</script>
+    
+   
+    
+    
+    <style>
+    .content{
+		
+		    margin-bottom: 55px;
+    float: none;
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+		}
+		
+    
+    </style>
+    
+    
+     <!--Modal-->
+     <link rel="stylesheet" href="css/animate.min.css">
+     <!--Modal-->
+    
+
+	<script src="js/jquery-1.11.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+    
+     <!--SVG-->
+    <script src='js/snap.svg-min.js'></script>
+    <script src="js/svg.js"></script>  
+    <link href="css/svg.css" rel="stylesheet" type="text/css">
+    <!--SVG-->
+</head>
+<body  ng-app="mainApp" ng-controller="contentCtrl" >
+
+
+<!--Modal-->
+<!--DEMO01-->
+<div id="animatedModal" class="contents">
+<div class="col-lg-12 modal-view">
+<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+<div  id="btn-close-modal" class="close-animatedModal"> 
+ x
+</div>
+
+<!--View-->
+<div class="ng-view"></div>
+<!--View-->
+
+</div>
+</div>
+<!--/DEMO01-->
+
+<!--DEMO02-->
+        <div id="modal-02" class="contents">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-02"> 
+                CLOSE MODAL
+            </div>
+            
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+<!--Modal-->
+
+
+
+<div ng-include="'nav.html'"></div>
+<!--View -->
+
+<!--<div ng-view></div>
+-->
+
+
+<!--Sections -->
+<div>
+	
+
+	<!--Section -->
+    <div class="col-lg-12" ng-repeat="x in workheaderContent">
+	<div  class="section landingPage headerbgcolor" id="{{x.id}}" style="background-image: url({{x.bgimage}})">
+		<div class="intro">
+            <svg class="svg" data-svgsrc="{{x.svg}}" width="100%" height="100%" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid meet"></svg>
+			<!--<h1 align="center"><img align="middle" src="{{x.biglogo}}" width="300px" ></h1>-->
+           <!-- <h3 style="color:{{x.textcolor}}">{{x.pagetitle}}</h3>-->
+			<p align="center">
+            <span class="arrowdown">
+            <!--<img align="middle" src="{{x.cta}}" width="100%" >-->
+            </span>
+            </p>
+		</div>
+	</div>
+     <h3 class="contents" style="color:{{x.textcolor}}">{{x.pagetitle}}</h3>
+    </div>
+	<!--/Section -->
+    
+    <!--Contents-->
+    <span class="contents">
+    
+    <!--Section  Content-->
+    <div class="col-lg-12 container-fluid">
+    <!--Toggle-->
+    <div id="servicestoggle" class="col-lg-12 servicestoggle center-block">
+    <ul class="nav navbar-nav ">
+     <li class="navlist" >
+     <a href="" class="btn_all">
+     All
+     </a>
+      </li>
+     <li class="navlist" >
+    <a href="" class="btn_ux">
+     UX
+     </a>
+      </li>
+      <li class="navlist" >
+     <a href="" class="btn_design" >
+     DESIGN
+     </a>
+      </li>
+      <li class="navlist" >
+     <a href="" class="btn_illustration">
+     ILLUSTRATION
+     </a>
+      </li>
+      <li class="navlist" >
+     <a href="" class="btn_development">
+     DEVELOPMENT
+     </a>
+      </li>
+      </ul>
+    </div>
+<!--    <ul>
+            <li><a id="demo01" href="#animatedModal">DEMO01</a></li>
+            <li><a id="demo02" href="#modal-02">DEMO02</a></li>
+        </ul>-->
+    
+    <!--Projects-->
+    <div class="col-lg-12 projects" >
+    <!--Project-->
+    <div ng-repeat="x in projectscontent" class="col-lg-4  project {{x.category}}" style="background-image:url({{x.backgroundimage}})">
+    
+    <div class="container-fluid projectpopup">
+    <h3>{{x.projecttitle}}</h3>
+    <div class="viewbutton">
+    <a href="{{x.link}}" data-modal-link="{{x.modal}}">
+    VIEW
+    </a>
+    </div>
+    </div>
+    
+     </div>
+    <!--/Project-->
+    </div>
+    <!--/Projects-->
+    </div>
+
+    <!--/Section  Content-->
+   
+   	<!--Test Section -->
+   	
+	</span>
+    <!--Contents-->
+
+</div>
+<!--/Sections -->
+
+<!--/View -->
+
+<div ng-include="'footer.html'"></div>
+
+
+
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/war.js"></script>
+
+<!--Modal-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/animatedModal.min.js"></script>
+    <script>
+		   setTimeout(
+           
+           function(){
+		   modal();
+           scrollPosition();
+           popUp();
+		   }
+
+           , 1000);
+
+           function modal(){
+			
+			 //demo 01
+            $(".viewbutton a").animatedModal({
+                //modalTarget:'modal-02',
+                animatedIn:'slideInUp',
+                animatedOut:'slideOutDown',
+                color:'#3498db',
+                // Callbacks
+                beforeOpen: function() {
+                    console.log("The animation was called");
+                },           
+                afterOpen: function() {
+                    console.log("The animation is completed");
+                }, 
+                beforeClose: function() {
+                    console.log("The animation was called");
+                }, 
+                afterClose: function() {
+                    console.log("The animation is completed");
+                }
+            });
+
+			   
+			}
+
+
+
+function scrollPosition(){
+
+setInterval(
+  function(){
+
+ var scrollPosition = $(document).scrollTop();
+
+
+ if(scrollPosition > 380){
+   //console.log(scrollPosition);
+    $("#servicestoggle").css({"position": "fixed", "top": "50px", "background-color": "#fff","z-index": "1000","width": "95%"});
+  }else{
+
+    $("#servicestoggle").removeAttr("style");
+  }
+
+
+},1000)
+
+}
+
+
+function popUp(){   
+$(".project").hover(function() {
+         $(this).children(".projectpopup").animate({left: "0%"},500);
+        //$(this).children(".projectpopup").fadeIn();
+        //$(this).children(".projectpopup").addClass("slideInUp");
+        //$(this).children(".projectpopup").removeClass("slideOutDown");
+    }, function() {
+        $(this).children(".projectpopup").animate({left: "100%"},500);
+        //$(this).children(".projectpopup").addClass("slideOutDown");
+        //$(this).children(".projectpopup").removeClass("slideInUp");
+        
+ });    
+/*$(".project").mouseover(function(){
+    $(this).children(".projectpopup").animate({left: "0%"},500);
+});
+
+$(".projectpopup").mouseout(function(){
+    $(this).animate({left: "100%"},500);
+    console.log("Bye")
+});*/
+}
+
+</script>
+
+<!--Modal-->
+</body>
+</html>

@@ -1,0 +1,1885 @@
+<!--Script -->
+<script type="text/javascript">
+//alert("Loaded");
+        var addRandom = 200;
+
+        var configt = {
+            type: 'line',
+            elements: {
+                line: {
+                    tension: 0.000001
+                }
+            },
+            data: {
+                labels: ["04:00", "", "", "", "08:00", "", "", "", "12:00", "", "", "", "16:00", "", "", "", "20:00", "", "", "", "", "", "", ""],
+                datasets: [{
+                    radius: 0,
+                    label: "Clients",
+                    backgroundColor: "#1456aa",//window.chartColors.blue,
+                    borderColor: "#1456aa",//window.chartColors.blue,
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                    fill: true,
+                }, {
+                    label: "To Client",
+                    radius: 0,
+                    fill: true,
+                    backgroundColor: "#7cceee",//window.chartColors.blue,
+                    borderColor: "#7cceee",//window.chartColors.blue,
+                    elements: {
+                     line: {
+                     tension: 0.000001
+                      }
+                     },
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                layout: {
+                padding: {
+                left: 10,
+                right: 10,
+                top: 10,
+                bottom: 10
+                        }
+                    },
+                title:{
+                    display:true,
+                    text:'Traffic Volume'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value'
+                        }
+                    }]
+                    
+                }
+            }
+        };
+
+        var configu = {
+            type: 'line',
+            elements: {
+                line: {
+                    tension: 10.000001
+                }
+            },
+            data: {
+                labels: ["04:00", "", "", "", "08:00", "", "", "", "12:00", "", "", "", "16:00", "", "", "", "20:00", "", "", "", "", "", "", ""],
+                datasets: [{
+                    radius: 0,
+                    label: "Clients",
+                    backgroundColor: "#ce6006",//window.chartColors.blue,
+                    borderColor: "#ce6006",//window.chartColors.blue,
+                    steppedLine: false,
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                layout: {
+                padding: {
+                left: 10,
+                right: 10,
+                top: 10,
+                bottom: 10
+                        }
+                    },
+                legend: {
+                    display: false
+                },
+                title:{
+                    display:true,
+                    text:'Unique Clients'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value'
+                        }
+                    }]
+                    
+                }
+            }
+        };
+        
+
+        addRandom = 5;
+
+        var configa = {
+            type: 'horizontalBar',
+            elements: {
+                line: {
+                    tension: 0.000001
+                }
+            },
+            data: {
+                labels: ['web streaming', ' http protocol over tls ssl', '  miscellaneous', 'itunes', 'apple.com', 'dhs.gov', ' facebook','web file transfer', 'icloud-content.com', 'google.com'],
+                datasets: [{
+                    label: "Clients",
+                    backgroundColor: "#1456aa",//window.chartColors.blue,
+                    borderColor: "#1456aa",//window.chartColors.blue,
+                    data: [
+                        2.871935374,
+                        0.503743186,
+                        0.555337048,
+                        1.088762689,
+                        1.088762689,
+                        2.551770366 ,
+                        3.58121481,
+                        0.259960337 ,
+                        2.117840487 ,
+                        4.477504264 ,
+                    ],
+                    fill: true,
+                }, {
+                    label: "To Client",
+                    fill: true,
+                    backgroundColor: "#7cceee",//window.chartColors.blue,
+                    borderColor: "#7cceee",//window.chartColors.blue,
+                    elements: {
+                     line: {
+                     tension: 0.000001
+                      }
+                     },
+                     data: [
+                        2.871935374+addRandom,
+                        0.503743186+addRandom,
+                        0.555337048+addRandom,
+                        1.088762689+addRandom,
+                        1.088762689+addRandom,
+                        2.551770366+addRandom,
+                        3.58121481+addRandom,
+                        0.259960337+addRandom,
+                        2.117840487+addRandom,
+                        4.477504264+addRandom,
+                    ],
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                title:{
+                    display:true,
+                    text:'Top 10 Applications'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        barPercentage: 200,
+                        categoryPercentage: 200,
+                        stacked: true,
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        stacked: true,
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value'
+                        }
+                    }]
+                    
+                }
+            }
+        };
+
+
+      //Get Charts
+      var ctxt = document.getElementById("chart-area-traffic").getContext("2d");
+      window.myDoughnut = new Chart(ctxt, configt); 
+      var ctxu = document.getElementById("chart-area-unique").getContext("2d");
+      window.myDoughnut = new Chart(ctxu, configu);
+      var ctxa = document.getElementById("chart-area-applications").getContext("2d");
+      window.myDoughnut = new Chart(ctxa, configa);
+
+
+    </script>
+
+    <script type="text/javascript">
+        
+        //$(".floorplanthumbnail").hide();
+         floorplanThumb();
+
+        function floorplanThumb(){
+
+        $(".floorplanthumbnail").hide();
+        //#album #groundfloor
+        $(".imgholder").click(function(){
+            $(".floorplanthumbnail").show();
+         });
+
+        $("#album").click(function(){
+             $(".floorplanthumbnail").hide();
+         });
+        
+        $("#groundfloor").click(function(){
+             $(".floorplanthumbnail").show();
+         });
+        
+
+        }
+
+    </script>
+<!--Script -->
+<div class="content analycticsmore viewmoredrill">
+    
+
+<!--Content -->
+    <div class="uniTitle">
+        <a onclick='window.open("../venues/index.html", "_self")' class="blueLinks">Venues</a>
+        <p class="UniHead">HQ</p>
+    </div>
+    <div class="uniCont">
+        <div class="uniCont1">
+
+            <!--Admin-->
+             
+<div class='content administration userstab'>
+        <ul class="tabNav" id="admin_nav">
+            <li onclick='adminToggle("admin_tab_cont_details", 1)' class="adminSelect">
+            <div class="tabhalf">
+            <img src="../img/tab_venues_selected.png" class="tabcolor" width="40px" />
+            <img src="../img/tab_venues.png" class="tabgrey" width="40px" />
+            </div>
+            <div class="tabhalf">
+            Overview<br /><span class="sub_head " style="color:#00c100"><span class="client_Items" >0</span> Operational</span>
+            </div>
+            </li>
+
+
+            <li onclick='adminToggle("admin_tab_cont_clients", 2)' >
+            <div class="tabhalf">
+            <img src="../img/tab_clients_selected.png" class="tabcolor" width="40px" />
+            <img src="../img/tab_clients.png" class="tabgrey" width="40px" />
+            </div>
+            <div class="tabhalf">
+            Clients<br /><span class="sub_head " style="color:#00c100">1 connected</span>
+            </div>
+            </li>
+
+
+            <li onclick='adminToggle("admin_tab_cont_notifications", 3)'>
+            <div class="tabhalf">
+            <img src="../img/tab_aps_generic_selected.png" class="tabcolor" width="40px" />
+            <img src="../img/tab_aps_generic.png" class="tabgrey" width="40px" />
+            </div>
+            <div class="tabhalf">
+            APs<br /><span class="sub_head ">24/24 online</span>
+            </div>
+            </li>
+
+            <li onclick='adminToggle("admin_tab_cont_support", 4)'>
+            <div class="tabhalf">
+            <img src="../img/menu-wlans-mo.png" class="tabcolor" width="40px" />
+            <img src="../img/menu-wlans.png" class="tabgrey" width="40px" />
+            </div>
+            <div class="tabhalf">
+            Networks<br /><span class="sub_head ">3 Active</span>
+            </div>
+            </li>
+
+            <li onclick='adminToggle("admin_tab_cont_license", 5)'>
+            <div class="tabhalf">
+            <img src="../img/tab_alarms_selected.png" class="tabcolor" width="40px" />
+            <img src="../img/tab_alarms.png" class="tabgrey" width="40px" />
+            </div>
+            <div class="tabhalf">
+            Events<br /><span class="sub_head "></span>
+            </div>
+            </li>
+
+            <p id='adminToggleActive' style='display:none'>admin_tab_cont_details</p>
+        </ul>
+        <div id='admin_tab_cont' class="adminCont">
+            <div id="admin_tab_cont_details">
+               
+                <!--Content Start-->
+               <div class="APCont">
+               <div class="APCont1">
+                 <br><br>  
+
+            <div class="venuecombine">
+            <!--Left-->
+            <div class="venueleft">
+            <div class="venuecontentholder">
+            <div class="totalaps">
+                <p>APs (4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="
+    margin-top: -5px;
+" width="18px;" src="../img/access_points_10.png" /> 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="
+    margin-top: -5px;
+" width="18px;" src="../img/menu-aps.png" /> 4</p>
+                <!--<span class="opwifi">
+                <img width="15px;" src="../img/menu-aps.png" />&nbsp; 24 operational
+                </span>-->
+                <div class="floorplan">
+                    <div class="groundholder" >
+                    <div class="flooorplanlabel">Ground Floor</div>
+                    <div class="ground1">
+
+                    <div class="imgholder">
+                    <span class="markergreen" style="left: 632px;top: 115px;" >
+                    <img class="groundimg" style="background-color:transparent;"  width="100%" src="../img/green_marker.png" />
+                    </span>
+
+                    <span class="markergreen" style="left: 578px;top: 244px;" >
+                    <img class="groundimg" style="background-color:transparent;"  width="100%" src="../img/green_marker.png" />
+                    </span>
+
+                    <span class="markergrey" style="left: 85px;top: 213px;" >
+                    <img class="groundimg" style="background-color:transparent;"  width="100%" src="../img/grey_marker.png" />
+                    </span>
+
+                    <span class="markergrey" style="left: 179px;top: 130px;" >
+                    <img class="groundimg" style="background-color:transparent;"  width="100%" src="../img/grey_marker.png" />
+                    </span>
+
+                    <img class="groundimg" width="100%" src="../img/groundfloor.jpg" />
+                    
+                    </div>
+
+                    <div class="floorplanthumbnail">
+                        <div id="album" class="floorthumb deactivated_thumb">
+                        <div class="thumblabel">Album</div>
+                        <img class="groundimg"  width="100%" src="../img/album.png" />
+                        </div>
+
+                        <div id="groundfloor" class="floorthumb activated_thumb">
+                        <div class="thumblabel">Ground Floor</div>
+                        <img class="groundimg"  width="100%" src="../img/groundfloor.jpg" />
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="venuecontentholder">
+            <!--<div class="totalaps apnote">
+                <p align="center"><img src ="../img/lightbulb.jpg" width="18px" /> APs can be placed on floor plans to show their geographical distribution</p>
+            </div>-->
+            </div>
+            </div>
+            <!--Left-->
+            <!--Right-->
+            <div class="venueright">
+            <div id="venuemap"  class="venuemap">
+        <!--
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12711195.618984455!2d-107.07503172823053!3d38.93953462165095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sza!4v1519726775864" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen=""></iframe>-->
+
+           </div>
+            
+            <div class="venuesettings">
+            <p>Venue Settings:</p>
+            <p><img src ="../img/compass.jpg" width="25px" /> Mesh network: 
+            &nbsp;&nbsp;&nbsp;<img src ="../img/switch.jpg" width="50px" /></p>
+            <p><img src ="../img/speaker.jpg" width="25px" /> Wi-Fi Radio Settings: <span><a href="">View</a></span></p>
+
+            </div>
+
+            </div>
+            <!--Right-->
+            </div>
+
+            <div class="venuegraphsholder">
+                <!--Left Chart-->
+                <div class="venuegraphsleft">
+
+                <div class="stats">
+                <ul class="reportList">
+                    <li class="statsList selected">Last 24 Hours</li>
+                    <li class="statsList">Last 7 Days</li>
+                    <li class="statsList">Last 30 Days</li>
+                </ul>
+                <div>
+                    <canvas id="chart-area-traffic"></canvas>                    
+                </div>
+                <div>
+                    <canvas id="chart-area-unique"></canvas>
+                </div>
+                </div>
+
+                </div>
+                <!--Left Chart-->
+                
+                <!--Rightt  Chart-->
+                <div class="venuegraphsright">
+                <div class="stats">
+                    <canvas id="chart-area-applications">
+                    </canvas>
+                </div>
+                </div>
+                <!--Right  Chart-->
+
+            </div>
+            </div>
+               </div>
+
+<!--Content End-->
+
+            </div>
+
+            <!--
+            <div id="admin_tab_cont_admin" style='display: none;'>
+                <!--Content Start--
+                    Test
+                <!--Content End--
+            </div>-->
+
+            <!--Events-->
+            
+             <div id="admin_tab_cont_license" style='display: none;'>
+                <!--Content Events Start-->
+                <div class='content'>
+        <div class="APCont">
+            <div class="APCont1">
+                <!--<a onclick='dashAdd("ap")' class="blueLinks addBtn">Add AP</a>-->
+                <br><br><br>
+                <div class="APTop">
+                    
+                <form>
+
+                <select class="dropDown">
+                    <option value='all'>All Severities</option>
+                    <option value='wifi'>Critical</option>
+                    <option value='wifi'>Major</option>
+                    <option value='wifi'>Minor</option>
+                    <option value='wifi'>Warning</option>
+                    <option value='wifi'>Indeterminate</option>
+                    <option value='wifi'>International</option>
+                </select>
+
+                <select class="dropDown">
+                    <option value='all'>All Event Types</option>
+                    <option value='disconnected'><img src='' alt='red x'/> Admin</option>
+                    <option value='operational'><img src='' alt='green tick'/>AP</option>
+                    <option value='operational'><img src='' alt='green tick'/>Client</option>
+                    <option value='operational'><img src='' alt='green tick'/>Notification</option>
+                </select>
+
+                <!--<input class="time" type='time' name='search' placeholder="Time" />-->
+                
+                <!--
+                <select class="dropDown">
+                    <option value='all'>All Tags</option>
+                    <p>No Tags</p>
+                </select>-->
+
+                <input class="searchAP" type='text' name='search' placeholder="Search for events" required/>
+                <i class="fa fa-search fa-lg searchIconAP" aria-hidden="true"></i>
+
+                </form>
+
+                </div>
+
+                <table class="adminT1">
+                    <tr>
+                        <th>Date</th>
+                        <th>Severity</th>
+                        <th>Event Type</th>
+                        <th>Source</th>
+                        <th>Mac Address</th>
+                        <th>Description</th>
+                        <!--<th>Tags</th>-->
+                    </tr>
+                      <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-SOUTH-02</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             74:3E:2B:36:BC:20
+                        </td>
+                        <td class="s2">
+                            UAP's RF operating channel was changed from channel 132 to channel 116
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-SOUTH-02</a>
+                        </td>
+                        <td class="s2 softmerge">
+                            74:3E:2B:36:BC:20
+                        </td>
+                        <td class="s2">
+                            AP's RF operating channel was changed from channel 60 to channel 132
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-SOUTH-02</a>
+                        </td>
+                        <td class="s2 softmerge">
+                            74:3E:2B:36:BC:20
+                        </td>
+                        <td class="s2">
+                            AP's RF operating channel was changed from channel 100 to channel 60
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-SOUTH-02</a>
+                        </td>
+                        <td class="s2 softmerge">
+                            74:3E:2B:36:BC:20
+                        </td>
+                        <td class="s2">
+                             AP's RF operating channel was changed from channel 60 to channel 100
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-SOUTH-02</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             74:3E:2B:36:BC:20
+                        </td>
+                        <td class="s2">
+                            AP's RF operating channel was changed from channel 100 to channel 60
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-SOUTH-02</a>
+                        </td>
+                        <td class="s2 softmerge">
+                            74:3E:2B:36:BC:20
+                        </td>
+                        <td class="s2">
+                            AP's RF operating channel was changed from channel 124 to channel 100
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-EAST-01</a>
+                        </td>
+                        <td class="s2 softmerge">
+                            F8:E7:1E:0D:1E:30
+                        </td>
+                        <td class="s2">
+                            AP's WLAN changed state (was either disabled or enabled)
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">DO-EAST-01</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             F8:E7:1E:0D:1E:30
+                        </td>
+                        <td class="s2">
+                            AP's WLAN changed state (was either disabled or enabled)
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">Leroy</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             24:77:03:3B:B9:54
+                        </td>
+                        <td class="s2">
+                            User left the Wi-Fi network
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">Rachel</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             24:77:03:4E:42:A8
+                        </td>
+                        <td class="s2">
+                             User left the Wi-Fi network
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">Yves</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             24:77:03:4E:42:A8
+                        </td>
+                        <td class="s2">
+                             User left the Wi-Fi network
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">Jose</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             24:77:03:4E:42:A8
+                        </td>
+                        <td class="s2">
+                            User left the Wi-Fi network
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">Pooja</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             24:77:03:4E:42:A8
+                        </td>
+                        <td class="s2">
+                            User left the Wi-Fi network
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">Ian</a>
+                        </td>
+                        <td class="s2 softmerge">
+                             24:77:03:4E:42:A8
+                        </td>
+                        <td class="s2">
+                            User left the Wi-Fi network
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td class="s2">
+                            03/06/2018 15:20
+                        </td>
+                        <td class="s2" align="center">
+                            <i class="fa fa-info" aria-hidden="true"></i>
+                        </td>
+                        <td class="s2">
+                            Client
+                        </td>
+                        <td class="s2">
+                            <a href="#">Gina</a>
+                        </td>
+                        <td class="s2 softmerge">
+                              24:77:03:4E:42:A8
+                        </td>
+                        <td class="s2">
+                            User left the Wi-Fi network
+                            <img src="../img/events_06.png" class="eventsimg" width="16px" />
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+                <!--Content Evnts End-->
+            </div>
+            <!--Events-->
+            
+            <div id="admin_tab_cont_clients" style='display: none;'>
+                <!--Content Client Start-->
+                 <div class='content'>
+        <div class="APCont">
+            <div class="APCont1">
+                
+                <!--<br><br><br>
+                <a  class="blueLinks addBtn">Add AP</a>-->
+                 <br><br><br>
+                <div class="APTop">
+                    <form>
+                        <input class="searchAP" type="text" name="search" placeholder="Search for clients.." required="">
+                        <i class="fa fa-search fa-lg searchIconAP"  aria-hidden="true"></i>
+
+                        <select class="dropDown" >
+                    <option value='all'>All APs</option>
+                    <option>LUK-AP-GYM</option>
+                    <option>LUK-AP-Conf</option>
+                    <option>LUK-AP-LRC</option>
+                    <option>LUK-AP-229</option>
+                    <option>LUK-AP-128</option>
+                    <option>LUK-AP-235</option>
+                    <option>LUK-AP-136</option>
+
+                    <option>LUK-AP-132</option>
+                    <option>LUK-AP-129</option>
+                    <option>LUK-AP-Office</option>
+                    <option>LUK-AP-227</option>
+                    <option>LUK-AP-135</option>
+                    <option>LUK-AP-SPARE-1</option>
+                    <option>LUK-AP-126</option>
+
+                    <option>LUK-AP-Tech Hall</option>
+                    <option>OUK-AP-210</option>
+                    <option>OUK-AP-212</option>
+                    <option>OUK-AP-218</option>
+                    <option>OUK-AP-TrackShed</option>
+                    <option>CUK-AP-119</option>
+                    <option>CUK-Hallway-Art</option>
+
+                    <option>CUK-AP-112</option>
+                    <option>CUK-AP-108</option>
+                    <option>CUK-AP-219</option>
+                    <option>ESC-Rm801</option>
+                    <option>ESC-Rm209</option>
+                    <option>BBE-Rm109</option>
+                    <option>BBE-Rm201</option>
+
+                    <option>CDE-AP-160</option>
+                    <option>CDE-AP-157</option>
+                    <option>PFR-AP-160</option>
+                    <option>PFR-AP-157</option>
+                </select>
+
+                    </form>
+                
+            </div>
+
+
+            <table class="adminT1">
+                    <tr>
+                        <th>OS</th>
+                        <th>MAC Address</th>
+                        <th>Username</th>
+                        <th>Hostname</th>
+                        <th><img src="../img/location_black.png" width="10px" />Venue</th>
+                        <th><img src="../img/access_points_07.png" width="15px">AP</th>
+                        <th>Network (VLAN)</th>
+                        <th>Time Connected</th>
+                        <!--<th>Tags</th>-->
+                    </tr>
+                      <tr >
+                        <td class="s2"><img src="../img/users_17.jpg" width="15px" />Apple</td>
+                        <td class="s2">78:7b:8a:06:79:b3</td>
+                        <td class="s2">10.45.1.150</td>
+                        <td class="s2">N/A</td>
+                        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />HQ</td>
+                        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-GYM</td>
+                        <td class="s2">D201(45)</td>
+                        <td class="s3">30 days, 7 hours</td>
+                      </tr>
+                  </table>
+
+        </div>
+    </div>
+                </div>
+                <!--Content Client End-->
+            </div>
+                   
+            <div id="admin_tab_cont_notifications" style='display: none;'>
+                <!--Content AP Start-->
+                 <div class='content'>
+        <div class="APCont">
+            <div class="APCont1">
+                <a onclick='dashAdd("ap")' class="blueLinks addBtn">Add AP</a>
+                <br><br><br>
+                <div class="APTop">
+                    <form>
+                        <input class="searchAP" type='text' name='search' placeholder="AP's name/ MAC Address" required/>
+                        <i class="fa fa-search fa-lg searchIconAP" aria-hidden="true"></i>
+
+                        <select class="dropDown">
+                    <option value='all'>All Types</option>
+                    <option value='wifi'>WiFi</option>
+                </select>
+
+                        <select class="dropDown">
+                    <option value='all'>All Statuses</option>
+                    <option value='disconnected'><img src='' alt='red x'/> AP disconnected</option>
+                    <option value='operational'><img src='' alt='green tick'/> Operational</option>
+                </select>
+
+                        <select class="dropDown">
+                    <option value='all'>All Models</option>
+                    <option value='R310'>R310</option>
+                    <option value='R500'>R500</option>
+                    <option value='R600'>R600</option>
+                </select>
+
+                        <select class="dropDown">
+                    <option value='all'>All Tags</option>
+                    <p>No Tags</p>
+                </select>
+                    </form>
+                </div>
+                <table class="adminT1">
+                    <tr>
+                        <th><img src="../img/access_points_07.png" width="20px" /> AP</th>
+                        <th>Status</th>
+                        <th>Model</th>
+                        <th>IP Address</th>
+                        <th>Mac Address</th>
+                        <th>Venue</th>
+                        <th>Mesh Role</th>
+                        <th>Clients</th>
+                        <!--<th>Tags</th>-->
+                    </tr>
+      
+      <tr class="loadbefore" >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" /> LUK-AP-GYM</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" /> Operational</td>
+        <td class="s2">R610</td>
+        <td class="s2">10.1.46.5</td>
+        <td class="s2 softmerge">30:87:I2:03:C2:00</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" /> HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">40</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-Conf</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R610</td>
+        <td class="s2">10.1.46.6</td>
+        <td class="s2">30:87:I2:03:C2:E0</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">28</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-LRC</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R610</td>
+        <td class="s2">10.1.46.7</td>
+        <td class="s2 softmerge">30:87:I2:03:C4:60</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">62</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-229</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.8</td>
+        <td class="s2 softmerge">0C:F4:C9:22:70:20</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">45</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-128</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.10</td>
+        <td class="s2 softmerge">0C:F4:C9:22:92:50</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">33</td>
+      </tr>
+      <tr>
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-235</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.11</td>
+        <td class="s2 softmerge">0C:F4:C9:22:9C:F0</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">56</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-136</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.13</td>
+        <td class="s2 softmerge">0C:F4:C9:22:B9:C0</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">32</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-132</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.16</td>
+        <td class="s2 softmerge">0C:F4:C9:22:CD:E0/td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">29</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-129</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.12</td>
+        <td class="s2 softmerge">0C:F4:C9:22:D1:00</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">29</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-Office</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.14</td>
+        <td class="s2 softmerge">0C:F4:C9:22:D3:70</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">46</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-227</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.15</td>
+        <td class="s2 softmerge">0C:F4:C9:22:D4:90</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">70</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-135</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.17</td>
+        <td class="s2 softmerge">0C:F4:C9:22:D6:B0</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">39</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-SPARE-1</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.18</td>
+        <td class="s2 softmerge">0C:F4:C9:22:DA:90</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">34</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-126</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.19</td>
+        <td class="s2 softmerge">0C:F4:C9:22:DF:B0</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">24</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />LUK-AP-Tech Hall</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.46.20</td>
+        <td class="s2 softmerge">0C:F4:C9:22:E0:90</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />HQ</td>
+        <td class="s2">AP</td>
+        <td class="s3">43</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />OUK-AP-210</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.24</td>
+        <td class="s2 softmerge">Y3:3E:90:0F:74:80</td>
+        <td class="s2 softmerge"><img src="../img/location_green.png" width="16px" />Warehouse - Oxford</td>
+        <td class="s2">AP</td>
+        <td class="s3">49</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />OUK-AP-212</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.25</td>
+        <td class="s2 softmerge">Y3:3E:90:0F:73:90</td>
+        <td class="s2 softmerge"><img src="../img/location_green.png" width="16px" />Warehouse - Oxford</td>
+        <td class="s2">AP</td>
+        <td class="s3">32</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />OUK-AP-218</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.26</td>
+        <td class="s2 softmerge">Y3:3E:90:0F:76:30</td>
+        <td class="s2 softmerge"><img src="../img/location_green.png" width="16px" />Warehouse - Oxford</td>
+        <td class="s2">AP</td>
+        <td class="s3">16</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />OUK-AP-TrackShed</td>
+        <td class="s2 softmerge"><img src="../img/access_points_12.png" width="18px" />AP disconnected</td>
+        <td class="s2">T300</td>
+        <td class="s2">10.1.42.40</td>
+        <td class="s2 softmerge">F8:E7:4E:1B:58:10</td>
+        <td class="s2 softmerge"><img src="../img/location_green.png" width="16px" />Warehouse - Oxford</td>
+        <td class="s2">AP</td>
+        <td class="s3">30</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />CUK-AP-119</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.10</td>
+        <td class="s2 softmerge">Y3:3E:90:0D:06:60</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Phoenix</td>
+        <td class="s2">AP</td>
+        <td class="s3">64</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />CUK-Hallway-Art</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.6</td>
+        <td class="s2 softmerge">Y3:3E:90:0D:0C:90</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Cambridge</td>
+        <td class="s2">AP</td>
+        <td class="s3">39</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />CUK-AP-112</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.28</td>
+        <td class="s2 softmerge">Y3:3E:90:0D:12:60</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Cambridge</td>
+        <td class="s2">AP</td>
+        <td class="s3">29</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />CUK-AP-108</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.30</td>
+        <td class="s2 softmerge">Y3:3E:90:0D:06:90</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Cambridge</td>
+        <td class="s2">AP</td>
+        <td class="s3">54</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />CUK-AP-219</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.42.31</td>
+        <td class="s2 softmerge">Y3:3E:90:0D:11:90</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Cambridge</td>
+        <td class="s2">AP</td>
+        <td class="s3">35</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />ESC-Rm801</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.43.41</td>
+        <td class="s2 softmerge">Y3:3E:90:0F:77:00</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Edinburgh</td>
+        <td class="s2">AP</td>
+        <td class="s3">39</td>
+      </tr>
+      <tr>
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />ESC-Rm209</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.43.19</td>
+        <td class="s2 softmerge">Y3:3E:90:0F:94:60</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Edinburgh</td>
+        <td class="s2">AP</td>
+        <td class="s3">43</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />BBE-Rm109</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.43.12</td>
+        <td class="s2 softmerge">Y3:3E:90:0D:1D:30</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" /> Store - Brussels</td>
+        <td class="s2">AP</td>
+        <td class="s3">19</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />BBE-Rm201</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R500</td>
+        <td class="s2">10.1.43.13</td>
+        <td class="s2 softmerge">Y3:3E:90:0D:25:A0</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" /> Store - Brussels</td>
+        <td class="s2">AP</td>
+        <td class="s3">26</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />CDE-AP-160</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.41.9</td>
+        <td class="s2 softmerge">0C:F4:C9:22:6E:60</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Cologne</td>
+        <td class="s2">AP</td>
+        <td class="s3">86</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />CDE-AP-157</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.41.10</td>
+        <td class="s2 softmerge">0C:F4:C9:22:80:30</td>
+        <td class="s2"><img src="../img/location_green.png" width="16px" />Store - Cologne</td>
+        <td class="s2">AP</td>
+        <td class="s3">20</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />PFR-AP-160</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.41.9</td>
+        <td class="s2 softmerge">0C:F4:C9:22:6E:60</td>
+        <td class="s2 softmerge"><img src="../img/location_green.png" width="16px" />Store - Paris</td>
+        <td class="s2">AP</td>
+        <td class="s3">37</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/access_points_10.png" width="20px" />PFR-AP-157</td>
+        <td class="s2"><img src="../img/access_points_12.png" width="18px" />Operational</td>
+        <td class="s2">R510</td>
+        <td class="s2">10.1.41.10</td>
+        <td class="s2 softmerge">0C:F4:C9:22:80:30</td>
+        <td class="s2 softmerge"><img src="../img/location_green.png" width="16px" />Store - Paris</td>
+        <td class="s2">AP</td>
+        <td class="s4">25</td>
+      </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+                <!--Content AP End-->
+            </div>
+            <div id="admin_tab_cont_support" style='display: none;'>
+                <!--Content Network Start-->
+                <div class='content'>
+        <div class="networkCont">
+            <div class="networkCont11">
+                <a onclick='dashAdd("network")' class="blueLinks addBtn">Add Network</a>
+                <div class="netTop">
+                    <div class="grey-title-panel"></div>
+                </div>
+                <table class="adminT1">
+                    <tr>
+                        <th><img src="../img/networks_03.jpg" width="20px" />Network Name</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Venues</th>
+                        <th>APs</th>
+                        <th>VLAN</th>
+                    </tr>
+                    <!--<tr>
+                        <td>Test</td>
+                        <td>Test Network</td>
+                        <td>Portal - Self Sign-In</td>
+                        <td>0</td>
+                        <td>4</td>
+                        <td>VLAN-1</td>
+                    </tr>-->
+                    <!--New-->
+                   
+                  <tr class="loadbefore">
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" /> LUK-JH-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">37</td>
+                    <td class="s2">43</td>
+                  </tr>
+                  <tr>
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />LUK-D201-Guest</td>
+                    <td class="s1 softmerge">D201-Guest</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">24</td>
+                    <td class="s2">55</td>
+                  </tr>
+                  <tr>
+                   
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />LUK-D201-Staff</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">24</td>
+                    <td class="s2">75</td>
+                  </tr>
+                  <tr>
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />LUK-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">24</td>
+                    <td class="s2">45</td>
+                  </tr>
+                  <tr >
+                   
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />LUK-BG-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">1</td>
+                    <td class="s2">48</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />LUK-MIS-BYOD</td>
+                    <td class="s1">BYOD</td>
+                    <td class="s1">public</td>
+                    <td class="s2">1</td>
+                    <td class="s2">36</td>
+                    <td class="s2">142</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1 softmerge"><img src="../img/networks_06.png" width="20px" />LUK-WT-D201-Staff</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">27</td>
+                    <td class="s2">74</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />OUK-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">36</td>
+                    <td class="s2">42</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />OUK-D201-Guest</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Guest</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">26</td>
+                    <td class="s2">56</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />OUK-D201-Staff</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">26</td>
+                    <td class="s2">76</td>
+                  </tr>
+                  <tr>
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />CUK-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">26</td>
+                    <td class="s2">46</td>
+                  </tr>
+                  <tr>
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />CUK-BYOD</td>
+                    <td class="s1">BYOD</td>
+                    <td class="s1">public</td>
+                    <td class="s2">1</td>
+                    <td class="s2">37</td>
+                    <td class="s2">143</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />CUK D201-STAFF</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">37</td>
+                    <td class="s2">73</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />CUK-D201-Staff</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">26</td>
+                    <td class="s2">71</td>
+                  </tr>
+                  <tr>
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />ESC_D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">26</td>
+                    <td class="s2">41</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />ESC-D201-Staff</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">36</td>
+                    <td class="s2">72</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />BBE-D201-Public</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Public</div></td>
+                    <td class="s1">public</td>
+                    <td class="s2">2</td>
+                    <td class="s2">42</td>
+                    <td class="s2">51</td>
+                  </tr>
+                  <tr>
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />BBE-D201-Staff</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">16</td>
+                    <td class="s2">77</td>
+                  </tr>
+                  <tr>
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />BBE-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">16</td>
+                    <td class="s2">47</td>
+                  </tr>
+                  <tr >
+                   
+                    <td class="s1 softmerge"><img src="../img/networks_06.png" width="20px" />CDE-D201-Public</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Public</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">27</td>
+                    <td class="s2">54</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />CDE-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">27</td>
+                    <td class="s2">44</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />CDE-D201-Staff</td>
+                    <td class="s1 softmerge"><div class="softmerge-inner" style="width: 74px; left: -1px;">D201-Staff</div></td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">26</td>
+                    <td class="s2">76</td>
+                  </tr>
+                  <tr>
+                   
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />PFR-D201</td>
+                    <td class="s1">D201</td>
+                    <td class="s1">private</td>
+                    <td class="s2">1</td>
+                    <td class="s2">26</td>
+                    <td class="s2">46</td>
+                  </tr>
+                  <tr >
+                    
+                    <td class="s1"><img src="../img/networks_06.png" width="20px" />PFR-BYOD</td>
+                    <td class="s1">BYOD</td>
+                    <td class="s1">public</td>
+                    <td class="s2">1</td>
+                    <td class="s2">37</td>
+                    <td class="s2">80</td>
+                  </tr>
+                    <!--New-->
+                </table>
+            </div>
+        </div>
+                <!--Content Network End-->
+            </div>
+
+            
+
+        </div>
+    </div>
+            <!--Admin-->
+
+            <!--Content Goes here
+            <table class="adminT1">
+                    <tr>
+                        <th>Apps</th>
+                        <th>Total Traffic</th>
+                    </tr>
+                    <tr>
+                        <td>web streaming</td>
+                        <td>2.871935374 </td>
+                    </tr>
+                    
+                  <tr>
+                    <td class="s2">http protocol over tls ssl</td>
+                    <td class="s2">00.555337048</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">miscellaneous</td>
+                    <td class="s2">2.655720187</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">itunes</td>
+                    <td class="s2">2.551770366</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">dhs.gov</td>
+                    <td class="s2">3.58121481</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">facebook</td>
+                    <td class="s2">0.259960337</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">web file transfer</td>
+                    <td class="s2">2.117840487</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">icloud-content.com</td>
+                    <td class="s2">Store 3</td>
+                  </tr>
+                    
+               </table>
+             Content Goes here -->
+            <!--<ul>
+                <p>Data Summary:</p>
+                <p>01/02/2018 19:17 - 01/03/2018 19:17</p>
+            </ul>
+
+            <div>
+                <div>
+                    <p>Top Applications By Clients Count</p>
+                    <p>No data to display</p>
+                </div>
+                <div>
+                    <p>No data to display</p>
+                </div>
+            </div>
+
+            <ul>
+                <li>Application Name</li>
+                <li>DL+UP</li>
+                <li>DL</li>
+                <li>UP</li>
+                <li>Clients</li>
+                <p>No data to display</p>
+            </ul>
+        </div>
+    </div>
+</div>-->
+
+
+<script type="text/javascript">
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:8,
+        center: {lat: 51.509171, lng: -0.111979}
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('venuemap'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+
+      var hqData = '<div class="holder" style="display:block;float:left;width:100%;height:auto;font-family:'
+                  +'arial;position: relative;margin-left: 0px;">'
+                  +'<div style="background-color:'
+                  +'#fff;color:#484848;display:block;float:left;width:100%;padding: 6px;border-bottom: solid #ccc 1px;font-weight:bold;font-size:16px">'
+                  +'HQ</div>'
+                  +'<div style="background-color: #fff;color:'
+                  + '#000;display:block;float:left;width:100%;padding:'
+                  +'6px;border-bottom: solid #ccc 1px;font-size: 13px;">'
+                  +'APs <img width="10px" src="../img/access_points_10.png" style="margin-left: 20px;'
+                  +'">&nbsp; 15'
+                  +'</div><div style="background-color:'
+                  +'#fff;color:#000;display:block;float:left;width:100%;padding: 6px;border-bottom:'
+                  +'none;font-size: 13px;">Clients&nbsp;&nbsp;<img src="../img/users_03.png" width="7px">&nbsp;&nbsp;610</div>'
+                  +'<img width="10px" src="../img/arrow.png" style="'
+                  +'margin-left: 20px;position: absolute;top: 37px;left: -50px;width: 35px;">';
+      
+      //london 51.509171, -0.111979
+
+      // Array of markers
+      var markers = [
+        {
+          coords:{lat:51.509171,lng:-0.111979},
+          iconImage:'../img/mapmarker_smallerr.png',
+          content:hqData,
+          title:'HQ'
+        }
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          title:props.title,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+        }
+
+
+         //Marker event
+         /* marker.addListener('mouseover', function(){
+            infoWindow.open(map, marker);
+          });
+
+          marker.addListener('click', function(){
+            //infoWindow.open(map, marker);
+            Cookies.set('mapmarker', 'mapmarker', { expires: 7 });
+            window.location.href = "../venues/index.html";
+          });
+
+          marker.addListener('mouseout', function(){
+            infoWindow.close(map, marker);
+          });*/
+          //Marker Event
+
+
+          //holder Styling
+          google.maps.event.addListener(infoWindow, 'domready', function() {
+                var l = $('.holder').parent().parent().parent().siblings();
+                for (var i = 0; i < l.length; i++) {
+                    if($(l[i]).css('z-index') == 'auto') {
+                        $(l[i]).css('border-radius', '16px 16px 16px 16px');
+                        $(l[i]).css('padding', '0px !important');
+                        $(l[i]).css('background-color', 'transperant');
+                        //$(l[i]).css('border', '2px solid red');
+                    }
+                }
+
+                var t = $('.holder').parent();
+                for (var i = 0; i < t.length; i++) {
+                        $(t[i]).css('overflow', 'visible');
+                        //$(l[i]).css('border', '2px solid red');
+                }
+
+
+                var s = $('.holder').parent().parent();
+                for (var i = 0; i < s.length; i++) {
+                        $(s[i]).css('overflow', 'visible');
+                        //$(l[i]).css('border', '2px solid red');
+                }
+
+            });
+          //holder Styling
+          
+         
+
+      }
+    }
+
+
+
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-B_wj2tuV8dqNWfoG2mr9g7cx-mKqDPQ&callback=initMap"
+    type="text/javascript"></script>
+
+<script type="text/javascript" src="../js/gmaps.js"></script>

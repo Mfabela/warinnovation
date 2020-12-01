@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>THIS IS WAAAR!!!</title>
+    <!--Fav Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <!--Fav Icon-->
+    <link rel="icon" href="http://example.com/favicon.png">
+    <!--Open Graph-->
+    <meta property="og:title" content="THIS IS WAAAR!!!" />
+    <!--<meta property="og:type" content="video.movie" />-->
+    <meta property="og:url" content="http://warinnovation.co.za/" />
+    <meta property="og:image" content="http://warinnovation.co.za/images/opengraph.jpg" />
+    <meta property="og:description" content="WAR is an innovations company that aims to make your life just a little better" />
+    <!--Open Graph-->
+    <meta name="author" content="Luthando Mfabe">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Web Development, Augmented Reality, Virtual Reality, Game Development, HTML5 Development,I llustration, VR, AR, IOS Development, Android Development, Illustration, UI Design, UX Design, User Experience Design, Web GL, Graphic Design, Respberry PI, Leapmotion, Robotics">
+    <meta name="description" content="WAR is an innovations company that aims to make your life just a little better ">
+  <meta name="Resource-type" content="Document" />
+
+     
+    
+    <link rel="stylesheet" href="css/font.css" type="text/css" charset="utf-8" />
+    <!--Font-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/war.css" />
+    
+    <!--Link-->
+    <style>
+    .aboutlink{
+        background-color: rgb(40, 49, 109);
+    }
+    .aboutlink a{
+        color: #fff !important;
+    }
+    h3{
+        color: rgb(40, 49, 109);
+    }
+    </style>
+    <!--Link -->
+   
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48391381-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/war_angular.js"></script>
+    
+    <script>
+	//BodyContent
+    app.controller('contentCtrl', function($scope, $http) {
+    $http.get("headercontent.php").then(function(response) {
+    	$scope.headerContent = response.data.aboutpageheader;
+    });
+    
+
+    $http.get("pagecontent.php").then(function(response) {
+    	$scope.clientscontent = response.data.clients;
+    });
+
+   });
+//BodyContent
+    </script>
+	
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+	<script src="js/jquery-1.11.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+    
+     <!--SVG-->
+    <script src='js/snap.svg-min.js'></script>
+    <script src="js/svg.js"></script>  
+    <link href="css/svg.css" rel="stylesheet" type="text/css">
+    <!--SVG-->
+    
+    
+   
+    
+
+</head>
+<body  ng-app="mainApp" ng-controller="contentCtrl" >
+
+<div ng-include="'nav.html'"></div>
+<!--View -->
+
+
+<!--<div ng-view></div>
+-->
+
+
+<!--Sections -->
+<div  >
+	
+
+	<!--Section -->
+    <div class="col-lg-12" ng-repeat="x in headerContent">
+    
+    <div  class="section landingPage  headerbgcolor" id="{{x.id}}" style="background-image: url({{x.bgimage}})">
+		<div class="intro">
+            <svg class="svg" data-svgsrc="{{x.svg}}" width="100%" height="100%" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid meet"></svg>
+			<!--<h1 align="center"><img align="middle" src="{{x.biglogo}}" width="300px" ></h1>-->
+           <!-- <h3 style="color:{{x.textcolor}}">{{x.pagetitle}}</h3>-->
+			<p align="center">
+            <span class="arrowdown">
+            <!--<img align="middle" src="{{x.cta}}" width="100%" >-->
+            </span>
+            </p>
+		</div>
+	</div>
+    
+   
+    
+     <h3 class="contents" style="color:{{x.textcolor}}">{{x.pagetitle}}</h3>
+    </div>
+	<!--/Section -->
+    
+    
+    <!--Contents-->
+    <span class="contents">
+    <!--Section  Content-->
+	<!--<div class="col-lg-12 container content">
+     <div class="col-sm-6">
+    <p >WAR is an innovations company that tries to make the world a better place, for everyone. It was started by Luthando Mfabe in October 2016  in Johannesburg. Luthando has worked on some of the biggest international brands as a interaction designer and developer. Some of the brands he has worked on Include Coca-Cola, ShowMaxx, Mercedes Benz, MTN Business, MTN Consumer, Avis, MultiChoice, Protea Hotels, Dulux, Ford, Transact, 21 Icons and many many more brands. He built the first medical Augmented Reality app in South Africa for Transact. He also built AR and VR apps for Mercedes Benz and MTN. 
+    </p>
+    </div>
+     <div class="col-sm-6">
+    <p>
+    We just want to make the world a better place. We believe with good ideas and tachnology we can improve a lot of peoples' lives. We aim to make your life just a little bit better. We do that by woking with talented and passionate individuals. We also look forward to partnering with forward thinking and innovative institutions. We believe that by working with people who have the same vision, the sky is the limit. 
+    </p>
+     </div>
+    </div>-->
+    <div class="col-lg-12 container content">
+    <div class="col-sm-6">
+    <p>
+    To us innovation is relative, innovation does not necessarily mean building a cool app or creating the latest "cool" gadget. What Innovaton means to us is how we can make your life a little better. How we can contribute to make life easier. We do that by looking at the problem and then we find the best solution. Whether we do it through open source technology, green technology, art or a totally new invention, whatever it takes. We want to make innovation affordable for everyone.
+    </p>
+     </div>
+     <div class="col-sm-6">
+    <p>We are inspired by Africa. We love everything about Africa. From the music, food to the weather and history . We use African values to create products that speak to  Africans. Being African is not just being born in Africa but it also means how you think, speak and play. We aim to create innovative products that will inspire you and speak to you in your language.
+    </p>
+    </div>
+     
+    </div>
+    <!--/Section  Content-->
+    
+       <!--Team -->
+    <div class="col-lg-12 container content">
+    <h2 class="text-center">Team</h2>
+    
+    <div class="col-lg-12">
+    
+    <!--Profile-->
+    <div class="col-lg-4 profile">
+      <img src="images/profile/luthando_mfabe.jpg" width="100%">
+      <h3>Luthando Mfabe</h3>
+      <h2>Founder/ Developer</h2>
+    </div>
+    <!--Profile-->
+    
+
+    
+    </div>
+    
+    </div>
+    <!--Team-->  
+    
+    
+    <!--Clients --
+    <div class=" container-fluid pagesections">
+    <h2 class="text-center">CLIENTS</h2>
+    
+    <div class="col-lg-12">
+    
+    <div class="clients"  ng-repeat="x in clientscontent">
+      <img src="{{x.clientlogo}}" width="100%" alt="{{x.clienttitle}">
+    </div>
+
+    </div>
+    </div>
+    <!--Clients -->    
+   
+   	<!--Test Section -->
+   	
+	</span>
+<!--Contents-->
+
+
+</div>
+<!--/Sections -->
+
+<!--/View -->
+
+<div ng-include="'footer.html'"></div>
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/war.js"></script>
+</body>
+</html>

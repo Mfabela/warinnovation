@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+<title>THIS IS WAAAR!!!</title>
+    <!--Fav Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <!--Fav Icon-->
+    <link rel="icon" href="http://example.com/favicon.png">
+    <!--Open Graph-->
+    <meta property="og:title" content="THIS IS WAAAR!!!" />
+    <!--<meta property="og:type" content="video.movie" />-->
+    <meta property="og:url" content="http://warinnovation.co.za/" />
+    <meta property="og:image" content="http://warinnovation.co.za/images/opengraph.jpg" />
+    <meta property="og:description" content="WAR is an innovations company that aims to make your life just a little better" />
+    <!--Open Graph-->
+    <meta name="author" content="Luthando Mfabe">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Web Development, Augmented Reality, Virtual Reality, Game Development, HTML5 Development,I llustration, VR, AR, IOS Development, Android Development, Illustration, UI Design, UX Design, User Experience Design, Web GL, Graphic Design, Respberry PI, Leapmotion, Robotics">
+    <meta name="description" content="WAR is an innovations company that aims to make your life just a little better ">
+  <meta name="Resource-type" content="Document" />
+
+     
+    
+          <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48391381-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+      <link rel="stylesheet" type="text/css" href="css/war.css" />
+       <!--Font-->
+    <link rel="stylesheet" href="css/font.css" type="text/css" charset="utf-8" />
+    <!--Font-->
+    <!--Link-->
+    <style>
+    .contactlink{
+        background-color: rgb(252, 122, 100);
+    }
+    .contactlink a{
+        color: #fff !important;
+    }
+    h3{
+        color: rgb(252, 122, 100);
+    }
+    </style>
+    <!--Link -->
+      <script src="js/angular.min.js"></script>
+      <script src="js/angular-route.js"></script>
+      <script type="text/javascript" src="js/war_angular.js"></script>
+      <script>
+         //BodyContent
+            app.controller('contentCtrl', function($scope, $http) {
+            $http.get("headercontent.php").then(function(response) {
+            	$scope.headerContent = response.data.contactpageheader;
+            });
+           });
+         //BodyContent
+         
+      </script>
+      <!--[if IE]>
+      <script type="text/javascript">
+         var console = { log: function() {} };
+      </script>
+      <![endif]-->
+      <script src="js/jquery-1.11.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+      <style>
+         .pagesections h2 {
+         font-size: 22px;
+         font-weight: 600;
+         color: #9AD1CC;
+         font-size: 25px;
+         font-weight: 800;
+         text-transform: uppercase;
+         margin-top: 15px;
+         }
+      </style>
+      
+       <!--SVG-->
+    <script src='js/snap.svg-min.js'></script>
+    <script src="js/svg.js"></script>  
+    <link href="css/svg.css" rel="stylesheet" type="text/css">
+    <!--SVG-->
+    
+   </head>
+   <body  ng-app="mainApp" ng-controller="contentCtrl" >
+      <div ng-include="'nav.html'"></div>
+      <!--View --> 
+      <!--<div ng-view></div>
+         --> 
+      <!--Sections -->
+      <div>
+         	<!--Section -->
+    <div class="col-lg-12" ng-repeat="x in headerContent">
+	<div  class="section landingPage  headerbgcolor" id="{{x.id}}" style="background-image: url({{x.bgimage}})">
+		<div class="intro">
+            <svg class="svg" data-svgsrc="{{x.svg}}" width="100%" height="100%" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid meet"></svg>
+		    <!--<h1 align="center"><img align="middle" src="{{x.biglogo}}" width="300px" ></h1>-->
+           <!-- <h3 style="color:{{x.textcolor}}">{{x.pagetitle}}</h3>-->
+			<p align="center">
+            <span class="arrowdown">
+            <!--<img align="middle" src="{{x.cta}}" width="100%" >-->
+            </span>
+            </p>
+		</div>
+	</div>
+     <h3 class="contents" style="color:{{x.textcolor}}">{{x.pagetitle}}</h3>
+    </div>
+	<!--/Section -->
+         <!--Section  Content-->
+         <div class="col-lg-12 container content">
+            <div class="pagesections">
+               <!--Form Div -->
+               <div class="col-lg-6 warform">
+                  
+                  <ul>
+                     <form name="myForm" ng-controller="validateCtrl" method="post" action="mail/form.php" novalidate>
+                     
+                     <div class="col-lg-12">
+                        <p><label style="margin-top:0px">Name:</label><br>
+                           <input type="text" name="first_name" class="col-lg-12 warinput" ng-model="user" required>
+                           <span class="inputwarning" ng-show="myForm.user.$dirty && myForm.user.$invalid"> <span ng-show="myForm.user.$error.required">Username is required.</span> </span> 
+                        </p>
+                        </div>
+                        
+                        
+                        <div class="col-lg-12">
+                        <p><label>Email:</label><br>
+                           <input type="email" name="email" class="col-lg-12 warinput" ng-model="email" required>
+                           <span class="inputwarning" ng-show="myForm.email.$dirty && myForm.email.$invalid"> <span ng-show="myForm.email.$error.required">Email is required.</span> <span ng-show="myForm.email.$error.email">Invalid email address.</span> </span> 
+                        </p>
+                        </div>
+                        
+                        
+                        <div class="col-lg-12">
+                        <p><label>Message:</label><br>
+                           <textarea name="comments"  class="col-lg-12 warinput warmessage" ng-model="textarea" required> </textarea>
+                           <span  class="inputwarning" ng-show="myForm.textarea.$dirty && myForm.textarea.$invalid"> <span ng-show="myForm.textarea.$error.required">Message is required.</span> </span>
+                       </p>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                         <p>
+                           <input class="warsubmit" type="submit"
+                              ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||
+                              myForm.email.$dirty && myForm.email.$invalid">
+                        </p>
+                        </div>
+                        
+                     </form>
+                  </ul>
+               </div>
+               <!--/Form Div -->
+               
+               <div class="col-lg-6 contacts">
+                  <span>Contact Details</span>
+                  <br />
+                  <br />
+                  <ul>
+                     <li><b>Address</b></li>
+                     <li>73 Juta St</li>
+                     <li>Johannesburg</li>
+                     <li>2000</li>
+                  </ul>
+                  <br />
+                  <ul>
+                     <li><b>Luthando Mfabe</b></li>
+                     <li>Mobile: 061 650 6600</li>
+                     <li>Email: luthando@warinnovation.co.za</li>
+                  </ul>
+               </div>
+               <!--Map-->
+               <div class="col-lg-12 map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14320.3022648184!2d28.03511!3d-26.19422!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa1ce9b8f9ecf4fbd!2sInstant+Grass!5e0!3m2!1sen!2sza!4v1472740592373" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+               </div>
+               <!--Map--> 
+            </div>
+         </div>
+         <!--/Section  Content--> 
+         <!--Test Section --> 
+      </div>
+      <!--/Sections --> 
+      <!--/View -->
+      <div ng-include="'footer.html'"></div>
+      <script type="text/javascript" src="js/jquery.fullPage.js"></script> 
+      <script type="text/javascript" src="js/examples.js"></script> 
+      <script type="text/javascript" src="js/war.js"></script>
+      
+      <script>
+
+
+</script>
+
+   </body>
+</html>

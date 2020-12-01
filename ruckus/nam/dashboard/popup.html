@@ -1,0 +1,118 @@
+<html>
+<body>
+
+<div style="display:block;float:left;width:100%;height:auto;font-family:  arial;position: relative;margin-left: 10px;">
+<div style="background-color: #484848;color:#fff;display:block;float:left;width:100%;padding: 10px;">Title</div><div style="background-color: #fff;color: #000;display:block;float:left;width:100%;padding: 10px;border-bottom: solid #ccc 1px;font-size: 13px;">APs <img width="10px" src="../img/access_points_10.png" style="
+    margin-left: 20px;
+">&nbsp; 16
+</div><div style="background-color: #fff;color: #000;display:block;float:left;width:100%;padding: 10px;border-bottom: solid #c1c1c1 5px;font-size: 13px;">Clients</div>
+
+    <img width="10px" src="../img/arrow.png" style="
+    margin-left: 20px;
+    position: absolute;
+    top: 37px;
+    left: -50px;
+    width: 35px;
+">
+
+
+
+<script>
+var map, popup, Popup;
+
+/** Initializes the map and the custom popup. */
+function initMap() {
+  definePopupClass();
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -33.9, lng: 151.1},
+    zoom: 10,
+  });
+
+  popup = new Popup(
+      new google.maps.LatLng(-33.866, 151.196),
+      document.getElementById('content'));
+  popup.setMap(map);
+}
+
+/** Defines the Popup class. */
+function definePopupClass() {
+  /**
+   * A customized popup on the map.
+   * @param {!google.maps.LatLng} position
+   * @param {!Element} content
+   * @constructor
+   * @extends {google.maps.OverlayView}
+   */
+  Popup = function(position, content) {
+    this.position = position;
+
+    content.classList.add('popup-bubble-content');
+
+    var pixelOffset = document.createElement('div');
+    pixelOffset.classList.add('popup-bubble-anchor');
+    pixelOffset.appendChild(content);
+
+    this.anchor = document.createElement('div');
+    this.anchor.classList.add('popup-tip-anchor');
+    this.anchor.appendChild(pixelOffset);
+
+    // Optionally stop clicks, etc., from bubbling up to the map.
+    this.stopEventPropagation();
+  };
+  // NOTE: google.maps.OverlayView is only defined once the Maps API has
+  // loaded. That is why Popup is defined inside initMap().
+  Popup.prototype = Object.create(google.maps.OverlayView.prototype);
+
+  /** Called when the popup is added to the map. */
+  Popup.prototype.onAdd = function() {
+    this.getPanes().floatPane.appendChild(this.anchor);
+  };
+
+  /** Called when the popup is removed from the map. */
+  Popup.prototype.onRemove = function() {
+    if (this.anchor.parentElement) {
+      this.anchor.parentElement.removeChild(this.anchor);
+    }
+  };
+
+  /** Called when the popup needs to draw itself. */
+  Popup.prototype.draw = function() {
+    var divPosition = this.getProjection().fromLatLngToDivPixel(this.position);
+    // Hide the popup when it is far out of view.
+    var display =
+        Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000 ?
+        'block' :
+        'none';
+
+    if (display === 'block') {
+      this.anchor.style.left = divPosition.x + 'px';
+      this.anchor.style.top = divPosition.y + 'px';
+    }
+    if (this.anchor.style.display !== display) {
+      this.anchor.style.display = display;
+    }
+  };
+
+  /** Stops clicks/drags from bubbling up to the map. */
+  Popup.prototype.stopEventPropagation = function() {
+    var anchor = this.anchor;
+    anchor.style.cursor = 'auto';
+
+    ['click', 'dblclick', 'contextmenu', 'wheel', 'mousedown', 'touchstart',
+     'pointerdown']
+        .forEach(function(event) {
+          anchor.addEventListener(event, function(e) {
+            e.stopPropagation();
+          });
+        });
+  };
+}
+    </script>
+
+
+</div> 
+
+</body>
+
+</html>

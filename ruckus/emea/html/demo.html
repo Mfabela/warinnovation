@@ -1,0 +1,341 @@
+<div class="overDemo">
+    <div class='content' style="background:transparent;">
+        <div id='content_pos1'>
+            <div class="flex-container flex-container1"  style="opacity:0; background:white;">
+                <div class="flex-item">
+                    <p>Alarms</p>
+                    <h2 class="activealarms" align="center"><span><img class="check" src="../img/check.jpg" width="25px" /></span>No Active Alarms</h2>
+                </div>
+                <div class="flex-item" id='content_pos1_dash_venues'>
+                    <p>Venues</p>
+                    <span class="chardata"> 
+                    <img src="../img/location.jpg">
+                    <br/>
+                    0
+                    </span>
+                    <canvas id="chart-area-venues_2"></canvas>
+                    <p class="expandLink" onclick='dashExpandV()'>Expand</p>
+                </div>
+                <div class="flex-item" id='content_pos1_dash_aps'>
+                    <p>APs</p>
+                    <span class="chardata">
+                     <img src="../img/wifi.jpg">
+                    <br/>
+                    0</span>
+                    <canvas id="chart-area-ap_2"></canvas>
+                    <p class="expandLink" onclick='dashExpandA()'>Expand</p>
+                </div>
+                <div class="flex-item">
+                    <p>Clients</p>
+                    <span class="chardata">
+                    <img src="../img/calculator.jpg">
+                    <br/>
+                    0
+                    </span>
+                    <canvas id="chart-area-clients_2"></canvas>
+                </div>
+            </div>
+            <div class="adding" style="border:transparent;">
+                <ul class="add">
+                    <li onclick='dashAdd("venue")' class="addVenueIcon addIcon" style="opacity:0;"><span class="addLink addLinkText">Add Venue</span></li>
+                    <li onclick='dashAdd("ap")' class="addApIcon addIcon" style="opacity:0;"><span class="addLink addLinkText">Add AP</span></li>
+                    <li onclick='dashAdd("network")' class="addNetworkIcon addIcon" style="opacity:0; background-color:white; width:125%;"><span class="addLink addLinkText">Add Network</span></li>
+                </ul>
+            </div>
+        </div>
+        <div id='content_pos2'>
+            <div id="map" style="opacity:0;"></div>
+            <div class="stats" style="opacity:0;">
+                <ul class="reportList">
+                    <li class="statsList selected">Last 24 Hours</li>
+                    <li class="statsList">Last 7 Days</li>
+                    <li class="statsList">Last 30 Days</li>
+                </ul>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class='nav' style="opacity:0;">
+        <div class="sidebar-search-box">
+            <form method='' action='' class="input-filter-cont" onclick='modalSignUp()'>
+                <input class="searchInput" type='text' name='search' placeholder='Search...' required/>
+
+                <i class="fa fa-search fa-lg searchIcon" aria-hidden="true"></i>
+
+            </form>
+        </div>
+        <ul>
+            <li class='active itemIcon1 itemIcon'>
+                <span class="itemText">Dashboard</span></li>
+            <li class="itemIcon2 itemIcon" onclick='window.open("../venues/index.html", "_self")'>
+                <span class="itemText">Venues</span></li>
+            <li class='itemIcon3 itemIcon' onclick='window.open("../ap/index.html", "_self")'>
+
+                <span class="itemText">APs</span></li>
+            <li class='itemIcon4 itemIcon' onclick='window.open("../networks/index.html", "_self")'>
+
+                <span class="itemText">Networks</span></li>
+            <li class='itemIcon5 itemIcon'>
+
+                <span class="itemText">Users</span></li>
+            <li class='itemIcon6 itemIcon'>
+
+                <span class="itemText">Events</span></li>
+            <li class='itemIcon7 itemIcon' onclick='window.open("../analytics/index.html", "_self")'>
+
+                <span class="itemText">Analytics</span></li>
+            <li class='itemIcon8 itemIcon' onclick='window.open("../administration/index.html", "_self")'>
+
+                <span class="itemText">Administration</span></li>
+        </ul>
+        <footer></footer>
+    </div>
+    <header id="dashHead" style="opacity:0;">
+        <section class="sec2">
+            <h1 id="logo2">
+                <a href="../dashboard/index.html">
+                <img alt="Ruckus Wireless" class="logo" src="../img/ruckus_idm_cloud_logo.png">
+                </a>
+            </h1>
+        </section>
+        <ul class="headLinks">
+            <li class="headBtn trialBtn"><a href="http://info.ruckuswireless.com/CloudWifiSignUp.html" target="_blank">Start free trial</a></li>
+            <li class="headBtn bell">
+                <a>
+                    <img class="bellIcon" src="../img/bell.png" onclick='dashNotifications()'>
+                </a>
+            </li>
+        </ul>
+    </header>
+</div>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+</style>
+<div id='step1' class="demos1">
+    <div class="step1Cont">
+        <div>
+        
+        <!--SelectLanguages--> 
+        <select  name="langdemo" class="selectdropdown langdemo">
+        <option value="English"> 
+        Select Language
+        </option>
+        <option value="English"> 
+        English
+        </option>
+        <option value="Deutsche">
+        Deutsche
+        </option>
+        <option value="Dutch">
+        Dutch
+        </option>
+        <option value="French">
+        French
+        </option>
+        <option value="Italian">
+        Italian
+        </option>
+        <option  value="Spanish">
+        Spanish
+        </option>
+        </select>
+       <!--Select Languages-->
+
+
+            <a class="demoExit">
+                <!--  <i class="fa fa-close" onclick='demoClose()'></i></a>-->
+                <img src="../img/Exit-1.png" onclick="demoClose()">
+            </a>
+            <p class="clear"></p>
+        </div>
+        <span id="welcometrans" >
+        <p class="welcomeTitle1">Welcome to the <br><span class="welcomeTitle">Ruckus Cloud WiFi Demo</span></p>
+        <p class="welcomeText" style="font-size:13px;width: 90%;" >Experience management simplicity. See how easy it is to monitor and manage a multi-site Wi-Fi network. Let's get started.</p>
+        <a class="welcomeNext" onclick='demoNext("step2")'>Next</a>
+        </span>
+    </div>
+</div>
+<div id='step2' style='display: none;' class="demos2">
+    <div class="step2Cont">
+     <!--Arrow-->
+        <img class="arrow" src="../img/arrow.png">
+        <!--Arrow-->
+        <div class="popupHead">
+            <img alt="Ruckus Wireless" class="popupLogo" src="../img/ruckuslogo_black.png">
+            
+
+            
+
+            <a class="demoExit">
+              
+              <!--SelectLanguages--> 
+        <select  name="langdemo" class="selectdropdown_2 langdemo_2">
+        <option value="English"> 
+        Select Language
+        </option>
+        <option value="English"> 
+        English
+        </option>
+        <option value="Deutsche">
+        Deutsche
+        </option>
+        <option value="Dutch">
+        Dutch
+        </option>
+        <option value="French">
+        French
+        </option>
+        <option value="Italian">
+        Italian
+        </option>
+        <option  value="Spanish">
+        Spanish
+        </option>
+        </select>
+       <!--Select Languages-->
+
+
+                <!--  <i class="fa fa-close" onclick='demoClose()'></i></a>-->
+                <img src="../img/Exit-1.png" onclick="demoClose()">
+            </a>
+            <p class="clear"></p>
+        </div>
+        <span id="welcometrans_2" >
+        <div class="popupText">
+            <p class="popup1stLine">The first screen is your dashboard.  It gives you a<br/> top level view of your Wi-Fi network</p>
+            <p class="demoLine"><img class="listImg" src="../img/SmallTearDrop.png"> Venues;</p>
+            <p class="demoLine"><img class="listImg" src="../img/Radio.png"> Access Points (AP) and</p>
+            <p class="demoLine"><img class="listImg" src="../img/TablClients.png"> Clients;</p>
+            <p class="popupLastLine">The alarm notification will let you know if an event affecting your network has occurred – such as a disconnected access point.</p>
+        </div>
+         <div class="popupFoot">
+            <p class="pagination"><span class="popoupSelected">1</span> / 2 / 3</p><a class="popupNext" onclick='demoNext("step3")'>Next</a>
+            <p class="clear"></p>
+        </div>
+        </span>
+    </div>
+</div>
+<div id='step3' style='display: none;' class="demos3">
+    <div class="step2Cont">
+        <div class="popupHead">
+            <img alt="Ruckus Wireless" class="popupLogo" src="../img/ruckuslogo_black.png">
+            <a class="demoExit">
+              
+               <!--Select Languages--> 
+                <select  name="langdemo" class="selectdropdown_2 langdemo_3">
+                <option value="English"> 
+                Select Language
+                </option>
+                <option value="English"> 
+                English
+                </option>
+                <option value="Deutsche">
+                Deutsche
+                </option>
+                <option value="Dutch">
+                Dutch
+                </option>
+                <option value="French">
+                French
+                </option>
+                <option value="Italian">
+                Italian
+                </option>
+                <option  value="Spanish">
+                Spanish
+                </option>
+                </select>
+                <!--Select Languages-->
+
+                <!--  <i class="fa fa-close" onclick='demoClose()'></i></a>-->
+                <img src="../img/Exit-1.png" onclick="demoClose()">
+            </a>
+            <p class="clear"></p>
+        </div>
+        <span id="welcometrans_3" >
+        <div class="popupText">
+            <p class="popup1stLine">Your dashboard  lets you zoom out for a global view of your <br>WLAN and zoom in for a closer look.</p>
+            <p>The  tear drops on the map show the location of your
+ <span class="orangeText">venues</span>.The color of the tear<br> drop represents the status of the venue and if action is required.<br></p>
+            <p class="popupLastLine"><b>What they <span class="orangeText">represent:</span></b></p>
+            <ul class="colorPins">
+                <li class="pinsIcons red">
+                    <img src='../img/TearDrop_Red.png' alt='red tear-drop' />
+                    <p>Requires</br> attention</p>
+                </li>
+                <li class="pinsIcons orange">
+                    <img src='../img/TearDrop_Orange.png' alt='orange tear-drop' />
+                    <p>Temporarily </br>degraded</p>
+                </li>
+                <li class="pinsIcons grey">
+                    <img src='../img/TearDrop_Grey.png' alt='gray tear-drop' />
+                    <p>In setup</br> phase</p>
+                </li>
+                <li class="pinsIcons green">
+                    <img src='../img/TearDrop_Green.png' alt='green tear-drop' />
+                    <p>All</br> good</p>
+                </li>
+            </ul>
+            <p class="popupLastLine"><b>Hover over or click on the tear drop to get more information about the venue.</b></p>
+        </div>
+         <div class="popupFoot">
+            <p class="pagination">1 /<span class="popoupSelected"> 2</span> / 3</p><a class="popupNext" onclick='demoNext("step4")'>Next</a>
+            <p class="clear"></p>
+        </div>
+        </span>
+    </div>
+</div>
+<div id='step4' style='display: none;' class="demos4">
+        <!--Arrow-->
+        <img class="arrow" src="../img/arrow.png">
+        <!--Arrow-->
+    <div class="step2Cont">
+        <div class="popupHead">
+            <img alt="Ruckus Wireless" class="popupLogo" src="../img/ruckuslogo_black.png">
+            <a class="demoExit">
+             
+             <!--Select Languages--> 
+                <select  name="langdemo" class="selectdropdown_2 langdemo_4">
+                <option value="English"> 
+                Select Language
+                </option>
+                <option value="English"> 
+                English
+                </option>
+                <option value="Deutsche">
+                Deutsche
+                </option>
+                <option value="Dutch">
+                Dutch
+                </option>
+                <option value="French">
+                French
+                </option>
+                <option value="Italian">
+                Italian
+                </option>
+                <option  value="Spanish">
+                Spanish
+                </option>
+                </select>
+                <!--Select Languages-->
+
+                <!--  <i class="fa fa-close" onclick='demoClose()'></i></a>-->
+                <img src="../img/Exit-1.png" onclick="demoClose()">
+            </a>
+            <p class="clear"></p>
+        </div>
+        <span id="welcometrans_4" >
+        <div class="popupText">
+            <p class="popupOnly">Need to add a new guest network to a venue? Go<br> ahead and click</p>
+            <h3 class="popupWifi" onclick='dashAdd("network")'><img src='../img/Wifi.png' alt='Add Network' /><span class="orangeText">Add Network</span></h3>
+        </div>
+        <div class="popupFoot">
+            <p class="pagination">1 / 2 / <span class="popoupSelected">3</span></p>
+            <p class="clear"></p>
+        </div>
+        </span>
+    </div>
+</div>

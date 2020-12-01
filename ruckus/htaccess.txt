@@ -1,0 +1,11 @@
+#start
+Options + Indexes
+IndexOptions FancyIndexing
+AuthType Basic
+ErrorDocument 404 404.html
+AddHandler server-parsed .html
+DirectoryIndex index.html
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/index.html$
+RewriteRule .* /index.html [L,R=302]
+#end

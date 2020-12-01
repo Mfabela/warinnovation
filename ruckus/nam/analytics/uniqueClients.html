@@ -1,0 +1,293 @@
+<!--Script -->
+<script type="text/javascript">
+//alert("Loaded");
+        var addRandom = 500;
+         
+        var configu = {
+            type: 'line',
+            data: {
+                labels:  [
+                    '01:00',
+                    '02:00',
+                    '03:00',
+                    '04:00',
+                    '05:00',
+                    '06:00',
+                    '07:00',
+                    '08:00',
+                    '09:00',
+                    '10:00',
+                ],
+                datasets: [{
+                    label: '5G',
+                    backgroundColor: "#94c2ef",
+                    borderColor: "#94c2ef",
+                    data: [
+                        3,
+                        20,
+                        37,
+                        26,
+                        7,
+                        4,
+                        35,
+                        22,
+                        26,
+                        50
+                    ],
+                    fill: false,
+                }, {
+                    label: '2.4G',
+                    fill: false,
+                    backgroundColor: "#000",
+                    borderColor: "#000",
+                    data: [
+                         3,
+                        23,
+                        13,
+                        16,
+                        6,
+                        53,
+                        34,
+                        25,
+                        25,
+                        52
+                    ],
+                }]
+            },
+            options: {
+                 elements: {
+                            line: {
+                                tension: 0.5
+                            }
+                       },
+                responsive: true,
+                maintainAspectRatio: true,
+                title: {
+                    display: true,
+                    text:'Unique Clients',
+                    position:"top"
+                },
+                legend: {
+                        position: "bottom",
+                        labels: {
+                            usePointStyle: true
+                        }
+                    },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: ''
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Number of clients'
+                        }
+                    }]
+                }
+            }
+        };
+
+
+
+      //Get Charts
+      var ctxu = document.getElementById("chart-area-applications_1").getContext("2d");
+      window.myDoughnut = new Chart(ctxu, configu);
+
+
+
+    </script>
+<!--Script -->
+<div class="content analycticsmore">
+    <div class="uniTitle">
+        <a onclick='window.open("../analytics/index.html", "_self")' class="blueLinks">Analytics</a>
+        <p class="UniHead">Unique Clients</p>
+    </div>
+    <div class="uniCont">
+        <div class="uniCont1">
+            <br><br>
+            <form class="grey-title-panel uniForm">
+                <div class="divTest">
+                    <label class="dropHead">Time Range</label><br>
+                    <select class="dropDown">
+                    <option>Last 24 Hours</option>
+                    <option>Last 7 Days</option>
+                    <option>Last 7 Month</option>
+                    <option>Custom Range</option>
+                </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Venues</label><br>
+                    <select class="dropDown">
+                    <option value='all'>All Venues</option>
+                    <option value='HQ'>HQ</option>
+                    <option value='Warehouse - Fresno'>Warehouse - Fresno</option>
+                    <option value='Store - Phoenix'>Store - Phoenix</option>
+                    <option value='Store Irvine'>Store Irvine</option>
+                    <option value='Store - Las Vegas'>Store - Las Vegas</option>
+                    <option value='Store - San Diego'>Store - San Diego</option>
+                    <option value='Store - Sacramento'>Store - Sacramento</option>
+                </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Access Points</label><br>
+                    <select class="dropDown">
+                        <option value='all'>All APs</option>
+                    <option>LCA-AP-GYM</option>
+                    <option>LCA-AP-Conf</option>
+                    <option>LCA-AP-LRC</option>
+                    <option>LCA-AP-229</option>
+                    <option>LCA-AP-128</option>
+                    <option>LCA-AP-235</option>
+                    <option>LCA-AP-136</option>
+
+                    <option>LCA-AP-132</option>
+                    <option>LCA-AP-129</option>
+                    <option>LCA-AP-Office</option>
+                    <option>LCA-AP-227</option>
+                    <option>LCA-AP-135</option>
+                    <option>LCA-AP-SPARE-1</option>
+                    <option>LCA-AP-126</option>
+
+                    <option>LCA-AP-Tech Hall</option>
+                    <option>FCA-AP-210</option>
+                    <option>FCA-AP-212</option>
+                    <option>FCA-AP-218</option>
+                    <option>FCA-AP-TrackShed</option>
+                    <option>PAZ-AP-119</option>
+                    <option>PAZ-Hallway-Art</option>
+
+                    <option>PAZ-AP-112</option>
+                    <option>PAZ-AP-108</option>
+                    <option>PAZ-AP-219</option>
+                    <option>ICA-Rm801</option>
+                    <option>ICA-Rm209</option>
+                    <option>LNV-Rm109</option>
+                    <option>LNV-Rm201</option>
+
+                    <option>SDCA-AP-160</option>
+                    <option>SDCA-AP-157</option>
+                    <option>SCA-AP-160</option>
+                    <option>SCA-AP-157</option>
+                </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Networks</label><br>
+                    <select class="dropDown">
+                    <option value='all'>All Networks</option>
+                    <option>LCA-JH-D201</option>
+                    <option>LCA-D201-Guest</option>
+                    <option>LCA-D201-Staff</option>
+                    <option>LCA-D201</option>
+                    <option>LCA-BG-D201</option>
+                    <option>LCA-MIS-BYOD</option>
+                    <option>LCA-WT-D201-Staff</option>
+                    <option>FCA-D201</option>
+                    <option>FCA-D201-Guest</option>
+                    <option>FCA-D201-Staff</option>
+                    <option>PAZ-D201</option>
+                    <option>PAZ-BYOD</option>
+                    <option>PAZ D201-STAFF</option>
+                    <option>PAZ-D201-Staff</option>
+                    <option>ICA_D201</option>
+                    <option>ICA-D201-Staff</option>
+                    <option>LNV-D201-Public</option>
+                    <option>LNV-D201-Staff</option>
+                    <option>LNV-D201</option>
+                    <option>SDCA-D201-Public</option>
+                    <option>SDCA-D201</option>
+                    <option>SDCA-D201-Staff</option>
+                    <option>SCA-D201</option>
+                    <option>SCA-BYOD</option>
+                </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Session Type</label><br>
+                    <select class="dropDown">
+                    <option>All Session Types</option>
+                    <option>Authenticated Sessions</option>
+                </select>
+                </div>
+
+                <div class="divApply">
+                    <a class="blueLinks btnReset">Reset</a>
+                    <input class="btnApply" type='button' name='apply' value='Apply' />
+                </div>
+            </form>
+            
+            
+        <!--Data Summary-->
+<div class="datasummary">
+<p class="datebold">Data Summary:</p>
+            <div>
+                
+                <p>&nbsp;&nbsp;<img class="analycons" src="../img/analycons_1.jpg" width="15px" />&nbsp;&nbsp;03/09/2018 08:29 - 03/10/2018 08:29 </p>
+            </div>
+
+            <div>   
+                    <p>&nbsp;&nbsp;<img class="analycons" src="../img/analycons_2.jpg" width="20px" />&nbsp;&nbsp;Traffic Volume Transferred: 1.5 GB</p>
+            </div>
+
+            <ul style="border:none" >
+                <p>&nbsp;&nbsp;<img class="analycons" src="../img/analycons_3.jpg" width="17px" />&nbsp;&nbsp;Average Session Duration: 596:31:23</p>
+            </ul>
+</div>
+<!--Data Summary -->
+
+            <!--Data Summary--
+<div class="datasummary">
+            <div>
+                <p class="datebold">Data Summary:</p>
+                <p>03/08/2018 13:01 - 03/09/2018 13:01 </p>
+            </div>
+
+            <div>   
+                    <p>&nbsp;</p>
+                    <p> Upload: -1622973.9 kB </p>
+            </div>
+
+            <ul>
+                <p>&nbsp;</p>
+                <p> Download: 426.2 MB</p>
+            </ul>
+</div>
+<!--Data Summary -->
+
+
+
+            <!--Graph holder -->
+                <div class="trafficgraphicholder">
+                 <!--Left Chart-->
+                 <div class="uniquestats">
+                 <canvas id="chart-area-applications_1"></canvas>
+                 <div>
+                </div>
+                
+                <!--Left Chart-->
+
+                </div>
+                <!--Graph holder -->
+
+            <!--
+            <ul class="uniSum">
+                <p>Data Summary:</p>
+                <p>01/02/2018 19:17 - 01/03/2018 19:17</p>
+            </ul>-->
+
+            <!--<p>Number of Unique Clients</p>
+            <p>No data to display</p>-->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ruckus Cloud</title>
+    <meta charset="utf-8">
+    
+
+<meta name="viewport" content="width=device-width">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TVW6MHT');</script>
+<!-- End Google Tag Manager -->
+
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2839870-26"></script>-->
+   <!--Script -->
+<script type="text/javascript">
+//alert("Loaded");
+        var addRandom = 200;
+
+        var configt = {
+            type: 'line',
+            elements: {
+                line: {
+                    tension: 0.000001
+                }
+            },
+            data: {
+                labels: ["04:00", "", "", "", "08:00", "", "", "", "12:00", "", "", "", "16:00", "", "", "", "20:00", "", "", "", "", "", "", ""],
+                datasets: [{
+                    label: "Clients",
+                    backgroundColor: "#1456aa",//window.chartColors.blue,
+                    borderColor: "#1456aa",//window.chartColors.blue,
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                    fill: true,
+                }, {
+                    label: "To Client",
+                    fill: true,
+                    backgroundColor: "#7cceee",//window.chartColors.blue,
+                    borderColor: "#7cceee",//window.chartColors.blue,
+                    elements: {
+                     line: {
+                     tension: 0.000001
+                      }
+                     },
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                title:{
+                    display:true,
+                    text:'Traffic Volume'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value'
+                        }
+                    }]
+                    
+                }
+            }
+        };
+
+        var configu = {
+            type: 'line',
+            elements: {
+                line: {
+                    tension: 10.000001
+                }
+            },
+            data: {
+                labels: ["04:00", "", "", "", "08:00", "", "", "", "12:00", "", "", "", "16:00", "", "", "", "20:00", "", "", "", "", "", "", ""],
+                datasets: [{
+                    label: "Clients",
+                    backgroundColor: "#ce6006",//window.chartColors.blue,
+                    borderColor: "#ce6006",//window.chartColors.blue,
+                    steppedLine: false,
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                title:{
+                    display:true,
+                    text:'Unique Clients'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value'
+                        }
+                    }]
+                    
+                }
+            }
+        };
+        
+
+        addRandom = 5;
+
+        var configa = {
+            type: 'horizontalBar',
+            elements: {
+                line: {
+                    tension: 0.000001
+                }
+            },
+            data: {
+                labels: ['web streaming', ' http protocol over tls ssl', '  miscellaneous', 'itunes', 'apple.com', 'dhs.gov', ' facebook','web file transfer', 'icloud-content.com', 'google.com'],
+                datasets: [{
+                    label: "Clients",
+                    backgroundColor: "#1456aa",//window.chartColors.blue,
+                    borderColor: "#1456aa",//window.chartColors.blue,
+                    data: [
+                        2.871935374,
+                        0.503743186,
+                        0.555337048,
+                        1.088762689,
+                        1.088762689,
+                        2.551770366 ,
+                        3.58121481,
+                        0.259960337 ,
+                        2.117840487 ,
+                        4.477504264 ,
+                    ],
+                    fill: true,
+                }, {
+                    label: "To Client",
+                    fill: true,
+                    backgroundColor: "#7cceee",//window.chartColors.blue,
+                    borderColor: "#7cceee",//window.chartColors.blue,
+                    elements: {
+                     line: {
+                     tension: 0.000001
+                      }
+                     },
+                     data: [
+                        2.871935374+addRandom,
+                        0.503743186+addRandom,
+                        0.555337048+addRandom,
+                        1.088762689+addRandom,
+                        1.088762689+addRandom,
+                        2.551770366+addRandom,
+                        3.58121481+addRandom,
+                        0.259960337+addRandom,
+                        2.117840487+addRandom,
+                        4.477504264+addRandom,
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                title:{
+                    display:true,
+                    text:'Top 10 Applications'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        stacked: true,
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value'
+                        }
+                    }]
+                    
+                }
+            }
+        };
+
+
+      //Get Charts
+      var ctxt = document.getElementById("chart-area-traffic").getContext("2d");
+      window.myDoughnut = new Chart(ctxt, configt); 
+      var ctxu = document.getElementById("chart-area-unique").getContext("2d");
+      window.myDoughnut = new Chart(ctxu, configu);
+      var ctxa = document.getElementById("chart-area-applications").getContext("2d");
+      window.myDoughnut = new Chart(ctxa, configa);
+
+
+    </script>
+<!--Script -->
+    <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../js/js.cookie.js"></script>
+    <script type="text/javascript" src="../js/init.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74688030-12"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag()
+
+{dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-74688030-12');
+</script>
+</head>
+
+<body onload="clientload()">
+   <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVW6MHT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!--Screen-->
+   <div id='biggerscreen'  class="">
+    <div class="step2Cont">
+        <div class="popupHead">
+            <img alt="Ruckus Wireless" class="popupLogo" src="../img/ruckuslogo_black.png">
+            <a class="demoExit">
+                <!--  <i class="fa fa-close" onclick='demoClose()'></i></a>-->
+                <!--<img src="../img/Exit-1.png" onclick="demoClose()">-->
+            </a>
+            <p class="clear"></p>
+        </div>
+        <div class="popupText">
+            <h1 class="popup1stLine" align="center" >Please View On Bigger Screen. We Recommend 1024x640 and larger :)</h1>
+        </div>
+        
+    </div>
+</div>
+<!--Screen-->
+    
+    <!--Content-->
+    <div class='content'>
+    <p class="APHead">Users</p>
+
+                <!--Tabs-->
+             
+<div class='administration userstab'>
+        <ul class="tabNav" id="admin_nav">
+            <li onclick='adminToggle("admin_tab_cont_details", 1)' class="adminSelect">
+            <div class="tabhalf">
+            <img src="../img/tab_clients_selected.png" class="tabcolor" width="40px" />
+            <img src="../img/tab_clients.png" class="tabgrey" width="40px" />
+            </div>
+            <div class="tabhalf">
+            Clients<br /><span class="sub_head "><span class="client_Items" >0</span> Connected</span>
+            </div>
+            </li>
+            <!--<li onclick='adminToggle("admin_tab_cont_admin", 2)'>Clients</li>-->
+            <li onclick='adminToggle("admin_tab_cont_notifications", 2)'>
+            <div class="tabhalf">
+            <img src="../img/tab_guests_selected.png" class="tabcolor" width="40px" />
+            <img src="../img/tab_guests.png" class="tabgrey" width="40px" />
+            </div>
+            <div class="tabhalf">
+            Guest Passes<br /><span class="sub_head">0 active</span>
+            </div>
+            </li>
+            
+            <p id='adminToggleActive' style='display:none'>admin_tab_cont_details</p>
+        </ul>
+
+        <div id='admin_tab_cont' class="adminCont">
+            
+            <div id="admin_tab_cont_details">
+               
+                <!--Content Start-->
+                
+        <div class="APCont">
+            <div class="APCont1">
+                <a onclick='' class="blueLinks addBtn">Refresh</a>
+                <br><br><br>
+                <div class="APTop">
+                    <form>
+                        <input class="searchAP" type='text' name='search' placeholder="Search for clients.." required/>
+                        <i class="fa fa-search fa-lg searchIconAP"  aria-hidden="true"></i>
+
+                 <select class="dropDown">
+                    <option value='all'>All Venues</option>
+                    <option value='HQ'>HQ</option>
+                    <option value='Warehouse - Fresno'>Warehouse - Fresno</option>
+                    <option value='Store - Phoenix'>Store - Phoenix</option>
+                    <option value='Store Irvine'>Store Irvine</option>
+                    <option value='Store - Las Vegas'>Store - Las Vegas</option>
+                    <option value='Store - San Diego'>Store - San Diego</option>
+                    <option value='Store - Sacramento'>Store - Sacramento</option>
+                </select>
+
+
+                <select class="dropDown" >
+                    <option value='all'>All Status Categories</option>
+                    <option value=''>Requires Attention</option>
+                    <option value=''>Temporarily Degraded</option>
+                    <option value=''>In setup phases</option>
+                    <option value=''>Operational</option>
+                </select>
+
+                       
+
+
+                    </form>
+                </div>
+                <table class="adminT1">
+                    <tr>
+                        <th>OS</th>
+                        <th>MAC Address</th>
+                        <th>Username</th>
+                        <th>Hostname</th>
+                        <th><img src="../img/location_black.png" width="10px" />Venue</th>
+                        <th><img src="../img/access_points_07.png" width="15px">AP</th>
+                        <th>Network (VLAN)</th>
+                        <th>Time Connected</th>
+                        <!--<th>Tags</th>-->
+                    </tr>
+      <tr >
+        <td class="s2"><img src="../img/users_17.jpg" width="15px" />Apple</td>
+        <td class="s2">78:7b:8a:06:79:b3</td>
+        <td class="s2">10.45.1.150</td>
+        <td class="s2">N/A</td>
+        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />HQ</td>
+        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-GYM</td>
+        <td class="s2">D201(45)</td>
+        <td class="s3">30 days, 7 hours</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/users_17.jpg" width="15px" />Apple</td>
+        <td class="s2">bc:67:78:9c:13:f9</td>
+        <td class="s2">10.45.1.150</td>
+        <td class="s2">N/A</td>
+        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />Warehouse - Fresno</td>
+        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-Conf</td>
+        <td class="s2">D201(44)</td>
+        <td class="s3">26 days, 7 hours</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/users_17.jpg" width="15px" />Apple</td>
+        <td class="s2">a4:d1:d2:71:f0:1f</td>
+        <td class="s2">10.44.1.66</td>
+        <td class="s2">N/A</td>
+        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />Store - Phoenix</td>
+        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-LRC</td>
+        <td class="s2">D201(41)</td>
+        <td class="s3">22 days, 20 hours</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/users_25.jpg" width="15px" />Window</td>
+        <td class="s2">70:1a:04:f4:39:d1</td>
+        <td class="s2">10.41.1.171</td>
+        <td class="s2">N/A</td>
+        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />Store - Irvine</td>
+        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-229</td>
+        <td class="s2">D201(41)</td>
+        <td class="s3">20 days, 8 hours</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/users_17.jpg" width="15px" />Apple</td>
+        <td class="s2">04:15:52:52:77:97</td>
+        <td class="s2">10.41.2.65</td>
+        <td class="s2">N/A</td>
+        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />Store - Las Vegas</td>
+        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-128</td>
+        <td class="s2">D201(41)</td>
+        <td class="s3">20 days, 3 hours</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/users_25.jpg" width="15px" />Window</td>
+        <td class="s2">ec:8e:b5:b1:f2:14</td>
+        <td class="s2">10.45.1.45</td>
+        <td class="s2">N/A</td>
+        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />Store - San Diego</td>
+        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-235</td>
+        <td class="s2">D201(45)</td>
+        <td class="s3">9 days, 6 hours</td>
+      </tr>
+      <tr >
+        <td class="s2"><img src="../img/users_17.jpg" width="15px" />Apple</td>
+        <td class="s2">78:7b:8a:01:bc:da</td>
+        <td class="s2">10.45.1.222</td>
+        <td class="s2">N/A</td>
+        <td class="s2 softmerge"><img src="../img/users_10.jpg" width="12px" />Store - Sacramento</td>
+        <td class="s2"><img src="../img/users_12.jpg" width="15px">LCA-AP-136</td>
+        <td class="s2">D201(45)</td>
+        <td class="s3">14 days, 18 hours</td>
+      </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+               <!--Content End-->
+
+            </div>
+
+            <div id="admin_tab_cont_notifications" style='display: none;'>
+                 <!--Content Start-->
+                
+        <div class="APCont">
+            <div class="APCont1">
+                <a onclick='' class="blueLinks addBtn">Refresh</a>
+                <br><br><br>
+                <div class="APTop">
+                    <form>
+                        <input class="searchAP" type='text' name='search' placeholder="Search by name, phone and E-mail.." required/>
+                        <i class="fa fa-search fa-lg searchIconAP" disabled="disabled" aria-hidden="true"></i>
+
+                        <select class="dropDown" disabled="disabled">
+                    <option value='all'>All Guest Types</option>
+                    <option value='wifi'>WiFi</option>
+                </select>
+
+                        <select class="dropDown" disabled="disabled">
+                    <option value='all'>Creation Type</option>
+                    <option value='disconnected'><img src='' alt='red x'/> AP disconnected</option>
+                    <option value='operational'><img src='' alt='green tick'/> Operational</option>
+                </select>
+
+
+                    </form>
+                </div>
+                <table class="adminT1">
+                    <tr>
+                        <th>Created</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                        <th>Allowed Network</th>
+                        <th>Expires</th>
+                        <th>Status</th>
+                        <!--<th>Tags</th>-->
+                    </tr>
+     
+                </table>
+            </div>
+        </div>
+    </div>
+               <!--Content End-->
+            </div>
+
+        </div>
+
+    </div>
+            <!--Tabs-->
+
+    </div>
+   <!--Content-->
+
+    <div class='nav'>
+        <div class="sidebar-search-box">
+            <form method='' action='' class="input-filter-cont" onclick='modalSignUp()'>
+                <input class="searchInput" type='text' name='search' placeholder='Search...' required/>
+
+                <i class="fa fa-search fa-lg searchIcon" aria-hidden="true"></i>
+
+            </form>
+        </div>
+        <ul>
+            <li class='itemIcon1 itemIcon' onclick='window.open("../dashboard/index.html", "_self")'>
+                <span class="itemText">Dashboard</span></li>
+            <li class="itemIcon2 itemIcon" onclick='window.open("../venues/index.html", "_self")'>
+                <span class="itemText">Venues</span></li>
+            <li class='itemIcon3 itemIcon' onclick='window.open("../ap/index.html", "_self")'>
+
+                <span class="itemText">APs</span></li>
+            <li class='itemIcon4 itemIcon' onclick='window.open("../networks/index.html", "_self")'>
+
+                <span class="itemText">Networks</span></li>
+            <li class='active itemIcon5 itemIcon' onclick='window.open("../users/index.html", "_self")'>
+
+                <span class=" itemText">Users</span></li>
+            <li class='itemIcon6 itemIcon' onclick='window.open("../events/index.html", "_self")'>
+
+                <span class="itemText">Events</span></li>
+            <li class='itemIcon7 itemIcon' onclick='window.open("../analytics/index.html", "_self")'>
+
+                <span class="itemText">Analytics</span></li>
+            <li class='itemIcon8 itemIcon' onclick='window.open("../administration/index.html", "_self")'>
+
+                <span class="itemText">Administration</span></li>
+        </ul>
+        <footer></footer>
+    </div>
+        <footer class="footer">
+            <a href="../cookie-policy/index.html" target="_self" class="footerlinks" >Cookie Policy</a>
+            <a href="https://www.arris.com/company/privacy" target="_blank" class="footerlinks" >Privacy Policy</a>
+   </footer>
+   <header id="dashHead">
+        <section class="sec2">
+            <h1 id="logo2">
+            <a href="../dashboard/index.html">
+                <img alt="Ruckus Wireless" class="logo" src="../img/ruckus_idm_cloud_logo.png">
+            </a>
+            </h1>
+        </section>
+        <ul class="headLinks">
+            <li class="headBtn trialBtn"><a href="https://info.ruckuswireless.com/cloud-trial.html?utm_source=InteractiveDemo&utm_medium=link&utm_campaign=KUMO-Trial-SignUp" target="_blank">Start free trial</a></li>
+            <li class="headBtn bell">
+                <a>
+                    <img class="bellIcon" src="../img/bell.png" onclick='dashNotifications()'>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+</body>
+
+</html>

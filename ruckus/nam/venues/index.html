@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ruckus Cloud</title>
+    <meta charset="utf-8">
+    
+
+<meta name="viewport" content="width=device-width">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TVW6MHT');</script>
+<!-- End Google Tag Manager -->
+
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2839870-26"></script>-->
+    <script>
+        /*window.dataLayer = window.dataLayer || [];
+                                                                                                                                                                                                                function gtag(){dataLayer.push(arguments);}
+                                                                                                                                                                                                                gtag('js', new Date());
+
+                                                                                                                                                                                                                gtag('config', 'UA-2839870-26');*/
+    </script>
+    <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../js/js.cookie.js"></script>
+    <script src="../js/Chart.bundle.js"></script>
+    <script src="../js/utils.js"></script>
+    <script type="text/javascript" src="../js/init.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <script type="text/javascript">
+    //alert("Venue");
+    if(Cookies.get('mapmarker')){
+        venuesToggle('venuesmore.html');
+        Cookies.remove('mapmarker');
+    }
+    </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74688030-12"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag()
+
+{dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-74688030-12');
+</script>
+</head>
+
+<body onload="venueload();" >
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVW6MHT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!--Screen-->
+   <div id='biggerscreen'  class="">
+    <div class="step2Cont">
+        <div class="popupHead">
+            <img alt="Ruckus Wireless" class="popupLogo" src="../img/ruckuslogo_black.png">
+            <a class="demoExit">
+                <!--  <i class="fa fa-close" onclick='demoClose()'></i></a>-->
+                <!--<img src="../img/Exit-1.png" onclick="demoClose()">-->
+            </a>
+            <p class="clear"></p>
+        </div>
+        <div class="popupText">
+            <h1 class="popup1stLine" align="center" >Please View On Bigger Screen. We Recommend 1024x640 and larger :)</h1>
+        </div>
+        
+    </div>
+</div>
+<!--Screen-->
+    <div class='content'>
+        <p class="venHead">Venues (<span class="venueItems">0</span>)</p>
+        <div class="venCont">
+            <div class="venCont1">
+                <a onclick='dashAdd("venue")' class="blueLinks addBtn">Add Venue</a>
+                <div class="venTop">
+                    <form>
+                        <input class="searchVenue" type='text' name='search' placeholder='Venue name, description' required/>
+                        <i class="fa fa-search fa-lg searchIconVenue" aria-hidden="true"></i>
+
+                        <select class="dropDown">
+                    <option value='all'>All cities</option>
+                    <option value='Los Angeles, CA'>Los Angeles, CA</option>
+                    <option value='Fresno, CA'>Fresno, CA</option>
+                    <option value='Phoenix, AZ'>Phoenix, AZ</option>
+                    <option value='Irvine, CA'>Irvine, CA</option>
+                    <option value='Las Vegas, NV'>Las Vegas, NV</option>
+                    <option value='San Diego, CA'>San Diego, CA</option>
+                    <option value='Sacramento, CA'>Sacramento, CA</option>
+                </select>
+                    </form>
+                </div>
+                <table class="adminT1">
+                    <tr>
+                        <th><img src="../img/location_black.png" width="10px" />Venue</th>
+                        <th>Description</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Networks</th>
+                        <th>APs</th>
+                        <th>Clients</th>
+                    </tr>
+                    
+                    <tr class="venuelink" onclick="venuesToggle('venuesmore.html');" >
+                        <td><img src="../img/location_green.png" width="10px" /> HQ</td>
+                        <td>Headquarters</td>
+                        <td>Los Angeles, CA</td>
+                        <td>US</td>
+                        <td>7</td>
+                        <td>15</td>
+                        <td>610</td>
+                    </tr>
+                   
+                    <!--New Code-->
+                  <tr>
+                    <td class="s2"><img src="../img/location_green.png" width="10px" /> Warehouse - Fresno</td>
+                    <td class="s2">Warehouse</td>
+                    <td class="s2">Fresno, CA</td>
+                    <td class="s3">US</td>
+                    <td class="s3">3</td>
+                    <td class="s3">4</td>
+                    <td class="s3">127</td>
+                  </tr>
+                  <tr>
+                    <td class="s2"><img src="../img/location_green.png" width="10px" />Store - Phoenix</td>
+                    <td class="s2">Store 2</td>
+                    <td class="s2">Phoenix, AZ</td>
+                    <td class="s3">US</td>
+                    <td class="s3">4</td>
+                    <td class="s3">5</td>
+                    <td class="s3">221</td>
+                  </tr>
+                  <tr>
+                    <td class="s2"><img src="../img/location_green.png" width="10px" />Store Irvine</td>
+                    <td class="s2">Store 4</td>
+                    <td class="s2">Irvine, CA</td>
+                    <td class="s3">US</td>
+                    <td class="s3">2</td>
+                    <td class="s3">2</td>
+                    <td class="s3">82</td>
+                  </tr>
+                  <tr>
+                    <td class="s2"><img src="../img/location_green.png" width="10px" />Store - Las Vegas</td>
+                    <td class="s2">Store 1</td>
+                    <td class="s2">Las Vegas, NV</td>
+                    <td class="s3">US</td>
+                    <td class="s3">3</td>
+                    <td class="s3">2</td>
+                    <td class="s3">45</td>
+                  </tr>
+                  <tr>
+                    <td class="s2"><img src="../img/location_green.png" width="10px" />Store - San Diego</td>
+                    <td class="s2">Store 5</td>
+                    <td class="s2">San Diego, CA</td>
+                    <td class="s3">US</td>
+                    <td class="s3">3</td>
+                    <td class="s3">3</td>
+                    <td class="s3">106</td>
+                  </tr>
+                  <tr>
+                    <td class="s2"><img src="../img/location_green.png" width="10px" />Store - Sacramento</td>
+                    <td class="s2">Store 3</td>
+                    <td class="s2 softmerge"><div class="softmerge-inner" style="width: 115px; left: -1px;">Sacramento, CA</div></td>
+                    <td class="s3">US</td>
+                    <td class="s3">2</td>
+                    <td class="s3">2</td>
+                    <td class="s3">62</td>
+                  </tr>
+                    <!--New Code -->
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class='nav'>
+        <div class="sidebar-search-box">
+            <form method='' action='' class="input-filter-cont" onclick='modalSignUp()'>
+                <input class="searchInput" type='text' name='search' placeholder='Search...' required/>
+
+                <i class="fa fa-search fa-lg searchIcon" aria-hidden="true"></i>
+
+            </form>
+        </div>
+        <ul>
+            <li class='itemIcon1 itemIcon' onclick='window.open("../dashboard/index.html", "_self")'>
+                <span class="itemText">Dashboard</span></li>
+            <li class="active itemIcon2 itemIcon"  onclick='window.open("../venues/index.html", "_self")'>
+                <span class="itemText">Venues</span></li>
+            <li class='itemIcon3 itemIcon' onclick='window.open("../ap/index.html", "_self")'>
+
+                <span class="itemText">APs</span></li>
+            <li class='itemIcon4 itemIcon' onclick='window.open("../networks/index.html", "_self")'>
+
+                <span class="itemText">Networks</span></li>
+            <li class='itemIcon5 itemIcon' onclick='window.open("../users/index.html", "_self")'>
+
+                <span class="itemText">Users</span></li>
+            <li class=' itemIcon6 itemIcon' onclick='window.open("../events/index.html", "_self")'>
+
+                <span class="itemText">Events</span></li>
+            <li class='itemIcon7 itemIcon' onclick='window.open("../analytics/index.html", "_self")'>
+
+                <span class="itemText">Analytics</span></li>
+            <li class='itemIcon8 itemIcon' onclick='window.open("../administration/index.html", "_self")'>
+
+                <span class="itemText">Administration</span></li>
+        </ul>
+        <footer></footer>
+    </div>
+        <footer class="footer">
+            <a href="../cookie-policy/index.html" target="_self" class="footerlinks" >Cookie Policy</a>
+            <a href="https://www.arris.com/company/privacy" target="_blank" class="footerlinks" >Privacy Policy</a>
+   </footer>
+   <header id="dashHead">
+        <section class="sec2">
+            <h1 id="logo2">
+               <a href="../dashboard/index.html">
+                <img alt="Ruckus Wireless" class="logo" src="../img/ruckus_idm_cloud_logo.png">
+            </a>
+            </h1>
+        </section>
+        <ul class="headLinks">
+            <li class="headBtn trialBtn"><a  href="https://info.ruckuswireless.com/cloud-trial.html?utm_source=InteractiveDemo&utm_medium=link&utm_campaign=KUMO-Trial-SignUp" target="_blank">Start free trial</a></li>
+            <li class="headBtn bell">
+                <a>
+                    <img class="bellIcon" src="../img/bell.png" onclick='dashNotifications()'>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+</body>
+
+</html>

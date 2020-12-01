@@ -1,0 +1,554 @@
+<!--Script -->
+<script type="text/javascript">
+//alert("Loaded");
+        var addRandom = 100;
+         
+        var configu = {
+            type: 'line',
+            data: {
+                labels:  [
+                    'web streaming',
+                    'http protocol over tls ssl',
+                    'miscellaneous',
+                    'itunes',
+                    'apple.com',
+                    'dhs.gov',
+                    'facebook',
+                    'web file transfer',
+                    'icloud-content.com',
+                    'google.com'
+                ],
+                datasets: [{
+                    label: 'web streaming',
+                    backgroundColor: "#d8d8d8",
+                    borderColor: "#d8d8d8",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                    fill: false,
+                }, {
+                    label: 'http protocol over tls ssl',
+                    fill: false,
+                    backgroundColor: "#39b54a",
+                    borderColor: "#39b54a",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'miscellaneous',
+                    fill: false,
+                    backgroundColor: "#997300",
+                    borderColor: "#997300",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'itunes',
+                    fill: false,
+                    backgroundColor: "#5b9bd5",
+                    borderColor: "#5b9bd5",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'apple.com',
+                    fill: false,
+                    backgroundColor: "#ed7d31",
+                    borderColor: "#ed7d31",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'dhs.gov',
+                    fill: false,
+                    backgroundColor: "#a5a5a5",
+                    borderColor: "#a5a5a5",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'facebook',
+                    fill: false,
+                    backgroundColor: "#ffc000",
+                    borderColor: "#ffc000",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'web file transfer',
+                    fill: false,
+                    backgroundColor: "#4472c4",
+                    borderColor: "#4472c4",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'icloud-content.com',
+                    fill: false,
+                    backgroundColor: "#70ad47",
+                    borderColor: "#70ad47",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }, {
+                    label: 'google.com',
+                    fill: false,
+                    backgroundColor: "#255d91",
+                    borderColor: "#255d91",
+                    data: [
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom,
+                        randomScalingFactor()+addRandom
+                    ],
+                }]
+            },
+            options: {
+                elements: {
+                    line: {
+                        tension: 0
+                        }
+                       },
+                responsive: true,
+                maintainAspectRatio: true,
+                title: {
+                    display: true,
+                    text:'Application By Traffic',
+                    position:"bottom"
+                },
+                legend: {
+                        position: "top",
+                        labels: {
+                            usePointStyle: true
+                        }
+                    },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Traffic'
+                        }
+                    }]
+                }
+            }
+        };
+
+
+
+
+        var configa = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [
+                        2.871935374,
+                        0.503743186,
+                        0.555337048,
+                        1.088762689,
+                        1.088762689,
+                        2.551770366,
+                        3.58121481,
+                        0.259960337,
+                        2.117840487,
+                        4.477504264,
+                    ],
+                    backgroundColor:[
+                        "#d8d8d8",//window.chartColors.gray,*/
+                        "#39b54a",//window.chartColors.red,
+                        "#997300",
+                        "#5b9bd5",
+                        "#ed7d31",
+                        "#a5a5a5",
+                        "#ffc000",
+                        "#4472c4",
+                        "#70ad47",
+                        "#255d91",
+                        "#9d480d",
+                        "#636363"
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    'web streaming',
+                    'http protocol over tls ssl',
+                    'miscellaneous',
+                    'itunes',
+                    'apple.com',
+                    'dhs.gov',
+                    'facebook',
+                    'web file transfer',
+                    'icloud-content.com',
+                    'google.com'
+                ]
+            },
+            options: {
+                elements: {
+                    line: {
+                        tension: 0
+                        }
+                       },
+                responsive: true,
+                title: {
+                    display: true,
+                    text:'Application By Traffic',
+                    position:"bottom"
+                },
+                legend: {
+                        display: false,
+                        position: "bottom",
+                        labels: {
+                            usePointStyle: false
+                        }
+                    }
+            }
+        };
+
+
+
+      //Get Charts
+      var ctxu = document.getElementById("chart-area-applications_1").getContext("2d");
+      window.myDoughnut = new Chart(ctxu, configu);
+
+      var ctxa = document.getElementById("chart-area-applications").getContext("2d");
+      window.myDoughnut = new Chart(ctxa, configa);
+
+
+    </script>
+<!--Script -->
+<div class="content analycticsmore">
+    <div class="uniTitle">
+        <a onclick='window.open("../analytics/index.html", "_self")' class="blueLinks">Analytics</a>
+        <p class="UniHead">Applications By Traffic</p>
+    </div>
+
+
+   
+    <!--Unicont-->
+    <div class="uniCont">
+        <div class="uniCont1">
+            <div class="Inputholder">
+                
+            <form class="grey-title-panel uniForm analyform">
+                
+                <div class="divTest">
+                    <label class="dropHead">Time Range</label><br>
+                    <select class="dropDown">
+                        <option>Last 24 Hours</option>
+                        <option>Last 7 Days</option>
+                        <option>Last 7 Month</option>
+                        <option>Custom Range</option>
+                    </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Venues</label><br>
+                    <select class="dropDown">
+                        <option value='all'>All Venues</option>
+                    <option value='HQ'>HQ</option>
+                    <option value='Warehouse - Oxford'>Warehouse - Oxford</option>
+                    <option value='Store - Cambridge'>Store - Cambridge</option>
+                    <option value='Store - Edinburgh'>Store - Edinburgh</option>
+                    <option value='Store - Brussels'>Store - Brussels</option>
+                    <option value='Store - Cologne'>Store - Cologne</option>
+                    <option value='Store - Paris'> Store - Paris</option>
+                    </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Access Points</label><br>
+                    <select class="dropDown">
+                            <option>All Aps</option>
+                            <option>LUK-AP-GYM</option>
+                    <option>LUK-AP-Conf</option>
+                    <option>LUK-AP-LRC</option>
+                    <option>LUK-AP-229</option>
+                    <option>LUK-AP-128</option>
+                    <option>LUK-AP-235</option>
+                    <option>LUK-AP-136</option>
+
+                    <option>LUK-AP-132</option>
+                    <option>LUK-AP-129</option>
+                    <option>LUK-AP-Office</option>
+                    <option>LUK-AP-227</option>
+                    <option>LUK-AP-135</option>
+                    <option>LUK-AP-SPARE-1</option>
+                    <option>LUK-AP-126</option>
+
+                    <option>LUK-AP-Tech Hall</option>
+                    <option>OUK-AP-210</option>
+                    <option>OUK-AP-212</option>
+                    <option>OUK-AP-218</option>
+                    <option>OUK-AP-TrackShed</option>
+                    <option>CUK-AP-119</option>
+                    <option>CUK-Hallway-Art</option>
+
+                    <option>CUK-AP-112</option>
+                    <option>CUK-AP-108</option>
+                    <option>CUK-AP-219</option>
+                    <option>ESC-Rm801</option>
+                    <option>ESC-Rm209</option>
+                    <option>BBE-Rm109</option>
+                    <option>BBE-Rm201</option>
+
+                    <option>CDE-AP-160</option>
+                    <option>CDE-AP-157</option>
+                    <option>PFR-AP-160</option>
+                    <option>PFR-AP-157</option>
+                    </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Networks</label><br>
+                    <select class="dropDown">
+                    <option value='all'>All Networks</option>
+                    <option>LUK-JH-D201</option>
+                    <option>LUK-D201-Guest</option>
+                    <option>LUK-D201-Staff</option>
+                    <option>LUK-D201</option>
+                    <option>LUK-BG-D201</option>
+                    <option>LUK-MIS-BYOD</option>
+                    <option>LUK-WT-D201-Staff</option>
+
+                    <option>OUK-D201</option>
+                    <option>OUK-D201-Guest</option>
+                    <option>OUK-D201-Staff</option>
+                    <option>CUK-D201</option>
+                    <option>CUK-BYOD</option>
+                    <option>CUK D201-STAFF</option>
+                    <option>CUK-D201-Staff</option>
+
+                    <option>ESC_D201</option>
+                    <option>ESC-D201-Staff</option>
+                    <option>BBE-D201-Public</option>
+                    <option>BBE-D201-Staff</option>
+                    <option>BBE-D201</option>
+                    <option>CDE-D201-Public</option>
+                    <option>CDE-D201</option>
+
+                    <option>CDE-D201-Staff</option>
+                    <option>PFR-D201</option>
+                    <option>PFR-BYOD</option>
+                    </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Download</label><br>
+                    <select class="dropDown">
+                        <option>Download</option>
+                        <option>Only Download</option>
+                        <option>Only Upload</option>
+                    </select>
+                </div>
+                <div class="divTest">
+                    <label class="dropHead">Time granularity</label><br>
+                    <select class="dropDown">
+                        <option>Per 1 Minute</option>
+                        <option>Per 15 Minutes</option>
+                        <option>Per 30 Minutes</option>
+                        <option>Per 1 Hour</option>
+                        <option>Per 1 Day</option>
+                    </select>
+                </div>
+
+                   </div>
+                <div class="divApply" style="right: 45px;padding-top: 38px;">
+                    <a class="blueLinks btnReset">Reset</a>
+                    <input class="btnApply" type='button' name='apply' value='Apply' />
+                </div>
+            </form>
+
+
+            <!--Data Summary-->
+<div class="datasummary">
+            <p class="datebold">Data Summary:</p>
+            <div>
+                <p>&nbsp;&nbsp;<img class="analycons" src="../img/analycons_1.jpg" width="15px" />&nbsp;&nbsp;003/13/2018 18:55 - 03/14/2018 18:55 </p>
+            </div>
+
+            <div>   
+                    <p>&nbsp;&nbsp;<img class="analycons" src="../img/upload.jpg" width="20px" />&nbsp;&nbsp; Upload: 62.6 GB  </p>
+            </div>
+
+            <ul style="border:none">
+                <p>&nbsp;&nbsp;<img class="analycons" src="../img/download.jpg" width="17px" />&nbsp;&nbsp;Download: 582.6 GB</p>
+            </ul>
+</div>
+<!--Data Summary -->
+
+              
+               <!--Graph holder -->
+                <div class="trafficgraphicholder">
+                 <!--Left Chart-->
+                <div class="venuegraphsleft">
+                <div class="stats">
+                <div>
+                    <canvas id="chart-area-applications_1"></canvas>                    
+                </div>
+                </div>
+                </div>
+                <!--Left Chart-->
+
+               <!--Rightt  Chart-->
+                <div class="venuegraphsright trafficgraph">
+                <div class="stats">
+                    <canvas id="chart-area-applications">
+                    </canvas>
+                </div>
+                </div>
+                <!--Right  Chart-->
+                </div>
+                <!--Graph holder -->
+
+            <table class="adminT1">
+                    <tr>
+                        <th>Apps</th>
+                        <th>Total Traffic</th>
+                    </tr>
+                    <tr>
+                        <td>web streaming</td>
+                        <td>2.871935374 </td>
+                    </tr>
+                    <!--New Code-->
+                  <tr>
+                    <td class="s2">http protocol over tls ssl</td>
+                    <td class="s2">00.555337048</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">miscellaneous</td>
+                    <td class="s2">2.655720187</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">itunes</td>
+                    <td class="s2">2.551770366</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">dhs.gov</td>
+                    <td class="s2">3.58121481</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">facebook</td>
+                    <td class="s2">0.259960337</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">web file transfer</td>
+                    <td class="s2">2.117840487</td>
+                  </tr>
+                  <tr>
+                    <td class="s2">icloud-content.com</td>
+                    <td class="s2">2.117840487</td>
+                  </tr>
+                    <!--New Code -->
+               </table>
+                
+
+
+          
+
+        </div>
+    </div>
+   <!--Unicont-->
+
+
+
+
+
+</div>

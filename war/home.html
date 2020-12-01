@@ -1,0 +1,35 @@
+
+<!--Sections -->
+<div id="fullpage" >
+	
+
+	<!--Section -->
+	<div ng-repeat="x in headerContent" class="section" id="{{x.id}}" style="background-image: url({{x.bgimage}})">
+		<div class="intro">
+			<h1 align="center"><img align="middle" src="images/warmainlogo.png" width="300px" ></h1>
+			<p align="center">
+            <span class="arrowdown">
+            <img align="middle" src="{{x.cta}}" width="100%" >
+            </span>
+            </p>
+		</div>
+	</div>
+
+	<!--/Section -->
+   
+   	<!--Test Section -->
+   	
+	<div ng-repeat="x in myContent" class="section" id="{{x.id}}" style="background-image: url({{x.bgimage}})">
+			<div class="intro">
+				<div class="col-lg-12"><img src="{{x.titleimage}}" height="60px"></div>
+				<div class="col-lg-12">
+			    <span class="viewbutton">
+                <img  src="images/view.png" width="160px"> 
+                </span>
+                </div>
+		</div>
+	</div>
+
+
+</div>
+<!--/Sections -->

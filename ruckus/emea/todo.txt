@@ -1,0 +1,335 @@
+Marcel,
+
+By the way the files I uploaded just now are older, I'm planning to be upload current files with more complete functions today. I'm focusing on the JS and dynamic functions today. The files I sen tare just to show I'm working on the website.
+
+I will upload files tonight at 23:00 - 01:00 so you will find files tomorrow morning.
+
+Regards.
+Luthando
+
+
+onclick="window.open("../networks/index.html", "_self")"
+
+
+
+onclick="this.checked=false; modalSignUpSmall(); $("#cn_pt_access_type2").prop("checked", true);"
+
+
+class="socialinactive socialctrl"
+
+Fix Dasboard Update
+Cookies
+Google API
+Need to fix the anaylictics graphs and make them the same
+Fix Menu*
+
+
+09:30 - 10:30
+Venue 1 level drill down*
+10:30 - 11:30
+Analyctic pages (Graphs and Grey out) - Unique Clients and Traffic*
+11:30 - 12:00
+Events Page*
+12:00 - 13:30
+Users Page*
+13:30 - 14:30
+Cookie forms (Create 1 form instance)
+14:30 - 15:00
+Google Map Keys
+15:00 - 15:30
+Expand Buttons
+15:30 - 16:00
+Minor changes
+16:00 - 17:00
+Charts should show relevant info (Venues and AP)
+
+onclick="analyticsToggle("ApplicationsByTraffic.html"); demoClose()"
+
+Tabs:
+http://localhost/becalebruckus/administration/
+
+
+Cookies:
+https://stackoverflow.com/questions/1458724/how-do-i-set-unset-a-cookie-with-jquery
+https://www.sitepoint.com/how-to-deal-with-cookies-in-javascript/
+https://www.w3schools.com/js/js_cookies.as
+http://www.the-art-of-web.com/javascript/setcookie/
+http://www.the-art-of-web.com/javascript/getcookie/
+
+
+Venues:
+Venue, Description, City, Country, Networks, APs, Clients
+
+
+AP:
+AP, status, Model, IP Address, Venue, Mesh Role, Clients
+
+
+Networks:
+Network Name, Description , Type, Venues, APs , VLAN
+
+
+
+
+Venues Name:
+name='vene_location'
+name='venue_details'
+
+.fa{
+    color: #ccc;
+    color: #39b54a;
+    font-size: 15px;
+}
+
+web streaming',
+                    'http protocol over tls ssl',
+                    'miscellaneous',
+                    'itunes',
+                    'apple.com',
+                    'dhs.gov',
+                    'facebook',
+                    'web file transfer',
+                    'icloud-content.com',
+                    'google.com'
+
+
+Color Code:
+Green: #39b54a
+Orange: #ea7600
+
+
+<div class="frmHead">
+        <p class="frmTitle">Create New WiFi Network</p>
+        <ul class="frmHeadBtn">
+            <li class="frmHelpBtn headBtns"><i class="fa fa-question-circle-o frmHelp"></i></li>
+            <li class="frmCloseBtn headBtns"><i class="fa fa-close frmClose" onclick="demoClose()"></i></li>
+        </ul>
+    </div>
+
+
+
+//Cookies
+
+//Change Value
+$(".network_Items").text(elementsNum);
+
+//Get cookie
+Cookies.get('network_Items')
+
+venueItems
+apItems
+network_Items
+//Cookies
+
+venuesToggle('venuesmore.html');
+
+
+n= latitude
+w=longitude
+
+HQ = 34.041249, -118.255489
+Warehouse - Fresno =  36.795405, -119.823427
+Store - Phoenix = 33.465957, -112.057727
+Store - Irvine = 33.642833, -117.829237
+Store - Las Vegas = 36.149194, -115.184867
+Store - San Diego = 32.817752, -117.156102
+Store - Sacramento = 38.555318, -121.479979
+
+
+<div style="display:block;float:left;width:100%;height:auto;font-family:  arial;position: relative;">
+
+<div style="background-color: #484848;color:#fff;display:block;float:left;width:100%;padding: 10px;">Title</div><div style="background-color: #fff;color: #000;display:block;float:left;width:100%;padding: 10px;border-bottom: solid #ccc 1px;font-size: 13px;">APs <img width="10px" src="../img/access_points_10.png" style="
+    margin-left: 20px;
+">&nbsp; 16
+</div><div style="background-color: #fff;color: #000;display:block;float:left;width:100%;padding: 10px;border-bottom: solid #c1c1c1 5px;font-size: 13px;">Clients</div>
+</div>
+
+
+
+
+
+
+HQ =  34°02'24.0"N 118°15'19.8"W  = 34.041249, -118.255489
+Warehouse - Fresno =  36°47'42.5"N 119°49'24.3"W  = 36.795405, -119.823427
+Store - Phoenix = 33°27'56.8"N 112°03'27.7"W = 33.465957, -112.057727
+Store - Irvine = 33°38'33.3"N 117°49'45.1"W = 33.642833, -117.829237
+Store - Las Vegas = 36°08'56.1"N 115°11'05.6"W = 36.149194, -115.184867
+Store - San Diego = 32°49'02.9"N 117°09'22.2"W = 32.817752, -117.156102
+Store - Sacramento =  38°33'18.3"N 121°28'48.0"W = 38.555318, -121.479979
+
+
+
+border: 2px solid #D5DFEB;
+padding: 10px;
+scaleLabel : "<%=value%>"
+
+switch.jpg
+on_switch.png
+
+
+Changed:
+dashboard/index
+init.js
+addnetwork.php
+base.css
+admin/index.html
+
+
+
+                    yAxes: [{
+                        display: true,
+                        gridLines:{
+                            drawOnChartArea: false
+                        },
+                        ticks: {
+                        callback: function(label, index, labels) {
+                        return label+'M';
+                            }
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Volume'
+                        }
+                    }]
+
+
+
+tooltips: {
+                enabled: true,
+                mode: 'single',
+                callbacks: {
+                    label: function(tooltipItems, data) { 
+                        return tooltipItems.yLabel + 'M';
+                    }
+                }
+            }
+
+Venues
+
+
+Fontsizes:
+15px
+14px
+13px
+11px
+
+
+
+Emails/ Hours R8400:
+
+To me it looks like it might take 1 - 4 weeks at 8 hours a day to finish up the work but I would like us to meet.
+1 week if it's minor css, HTML and responsive changes.
+2 - 4 weeks if it's a lot of JavaScript work that needs to be done fro the User Experience.
+
+
+HTML / W3C Optimization / Popups HTML - 8 hours  (21 February 2018)
+CSS - 4 hours (22 February 2018)
+Animations - 4 hours (22 Febraury 2018)
+JavaScript Debugging, recoding and Charts/ JS - 8 hours (23 February 2018)
+Responsive Design - 16 hours (26 February 2018 - 27 February 2018)
+
+40 hours
+
+
+
+
+Hours 2, 5 March- 9 March
+
+Hours per task:
+1. Event and Users not click-able (1 - 4 hours):
+    (Events:
+ https://t4.cloud.ruckuswireless.com/t/0015000001EhrO3AAJ/#/tenant/0015000001EhrO3AAJ/events
+  /  Users:
+ https://t4.cloud.ruckuswireless.com/t/0015000001EhrO3AAJ/#/tenant/0015000001EhrO3AAJ/users/devices)
+
+Note: This depends on what I need to do. Do have to create the pages or do I only have to link them to existing live pages.
+
+
+
+
+2. Venue can't be clicked into (first venue: 1 level drill-down (4 hours) :
+
+ https://t4.cloud.ruckuswireless.com/t/0015000001EhrO3AAJ/#/tenant/0015000001EhrO3AAJ/venues/venue-details/My-Venue/venue-overview)
+
+Note: I will have to get the design for this pager and the UX. Also the password for the the original site does not work for some reason. I get kicked out, it would be great to access the page.
+
+
+
+
+
+4. The guide shows up every-time you go to the main dashboard page  -
+any possibility to allow the guide to show up only the first time when
+a user lands onto the dashboard? (4 hours):
+
+I will have to use cookies for this function.
+
+
+
+5. Network doesn't add anything to the list when you create it (but
+the button works now). The same for Add AP and add Venue - can we
+please make the dummy data to work e.g. when a network is created - it
+will create a new network and populate accordingly (8 hours - 16 hours).
+
+Depending on what the client needs. Does he need it to actually save data in the Database or does he need it just to display dummy data? I can use JavaScript to create a dummy User Experience which is 8 hours or I will have to use PHP and MySQL to create the real deal which might take 16 hours. I would prefer  someone else to do the PHP and MySQL.
+
+
+
+Summarized breakdown:
+
+-Event and Users not click-able (1 - 4 hours):
+
+-Venue can't be clicked into (first venue: 1 level drill-down (4 hours) :
+
+-Popup up once (4 hours):
+
+-Network doesn't add anything to the list when you create it (but
+ the button works now).(8 hours - 16 hours).
+
+
+Hours = 28 hours (3 1/2 Days)
+
+It's going to take 3 and a half days.
+
+
+
+
+
+
+mAP pINS 16 HOURS R4800.00
+
+
+Phase 2: R12000.00
+
+Free trial link updates  (4 hours) 19 March 2018
+Translate guide screens into 5 languages  (12 hours) 19 March 2018 -  20 March 2018
+Map pin data for Europe (4  hours)  20 March 2018
+Switch between regions (Dropdown) (4 hours) 21 March 2018 
+Updating relevant European data eg Venues and APS (8 hours) 21 March 2018
+Updating User Experienceeg eg Intro (8 hours) 21 March 2018
+
+
+
+
+Total:37200
+Left:30000
+
+
+
+
+
+
+
+
+
+
+
+
+Hi Kabelo.
+Here is a more updated breakdown from our last phone call.
+ From a quick breakdown It will take plus minus 14 - 16 days working days. That's around  112 hours of dev. I think between 19 - 21 March it should be done.
+There's a chance I could finsih earlier.
+Chat feature  intergration (2 days) 28 February 2018 - 2 March 2018
+Free trial link  (1 day) 5 March 2018
+Translate guide screens into 5 languages  ( 7 days) 5 March 2018 -  14 March 2018
+Map pin data for Europe (3  days)  15 March 2018 -  19 March 2018
+Switch between regions (Dropdown) (3 days) 19 March 2018 -  21 March 2018

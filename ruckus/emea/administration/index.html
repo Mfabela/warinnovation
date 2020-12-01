@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ruckus Cloud</title>
+    <meta charset="utf-8">
+    
+
+<meta name="viewport" content="width=device-width">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TVW6MHT');</script>
+<!-- End Google Tag Manager -->
+
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2839870-26"></script>-->
+    <script>
+        /*window.dataLayer = window.dataLayer || [];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                function gtag(){dataLayer.push(arguments);}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                gtag('js', new Date());
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                gtag('config', 'UA-2839870-26');*/
+    </script>
+    <script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../js/init.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-74688030-12"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag()
+
+{dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-74688030-12');
+</script>
+</head>
+
+<body onload="switchtoggle()" >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVW6MHT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!--Screen-->
+   <div id='biggerscreen'  class="">
+    <div class="step2Cont">
+        <div class="popupHead">
+            <img alt="Ruckus Wireless" class="popupLogo" src="../img/ruckuslogo_black.png">
+            <a class="demoExit">
+                <!--  <i class="fa fa-close" onclick='demoClose()'></i></a>-->
+                <!--<img src="../img/Exit-1.png" onclick="demoClose()">-->
+            </a>
+            <p class="clear"></p>
+        </div>
+        <div class="popupText">
+            <h1 class="popup1stLine" align="center" >Please View On Bigger Screen. We Recommend 1024x640 and larger :)</h1>
+        </div>
+        
+    </div>
+</div>
+<!--Screen-->
+    <div class='content administration admintabscont'>
+        <p class="administrationHeading">Administration</p>
+        <ul class="tabNav" id="admin_nav">
+            <li onclick='adminToggle("admin_tab_cont_details", 1)' class="adminSelect">Account Details</li>
+            <li onclick='adminToggle("admin_tab_cont_admin", 2)'>Administrators</li>
+            <li onclick='adminToggle("admin_tab_cont_notifications", 3)'>Notifications</li>
+            <li onclick='adminToggle("admin_tab_cont_support", 4)'>Support</li>
+            <li onclick='adminToggle("admin_tab_cont_license", 5)'>License</li>
+            <p id='adminToggleActive' style='display:none'>admin_tab_cont_details</p>
+        </ul>
+        <div id='admin_tab_cont' class="adminCont">
+            <div id="admin_tab_cont_details">
+                <div class="accountDetails">
+                    <div class="adminTab1">
+                        <div class="adminTabTitle">Organization:</div>
+                        <div class="adminTabText">Ruckus Demos</div>
+                    </div>
+                    <hr>
+                    <div class="adminTab2 ad1">
+                        <div class="adminTabTitle">Address:</div>
+                        <div class="adminTabText">350 West Java Drive</div>
+                    </div>
+                    <div class="adminTab2">
+                        <div class="adminTabTitle">City:</div class="adminTabText">
+                        <div class="adminTabText">Sunnyvale</div>
+                    </div>
+                    <div class="adminTab2">
+                        <div class="adminTabTitle">State/Province:</div>
+                        <div class="adminTabText">CA</div>
+                    </div>
+                    <div class="adminTab2">
+                        <div class="adminTabTitle">Zip:</div>
+                        <div class="adminTabText">94089</div>
+                    </div>
+                    <div class="adminTab2">
+                        <div class="adminTabTitle">Country:</div>
+                        <div class="adminTabText">United States</div>
+                    </div>
+
+                    <hr>
+                </div>
+            </div>
+
+            <div id="admin_tab_cont_admin" style='display: none;'>
+                <div class="administratorsTab">
+                    <div class="tab2Cont1">
+                        <div class="grey-title-panel">
+                            <p>Local Administrators <span><a class="blueLinks">Add Administrator&nbsp;&nbsp;|</a><a class="blueLinks">Refresh</a></span></p>
+                        </div>
+                        <table class="adminT1">
+                            <tr>
+                                <th>Email</th>
+                                <th>Name</th>
+                                <th>Role</th>
+                            </tr>
+                            <tr>
+                                <td>jack.rubell@raines.com</td>
+                                <td>Jack Rubell</td>
+                                <td>Prime Admin</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <br><br>
+                        <div class="grey-title-panel">
+                            <p>3rd Party Administrators <span><a class="blueLinks">Add Administrator &nbsp;&nbsp;|</a><a class="blueLinks">Refresh</a></span></p>
+                        </div>
+                        <div class="infoPara">
+                            <p>You can delegate rights to 3rd party administrators.</p>
+                            <p>These administrators will be given the "Administrator" role.</p>
+                        </div>
+                        <table class="adminT1">
+                            <tr>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="admin_tab_cont_notifications" style='display: none;'>
+                <div class="notificationsTab">
+                    <br><br>
+                    <p>System notifications will be sent to the following email addresses and mobile devices:</p>
+                    <div>
+                        <div class="grey-title-panel">
+                            <p>Email <span><a class="blueLinks">Add Email Address</a></span></p>
+                        </div>
+                        <table class="adminT1">
+                            <tr>
+                                <th>Email Address</th>
+                                <th>Status</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            <tr>
+                                <td>jack.rubell@raines.com</td>
+                                <td>Active</td>
+                                <td><img src="../img/on_switch.png" class="switch"/></td>
+                            </tr>
+                            <tr>
+                                <td>peter@email.com</td>
+                                <td>Active</td>
+                                <td><img src="../img/on_switch.png" class="switch"/></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br><br>
+                    <div>
+                        <div class="grey-title-panel">
+                            <p>SMS <span><a class="blueLinks">Add Mobile Number</a></span></p>
+                        </div>
+                        <table class="adminT1">
+                            <tr>
+                                <th>Mobile Number</th>
+                                <th>Status</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="admin_tab_cont_support" style='display: none;'>
+                <div class="tabSupport">
+                    <br><br>
+                    <p class="supportHead">Recovery Network Passphrase:&nbsp;&nbsp;&nbsp;<span style="color:#75787B">••••••••••••</span><span class="fa-eye-eye"></span><a class="blueLinks">Change</a></p>
+                    <br>
+                    <ul style="color: #808080;">
+                        <li>The SSID of the discovery network is: “Recover.Me-xxxxxx” where “xxxxxx” are the last six characters of the AP's MAC address </li>
+                        <li>When you enter the Passphrase make sure to type only 16 digits, no spaces</li>
+                    </ul>
+                    <br><br>
+                    <hr>
+                    <br><br>
+                    <p class="supportHead">Allow access to Ruckus support  <img src="../img/on_switch.png" style="margin-left:30px" class="switch" /></p>
+                    <br>
+                    <p style="color: #808080;" >Enable this when requested by Ruckus support team.</p>
+                    <p style="color: #808080;" >By enabling this, you are granting Ruckus support with temporary administrator-level access.</p>
+                    <p style="color: #808080;" >This grant for access will be automatically revoked after 7 days.</p>
+                </div>
+            </div>
+
+            <div id="admin_tab_cont_license" style='display: none;'>
+                <div class="licenseTab">
+                    <br><br>
+                    <div class="licText">
+                        <div class="lT1">License Type:</div>
+                        <div class="lT2">Basic</div>
+                    </div>
+                    <div class="licText">
+                        <div class="lT1">Total AP Usage:</div>
+                        <div class="lT2">
+                            <p><img src="../img/access_points_07.png" style="margin-top:-3px; margin-right:5px;" width="15px" /><span class="tablepercent" > 94% </span> 195 / 204</p></div>
+                    </div>
+                    <hr />
+                    <br>
+                    <div class="grey-title-panel">
+                        <p>License Subscriptions <span><a class="blueLinks">License Management&nbsp;&nbsp;|</a><a class="blueLinks">Refresh</a></span></p>
+                    </div>
+
+                    <table class="adminT1">
+                        <tr>
+                            <th>License for</th>
+                            <th>Purchased on</th>
+                            <th>Expires on</th>
+                            <th>Time Left</th>
+                        </tr>
+                        <tr>
+                            <td>1500 APs</td>
+                            <td>06/05/2017 02:00</td>
+                            <td>06/05/2018 02:00</td>
+                            <td>4 Months</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class='nav'>
+        <div class="sidebar-search-box">
+            <form method='' action='' class="input-filter-cont" onclick='modalSignUp()'>
+                <input class="searchInput" type='text' name='search' placeholder='Search...' required/>
+
+                <i class="fa fa-search fa-lg searchIcon" aria-hidden="true"></i>
+
+            </form>
+        </div>
+        <ul>
+            <li class='itemIcon1 itemIcon' onclick='window.open("../dashboard/index.html", "_self")'>
+                <span class="itemText">Dashboard</span></li>
+            <li class=" itemIcon2 itemIcon" onclick='window.open("../venues/index.html", "_self")'>
+                <span class="itemText">Venues</span></li>
+            <li class='itemIcon3 itemIcon' onclick='window.open("../ap/index.html", "_self")'>
+
+                <span class="itemText">APs</span></li>
+            <li class='itemIcon4 itemIcon' onclick='window.open("../networks/index.html", "_self")'>
+
+                <span class="itemText">Networks</span></li>
+            <li class='itemIcon5 itemIcon' onclick='window.open("../users/index.html", "_self")'>
+
+                <span class="itemText">Users</span></li>
+            <li class='itemIcon6 itemIcon' onclick='window.open("../events/index.html", "_self")'>
+
+                <span class="itemText">Events</span></li>
+            <li class='itemIcon7 itemIcon' onclick='window.open("../analytics/index.html", "_self")'>
+
+                <span class="itemText">Analytics</span></li>
+            <li class='active itemIcon8 itemIcon' onclick='window.open("../administration/index.html", "_self")'>
+
+                <span class=" itemText">Administration</span></li>
+        </ul>
+        <footer></footer>
+    </div>
+        <footer class="footer">
+            <a href="../cookie-policy/index.html" target="_self" class="footerlinks" >Cookie Policy</a>
+            <a href="https://www.arris.com/company/privacy" target="_blank" class="footerlinks" >Privacy Policy</a>
+   </footer>
+   <header id="dashHead">
+        <section class="sec2">
+            <h1 id="logo2">
+                <a href="../dashboard/index.html">
+                <img alt="Ruckus Wireless" class="logo" src="../img/ruckus_idm_cloud_logo.png">
+                </a>
+            </h1>
+        </section>
+        <ul class="headLinks">
+            <li class="headBtn trialBtn"><a  href="https://info.ruckuswireless.com/cloud-trial.html?utm_source=InteractiveDemo&utm_medium=link&utm_campaign=KUMO-Trial-SignUp" target="_blank">Start free trial</a></li>
+            <li class="headBtn bell">
+                <a>
+                    <img class="bellIcon" src="../img/bell.png" onclick='dashNotifications()'>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+</body>
+
+</html>
