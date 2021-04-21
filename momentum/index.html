@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Build A Material Theme</title>
+    <meta charset="utf-8">
+      <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+      <!-- import Material Icons from Google Fonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:900i" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+            <!-- import the Material stylesheet -->
+            <link href="css/mystyle.css" rel="stylesheet" >
+              <!-- Add favicons -->
+              <!--Material Design -->
+              <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+                <!-- import the Material javascript file -->
+                <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+                <!--Material Design -->
+                <!--Bootstrap Css-->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+                  <!--/Bootstrap Css-->
+                </head>
+                <body class="mdc-typography">
+                  <header class="mdc-top-app-bar mom-mdc-top-app-bar mom-mdc-bg-grey">
+                    <div class="mdc-top-app-bar__row">
+                      <!--Menus-->
+                      <!--Layout Grid Menu-->
+                      <div class="mdc-layout-grid" style="padding: 0px;">
+                        <!--mdc-layout-grid__inner is the row-->
+                        <div class="mdc-layout-grid__inner">
+                          <!--Inner Grid-->
+                          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start mdc-layout-grid__cell mdc-layout-grid__cell--span-2 mom-mdc-top-app-bar__section">
+                            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button mom-mdc-top-app-bar__navigation-icon" aria-label="Open navigation menu">menu</button>
+                            <span class="mdc-top-app-bar__title">
+                              <img width="120px" src="img/momentum.svg">
+                              </span>
+                            </section>
+                            <section class="mdc-top-app-bar__section mdc-layout-grid__cell mdc-layout-grid__cell--span-8" role="toolbar">
+                              <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                <span class="mdc-fab__label mom-mdc-fab__label">Help</span>
+                              </button>
+                            </section>
+                            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-layout-grid__cell mdc-layout-grid__cell--span-2" role="toolbar">
+                              <!--<button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite </button>-->
+                              <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">shopping_cart</span>
+                                <span class="mdc-fab__label mom-mdc-fab__label">2</span>
+                              </button>
+                              <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">favorite</span>
+                                <span class="mdc-fab__label mom-mdc-fab__label">16</span>
+                              </button>
+                              <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                <span class="mdc-fab__label mom-mdc-fab__label">My Account</span>
+                              </button>
+                              <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                <span class="mdc-fab__label mom-mdc-fab__label">Orders</span>
+                              </button>
+                              <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                <span class="mdc-fab__label mom-mdc-fab__label">Logout</span>
+                              </button>
+                            </section>
+                            <!--/Inner Grid-->
+                          </div>
+                          <!--/mdc-layout-grid__inner is the row-->
+                        </div>
+                        <!--/Layout Grid Menu-->
+                        <!--/Menus-->
+                      </div>
+                    </header>
+                    <!--Main Is where the content goes here-->
+                    <main class="main-content mdc-top-app-bar--fixed-adjust mom-mdc-top-app-bar--fixed-adjust mom-mdc-bg-grey mb-5">
+                      <!--mdc-layout-grid is the container-->
+                      <div class="mdc-layout-grid">
+                        <!--mdc-layout-grid__inner is the row-->
+                        <div class="mdc-layout-grid__inner">
+                          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
+                          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+                            <!--Inner Content  Content Goes Here-->
+                            <div class="mdc-layout-grid mom-mdc-padding_0">
+                              <!--mdc-layout-grid__inner is the row-->
+                              <div class="mdc-layout-grid__inner">
+                                <div class="mdc-layout-grid__cell mom-mdc-breadcrumb mdc-layout-grid__cell--span-12">
+                                  <!--Breadcrumbs-->
+                                  <a href="#">Cellphones</a>>
+                                  <a href="#">Wearable Wearables</a>>
+                                  <a href="#">Smart Watches</a>
+                                  <!--Breadcrumbs-->
+                                  <!--hr-->
+                                  <hr class="mom-mdc-hr" />
+                                  <!--/hr-->
+                                </div>
+                                <!--Search Section-->
+                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                                  <!--Row Mom-->
+                                  <div class="mom-mdc-row">
+                                    <!--Row Search Section-->
+                                    <div class="row">
+                                      <div class="col-md-6 mom-mdc-padding_0 mom-mdc-search-container" >
+                                        <!--Search-->
+                                        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon mom-mdc-searchbar">
+                                          <i class="material-icons mdc-text-field__icon mom-mdc-text-field__icon">search</i>
+                                          <input class="mdc-text-field__input" value="Search product by name or brand">
+                                            <div class="mdc-notched-outline" >
+                                              <div class="mdc-notched-outline__trailing"></div>
+                                            </div>
+                                          </div>
+                                          <!--/Search-->
+                                        </div>
+                                        <div class="col-md-3 mom-mdc-padding_0 mom-mdc-select-border__right px-2" >
+                                          <!--Select Bootstrap-->
+                                          <select class="form-select mom-bstrap-select-department col-lg-4" aria-label="Default select example">
+                                            <option selected>All Departments</option>
+                                            <option value="1">Department 1</option>
+                                            <option value="2">Department 2</option>
+                                            <option value="3">Department 3</option>
+                                          </select>
+                                          <!--/Select Bootstrap -->
+                                        </div>
+                                        <div class="col-md-3 mom-mdc-padding_0 px-2" >
+                                          <!--Select Bootstrap-->
+                                          <select class="form-select mom-bstrap-select-ship-department mom-mdc-bg-peach col-lg-4" aria-label="Default select example">
+                                            <option selected>Ship By Deparment</option>
+                                            <option value="1">Department 1</option>
+                                            <option value="2">Department 2</option>
+                                            <option value="3">Department 3</option>
+                                          </select>
+                                          <!--/Select Bootstrap -->
+                                        </div>
+                                      </div>
+                                      <!--/Row Search Section-->
+                                    </div>
+                                    <!--Row Mom-->
+                                  </div>
+                                  <!--/Search Section-->
+                                  <!--Chips-->
+                                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                                    <!--Row-->
+                                    <div class="mom-mdc-row">
+                                      <!--Chips Inner -->
+                                      <div class="mdc-chip-set mom-mdc-chip-set" role="grid">
+                                        <div class="mdc-chip mom-mdc-chip" role="row">
+                                          <div class="mdc-chip__ripple"></div>
+                                          <span role="gridcell">
+                                            <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                              <span class="mdc-chip__text">CELLPHONE</span>
+                                            </span>
+                                          </span>
+                                        </div>
+                                        <div class="mdc-chip mom-mdc-chip" role="row">
+                                          <div class="mdc-chip__ripple"></div>
+                                          <span role="gridcell">
+                                            <span role="button" tabindex="-1" class="mdc-chip__primary-action">
+                                              <span class="mdc-chip__text">CELL ACCESSORIES</span>
+                                            </span>
+                                          </span>
+                                        </div>
+                                        <div class="mdc-chip mom-mdc-chip" role="row">
+                                          <div class="mdc-chip__ripple"></div>
+                                          <span role="gridcell">
+                                            <span role="button" tabindex="-1" class="mdc-chip__primary-action">
+                                              <span class="mdc-chip__text">APPLE</span>
+                                            </span>
+                                          </span>
+                                        </div>
+                                        <div class="mdc-chip mom-mdc-chip" role="row">
+                                          <div class="mdc-chip__ripple"></div>
+                                          <span role="gridcell">
+                                            <span role="button" tabindex="-1" class="mdc-chip__primary-action">
+                                              <span class="mdc-chip__text">SAMSUNG</span>
+                                            </span>
+                                          </span>
+                                        </div>
+                                        <div class="mdc-chip mom-mdc-chip" role="row">
+                                          <div class="mdc-chip__ripple"></div>
+                                          <span role="gridcell">
+                                            <span role="button" tabindex="-1" class="mdc-chip__primary-action">
+                                              <span class="mdc-chip__text">NOKIA</span>
+                                            </span>
+                                          </span>
+                                        </div>
+                                        <div class="mdc-chip mom-mdc-chip" role="row">
+                                          <div class="mdc-chip__ripple"></div>
+                                          <span role="gridcell">
+                                            <span role="button" tabindex="-1" class="mdc-chip__primary-action">
+                                              <span class="mdc-chip__text">HUAWEI</span>
+                                            </span>
+                                          </span>
+                                        </div>
+                                        <div class="mdc-chip mom-mdc-chip" role="row">
+                                          <div class="mdc-chip__ripple"></div>
+                                          <span role="gridcell">
+                                            <span role="button" tabindex="-1" class="mdc-chip__primary-action">
+                                              <span class="mdc-chip__text">ALCATEL</span>
+                                            </span>
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <!--hr-->
+                                      <!--hr-->
+                                      <hr class="mom-mdc-hr" />
+                                      <!--/hr-->
+                                      <!--Chips Inner -->
+                                    </div>
+                                    <!--Row-->
+                                  </div>
+                                  <!--Chips-->
+                                  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                    <!--Hello world -->
+                                    <!--Row-->
+                                    <div class="mom-mdc-row mom-mdc-margin-bottom__20 mom-mdc-brandname">
+                                      <p>
+                                        <a class="mdc-brandname-link" href="#">
+                                          <strong>POLAROID SA</strong>
+                                        </a>
+                                        <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                          <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">
+          share
+            </span>
+                                          <span class="mdc-fab__label mom-mdc-fab__label">
+            Share
+          </span>
+                                        </button>
+                                      </p>
+                                    </div>
+                                    <!--Row-->
+                                    <!--Row-->
+                                    <div class="mom-mdc-row mom-mdc-margin-bottom__20">
+                                      <p class="mdc-typography--headline6" >Polaroid Single Touch
+                                        <br>
+            Active Smart Watch
+            
+                                        </p>
+                                      </div>
+                                      <!--Row-->
+                                      <!--Row-->
+                                      <div class="mom-mdc-row mom-mdc-margin-bottom__20">
+                                        <p>
+                                          <strong>Ships in 5-7 work days</strong>
+                                        </p>
+                                      </div>
+                                      <!--Row-->
+                                      <!--Row-->
+                                      <div class="mom-mdc-row">
+                                        <p>
+                                          <span class="mom-mdc-border__right mom-mdc-span">Sold by 
+                                            <a href="#">Tech Direct</a>
+                                          </span>
+                                          <span class=" mom-mdc-span">Fulfilled by 
+                                            <a href="#">Momentum</a>
+                                            <span>
+                                            </p>
+                                          </div>
+                                          <!--Row-->
+                                          <!--hr-->
+                                          <hr class="mom-mdc-hr" />
+                                          <!--/hr-->
+                                          <!--Row-->
+                                          <div class="mom-mdc-row mom-mdc-margin-bottom__20">
+                                            <p class="mdc-typography--caption">
+              Eligible for Cash on Delivery
+                                              <br />
+              Free Delivery Available
+                                              <br />
+              Hassle-Free Exhanges & Returns for 30 Days
+                                              <br />
+              6-Month Limited Warranty
+                                              <br />
+                                            </p>
+                                          </div>
+                                          <!--Row-->
+                                          <!--Row-->
+                                          <div class="mom-mdc-row mom-mdc-margin-bottom__20 mom-mdc-rating">
+                                            <!--Star-->
+                                            <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                              <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">
+          star_rate
+            </span>
+                                            </button>
+                                            <!--Star-->
+                                            <!--Star-->
+                                            <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                              <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">
+          star_rate
+            </span>
+                                            </button>
+                                            <!--Star-->
+                                            <!--Star-->
+                                            <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                              <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">
+          star_rate
+            </span>
+                                            </button>
+                                            <!--Star-->
+                                            <!--Star-->
+                                            <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                              <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">
+          star_half
+            </span>
+                                            </button>
+                                            <!--Star-->
+                                            <!--Star-->
+                                            <button class="mdc-fab mdc-fab--extended mom-mdc-fab">
+                                              <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">
+          star_outline
+            </span>
+                                            </button>
+                                            <!--Star-->
+                                            <span class="mom-mdc-span mom-mdc-review-result">23 Review</span>
+                                          </div>
+                                          <!--Row-->
+                                        </div>
+                                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mom-mdc-product">
+                                          <!--Image-->
+                                          <div class="component-wrapper">
+                                            <ul class="mdc-image-list mdc-image-list--masonry">
+                                              <div class="mom-mdc-product-preview">
+                                                <li class="mdc-image-list__item">
+                                                  <img class="mdc-image-list__image" src="img/preview_watch_1.jpg">
+                                                  </li>
+                                                  <li class="mdc-image-list__item">
+                                                    <img class="mdc-image-list__image" src="img/preview_watch_2.jpg">
+                                                    </li>
+                                                  </div>
+                                                  <div class="mom-mdc-product-main">
+                                                    <li class="mdc-image-list__item" >
+                                                      <img class="mdc-image-list__image" src="img/main_watch.jpg">
+                                                      </li>
+                                                    </div>
+                                                  </ul>
+                                                </div>
+                                                <!--/Image-->
+                                              </div>
+                                              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                                <!--Last Text-->
+                                                <!--Row-->
+                                                <div class="mdc-layout-grid  mb-3">
+                                                  <!--mdc-layout-grid__inner is the row-->
+                                                  <div class="mdc-layout-grid__inner">
+                                                    <!--Row Content-->
+                                                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mom-mdc-bg-white p-2">
+                                                      <!--Hello world -->
+                                                      <!--Row-->
+                                                      <div class="mom-mdc-row mom-mdc-margin-bottom__20 mom-mdc-brandname">
+                                                        <p>FREE DELIVERY</p>
+                                                      </div>
+                                                      <!--Row-->
+                                                      <!--Row-->
+                                                      <div class="mom-mdc-row mom-mdc-margin-bottom__20">
+                                                        <p class="mdc-typography--headline3" >
+                                                          <strong>R899</strong>
+                                                        </p>
+                                                      </div>
+                                                      <!--Row-->
+                                                      <br>
+                                                        <!--Row-->
+                                                        <div class="mom-mdc-row mom-mdc-margin-bottom__20 mom-mdc-brandname">
+                                                          <button class="mdc-button mdc-button--raised mom-mdc-add-product">
+                                                            <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">shopping_cart</span>
+                                                            <span class="mdc-fab__label mom-mdc-fab__label">
+            Add to cart
+          </span>
+                                                          </button>
+                                                          <button class="mdc-button mdc-button--raised mom-mdc-add-favorite">
+                                                            <span class="material-icons mdc-fab__icon mom-mdc-fab__icon">favorite</span>
+                                                          </button>
+                                                        </div>
+                                                        <!--/Row-->
+                                                        <!--Hello world -->
+                                                      </div>
+                                                      <!--/Row Content-->
+                                                    </div>
+                                                    <!--mdc-layout-grid__inner is the row-->
+                                                  </div>
+                                                  <!--Row-->
+                                                  <!--Row-->
+                                                  <div class="mdc-layout-grid">
+                                                    <!--mdc-layout-grid__inner is the row-->
+                                                    <div class="mdc-layout-grid__inner">
+                                                      <!--Row Content-->
+                                                      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mom-mdc-bg-white  p-2">
+                                                        <!--Tabs -->
+                                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                          <li class="nav-item" role="presentation">
+                                                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Description</button>
+                                                          </li>
+                                                          <li class="nav-item" role="presentation">
+                                                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Product Info</button>
+                                                          </li>
+                                                        </ul>
+                                                        <div class="tab-content" id="myTabContent">
+                                                          <div class="tab-pane fade show active mdc-typography--caption p-3" id="home" role="tabpanel" aria-labelledby="home-tab" style="font-size:11px">
+    Download the POLAROID ACTIVE APP
+                                                            <br/>
+    Switch the Bluetooth off on your mobile phone
+                                                            <br/>
+    Open the app and select the watch icon in the bottom centre on the screen
+                                                            <br/>
+    Click on "ADD DEVICE"
+                                                            <br/>
+    Find your watch model and select it
+                                                            <br/>
+    A message will come up asking you to give
+                                                            <br/>
+                                                          </div>
+                                                          <div class="tab-pane fade p-3 mdc-typography--caption" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="font-size:11px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean venenatis lectus sit amet fringilla aliquet. Quisque viverra metus sit amet tincidunt suscipit. Praesent faucibus erat nibh, eu accumsan ligula ultrices ac. Sed magna urna, accumsan at molestie vitae, faucibus quis arcu.</div>
+                                                        </div>
+                                                        <!--/Tabs -->
+                                                      </div>
+                                                      <!--/Row Content-->
+                                                    </div>
+                                                    <!--mdc-layout-grid__inner is the row-->
+                                                  </div>
+                                                  <!--Row-->
+                                                  <!--Last Text-->
+                                                </div>
+                                              </div>
+                                              <!--mdc-layout-grid__inner is the row-->
+                                            </div>
+                                            <!--/Inner Content  Content Goes Here-->
+                                          </div>
+                                          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
+                                        </div>
+                                        <!--mdc-layout-grid__inner is the row-->
+                                      </div>
+                                      <!--Layout Test-->
+                                    </main>
+                                    <!--Main Is where the content goes here-->
+                                    <!--Bootstrap JS-->
+                  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+                  <!--/Bootstrap JS-->
+                  <!--Custom JS-->
+                  <script src="js/main.js" ></script>
+                  <!--/Custom JS-->
+                                  </body>
+                                </html>
