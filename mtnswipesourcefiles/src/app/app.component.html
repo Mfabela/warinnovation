@@ -1,0 +1,77 @@
+<app-header></app-header>
+<main class="container pt-3 ml-auto mr-auto swipermain">
+<div class="row">
+<div class="col-md-12"><h2 class="mainquestion">What Are You <br><strong>Here To Do?</strong></h2></div>
+</div>
+    <!--Current-->
+    <swiper (swiper)="log('swiper')" [centeredSlides]="true" (slideChange)="log('slideChange')"
+		[slidesPerView]="3" [spaceBetween]="20" [breakpoints]="breakpoints" [scrollbar]="scrollbar" [navigation]="true" [loop]="true"
+		[(index)]="indexNumber">
+		<ng-template let-data swiperSlide>
+	       <!--New-->
+	       <div class="card transition" [class.active-slide]="data.isActive" [class.bg-yellow]="data.isNext" [class.bg-blue]="data.isPrev">
+			  <img src="https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG" class="card-img-top" alt="Image">
+			  <div class="card-body">
+			    <h5 class="card-title">
+			    Get a device {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}
+			    </h5>
+			    <a href="#" class="btn btn-primary">START HERE ></a>
+			  </div>
+			</div>
+           <!--New-->
+	    </ng-template>
+		<ng-template let-data swiperSlide> 
+	        <!--New-->
+	       <div class="card transition" [class.active-slide]="data.isActive" [class.bg-yellow]="data.isNext" [class.bg-blue]="data.isPrev">
+			  <img src="https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG" width="100%" class="card-img-top" alt="Image">
+			  <div class="card-body">
+			    <h5 class="card-title">
+			    Add a <br/>phone-line {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}
+			    </h5>
+			    <a href="#" class="btn btn-primary">START HERE ></a>
+			  </div>
+			</div>
+           <!--New-->
+	    </ng-template>
+		<ng-template let-data swiperSlide>
+	        <!--New-->
+	       <div class="card transition" [class.active-slide]="data.isActive" [class.bg-yellow]="data.isNext" [class.bg-blue]="data.isPrev">
+			  <img src="https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG" width="100%" class="card-img-top" alt="Image">
+			  <div class="card-body">
+			    <h5 class="card-title">
+			    Upgrade {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}
+			    </h5>
+			    <a href="#" class="btn btn-primary">START HERE ></a>
+			  </div>
+			</div>
+           <!--New-->
+	    </ng-template>
+		<ng-template let-data swiperSlide>
+	       <!--New-->
+	       <div class="card transition" [class.active-slide]="data.isActive" [class.bg-yellow]="data.isNext" [class.bg-blue]="data.isPrev">
+			  <img src="https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG" width="100%" class="card-img-top" alt="Image">
+			  <div class="card-body">
+			    <h5 class="card-title">
+			    Mobile <br/> internet{{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}
+			    </h5>
+			    <a href="#" class="btn btn-primary">START HERE ></a>
+			  </div>
+			</div>
+           <!--New-->
+	    </ng-template>
+	    <ng-template let-data swiperSlide>
+	       <!--New-->
+	       <div class="card transition" [class.active-slide]="data.isActive" [class.bg-yellow]="data.isNext" [class.bg-blue]="data.isPrev">
+			  <img src="https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG" width="100%" class="card-img-top" alt="Image">
+			  <div class="card-body">
+			    <h5 class="card-title">
+			    Home  <br/>internet {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}
+			    </h5>
+			    <a href="#" class="btn btn-primary">START HERE ></a>
+			  </div>
+			</div>
+           <!--New-->
+	    </ng-template>
+	</swiper>
+    <!--Current-->
+</main>
