@@ -1,0 +1,32 @@
+<main class="container pt-3 ml-auto mr-auto swipermain">
+<div class="column is-4">
+        <!--Copied HTML-->
+        <div class="card">
+	    <div class="details">
+	        <div class="user_photo horizontal_center" id="user_photo"><img src="{{userimg}}"></div>
+	        <p id="user_title">{{text}}</p>
+	        <p id="user_value">{{field}}</p>
+	    </div>
+	    <ul class="values_list horizontal_center p-5 col-sm-7" id="values_list">
+	        <li data-title="Hi, My name is"  data-label="name" (mouseover)="fieldChange(user.name.first+' '+user.name.last, 'Hi, My name is')"><!--{{user.name.first}}{{user.name.last}}-->
+	        </li>
+	        <li data-title="My email address is"  data-label="email" data-caps="false" (mouseover)="fieldChange(user.email, 'My email address is')">
+	        <!--{{user.email}}-->
+	        </li>
+	        <li data-title="My birthday is"  data-label="birthday" id="date" style="color: white" (mouseover)="fieldChange(getFormatDate(), 'My birthday is')">
+	        {{user.dob.date | date: 'dd/MM/yyyy'}}
+	        </li>
+	        <li data-title="My address is"  data-label="location" (mouseover)="fieldChange(user.location.street.name, 'My address is')">
+	        <!--{{user.location.street.number}}{{user.location.street.name}}-->
+	        </li>
+	        <li data-title="My phone number is"  data-label="phone" (mouseover)="fieldChange(user.phone, 'My phone number is')">
+	        <!--{{user.phone}}-->
+	        </li>
+	        <li data-title="My password is" data-value="tasha1" data-label="pass" data-caps="false"  (mouseover)="fieldChange(user.login.password, 'My password is')" style="width: 40px;">
+	        </li>
+	    </ul>
+	</div>
+        <!--Copied HTML -->      
+      </div>
+</main>
+
