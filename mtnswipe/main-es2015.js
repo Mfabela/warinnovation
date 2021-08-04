@@ -78,7 +78,6 @@ let AppComponent = class AppComponent {
         this.exampleConfig = { slidesPerView: 3 };
         this.slidesPerView = 4;
         this.pagination = false;
-        this.slides2 = ["slide 1 One", "slide 2 Two", "slide 3 Three"];
         this.navigation = false;
         this.scrollbar = false;
         this.breakpoints = {
@@ -90,15 +89,6 @@ let AppComponent = class AppComponent {
         this.virtualSlides = Array.from({ length: 600 }).map((el, index) => `Slide ${index + 1}`);
     }
     ngOnInit() { }
-    setThumbsSwiper(swiper) {
-        this.thumbsSwiper = swiper;
-    }
-    setControlledSwiper(swiper) {
-        this.controlledSwiper = swiper;
-    }
-    replaceSlides() {
-        this.slides2 = ["foo", "bar"];
-    }
     togglePagination() {
         if (!this.pagination) {
             this.pagination = { type: "fraction" };
@@ -119,15 +109,6 @@ let AppComponent = class AppComponent {
         }
     }
     log(string) {
-        // console.log(string);
-    }
-    breakpointChange() {
-        this.breakPointsToggle = !this.breakPointsToggle;
-        this.breakpoints = {
-            640: { slidesPerView: 2, spaceBetween: 50 },
-            768: { slidesPerView: 4, spaceBetween: 40 },
-            1024: { slidesPerView: this.breakPointsToggle ? 7 : 5, spaceBetween: 50 }
-        };
     }
 };
 AppComponent.ctorParameters = () => [
@@ -138,7 +119,7 @@ AppComponent.propDecorators = {
 };
 AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
-        selector: "app-swiper-example",
+        selector: "app-swiper",
         template: _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
         styles: ["\n      .bg-yellow {\n        background-color: yellow;\n      }\n      .transition {\n        transition: background 0.25s ease, color 0.25s ease;\n      }\n      .active-slide {\n        background-color: green;\n        color: #fff;\n      }\n      .bg-blue {\n        background-color: blue;\n        color: #fff;\n      }\n    ", _app_component_css__WEBPACK_IMPORTED_MODULE_2__["default"]]
     })
@@ -157,7 +138,7 @@ AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>\r\n<main class=\"container pt-3 ml-auto mr-auto swipermain\">\r\n<div class=\"row\">\r\n<div class=\"col-md-12\"><h2 class=\"mainquestion\">What Are You <br><strong>Here To Do?</strong></h2></div>\r\n</div>\r\n    <!--Current-->\r\n    <swiper (swiper)=\"log('swiper')\" [centeredSlides]=\"true\" (slideChange)=\"log('slideChange')\"\r\n\t\t[slidesPerView]=\"3\" [spaceBetween]=\"20\" [breakpoints]=\"breakpoints\" [scrollbar]=\"scrollbar\" [navigation]=\"true\" [loop]=\"true\"\r\n\t\t[(index)]=\"indexNumber\">\r\n\t\t<ng-template let-data swiperSlide>\r\n\t       <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Get a device {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t\t<ng-template let-data swiperSlide> \r\n\t        <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Add a <br/>phone-line {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t\t<ng-template let-data swiperSlide>\r\n\t        <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Upgrade {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t\t<ng-template let-data swiperSlide>\r\n\t       <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Mobile <br/> internet{{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t    <ng-template let-data swiperSlide>\r\n\t       <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Home  <br/>internet {{ data.isActive ? 'active' : '' }} {{ data.isNext ? 'next' : '' }}\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t</swiper>\r\n    <!--Current-->\r\n</main>");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>\r\n<main class=\"container pt-3 ml-auto mr-auto swipermain\">\r\n<div class=\"row\">\r\n<div class=\"col-md-12\"><h2 class=\"mainquestion\">What Are You <br><strong>Here To Do?</strong></h2></div>\r\n</div>\r\n    <!--Current-->\r\n    <swiper (swiper)=\"log('swiper')\" [centeredSlides]=\"true\" (slideChange)=\"log('slideChange')\"\r\n\t\t[slidesPerView]=\"3\" [spaceBetween]=\"20\" [breakpoints]=\"breakpoints\" [scrollbar]=\"scrollbar\" [navigation]=\"true\" [loop]=\"true\"\r\n\t\t[(index)]=\"indexNumber\">\r\n\t\t<ng-template let-data swiperSlide>\r\n\t       <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Get a device \r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t\t<ng-template let-data swiperSlide> \r\n\t        <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Add a <br/>phone-line\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t\t<ng-template let-data swiperSlide>\r\n\t        <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Upgrade\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t\t<ng-template let-data swiperSlide>\r\n\t       <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Mobile <br/> internet\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t    <ng-template let-data swiperSlide>\r\n\t       <!--New-->\r\n\t       <div class=\"card transition\" [class.active-slide]=\"data.isActive\" [class.bg-yellow]=\"data.isNext\" [class.bg-blue]=\"data.isPrev\">\r\n\t\t\t  <img src=\"https://raw.githubusercontent.com/Mfabela/warinnovation/master/img-placeholder.JPG\" width=\"100%\" class=\"card-img-top\" alt=\"Image\">\r\n\t\t\t  <div class=\"card-body\">\r\n\t\t\t    <h5 class=\"card-title\">\r\n\t\t\t    Home  <br/>internet\r\n\t\t\t    </h5>\r\n\t\t\t    <a href=\"#\" class=\"btn btn-primary\">START HERE ></a>\r\n\t\t\t  </div>\r\n\t\t\t</div>\r\n           <!--New-->\r\n\t    </ng-template>\r\n\t</swiper>\r\n    <!--Current-->\r\n</main>");
 
 /***/ }),
 

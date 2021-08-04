@@ -28,7 +28,7 @@ SwiperCore.use([
 ]);
 
 @Component({
-  selector: "app-swiper-example",
+  selector: "app-swiper",
   styles: [
     `
       .bg-yellow {
@@ -53,29 +53,15 @@ SwiperCore.use([
 export class AppComponent {
   @ViewChild("swiperRef", { static: false }) swiperRef?: SwiperComponent;
 
-  show: boolean;
-  thumbs: any;
+
   constructor(private cd: ChangeDetectorRef) {}
   ngOnInit() {}
-
-  thumbsSwiper: any;
-  setThumbsSwiper(swiper) {
-    this.thumbsSwiper = swiper;
-  }
-  controlledSwiper: any;
-  setControlledSwiper(swiper) {
-    this.controlledSwiper = swiper;
-  }
 
   indexNumber = 0;
   exampleConfig = { slidesPerView: 3 };
   slidesPerView: number = 4;
   pagination: any = false;
 
-  slides2 = ["slide 1 One", "slide 2 Two", "slide 3 Three"];
-  replaceSlides() {
-    this.slides2 = ["foo", "bar"];
-  }
 
   togglePagination() {
     if (!this.pagination) {
@@ -110,16 +96,6 @@ export class AppComponent {
   );
 
   log(string) {
-    // console.log(string);
-  }
-
-  breakPointsToggle: boolean;
-  breakpointChange() {
-    this.breakPointsToggle = !this.breakPointsToggle;
-    this.breakpoints = {
-      640: { slidesPerView: 2, spaceBetween: 50 },
-      768: { slidesPerView: 4, spaceBetween: 40 },
-      1024: { slidesPerView: this.breakPointsToggle ? 7 : 5, spaceBetween: 50 }
-    };
+   
   }
 }

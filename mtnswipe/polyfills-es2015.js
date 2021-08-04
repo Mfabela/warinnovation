@@ -84,19 +84,6 @@ $({ target: 'Reflect', stat: true }, {
 
 /***/ }),
 
-/***/ 1:
-/*!**********************************************************************************************************!*\
-  !*** multi ./src/polyfills.ts ./node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js ***!
-  \**********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! C:\xampp\htdocs\mtn_angular_swipe\src\polyfills.ts */"hN/g");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\mtn_angular_swipe\node_modules\@angular-devkit\build-angular\src\webpack\jit-polyfills.js */"rZy+");
-
-
-/***/ }),
-
 /***/ "149L":
 /*!*******************************************************************************************!*\
   !*** ./node_modules/@angular-devkit/build-angular/node_modules/core-js/internals/html.js ***!
@@ -107,6 +94,19 @@ module.exports = __webpack_require__(/*! C:\xampp\htdocs\mtn_angular_swipe\node_
 var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "Ew/G");
 
 module.exports = getBuiltIn('document', 'documentElement');
+
+
+/***/ }),
+
+/***/ 2:
+/*!**********************************************************************************************************!*\
+  !*** multi ./src/polyfills.ts ./node_modules/@angular-devkit/build-angular/src/webpack/jit-polyfills.js ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\xampp\htdocs\mtn_angular_swipe\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\mtn_angular_swipe\node_modules\@angular-devkit\build-angular\src\webpack\jit-polyfills.js */"rZy+");
 
 
 /***/ }),
@@ -6179,5 +6179,5 @@ module.exports = {
 
 /***/ })
 
-},[[1,"runtime"]]]);
+},[[2,"runtime"]]]);
 //# sourceMappingURL=polyfills-es2015.js.map
